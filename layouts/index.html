@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<title>{{ .Title }}</title>
+
+<style>
+.Logo {
+  background-image: url(/images/logo-waardenburg.png);
+  background-repeat: no-repeat;
+}
+</style>
+
+<meta charset="utf-8">
+{{ with resources.Get "index.jsx" }}
+{{ $options := dict "defines" (dict "process.env.NODE_ENV" "\"development\"" "process.env.BaseURL" (printf `"%s"` $.Site.BaseURL)) }}
+{{ $script := . | js.Build $options }}
+<script src="{{ $script.RelPermalink }}" defer></script>
+{{ end }}
+</head>
+<body>
+<div id="root"></div>
+</body>
+</html>

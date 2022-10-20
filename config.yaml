@@ -1,0 +1,7 @@
+baseUrl: http://toolbox.buwa.nl
+languageCode: en
+title: Hugo react esbuild minimal example
+disableKinds:
+  - taxonomyTerm
+  - sitemap
+  - RSS
