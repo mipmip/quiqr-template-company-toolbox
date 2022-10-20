@@ -1,6 +1,6 @@
 baseUrl: http://toolbox.buwa.nl
 languageCode: en
-title: Hugo react esbuild minimal example
+title: Company Toolbox
 disableKinds:
   - taxonomyTerm
   - sitemap

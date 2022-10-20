@@ -10,7 +10,62 @@ menu:
     title: Settings
     menuItems:
       - key: mainConfig
+      - key: categories
+      - key: images
+
+collections:
+- dataformat: yaml
+  extension: md
+  folder: content/category/
+  itemtitle: Category
+  key: categories
+  title: Categories
+  fields:
+  - key: title
+    title: Title
+    type: string
+  - key: description
+    title: Description
+    type: string
+    multiLine: true
+
+  - key: image
+    buttonTitle: select image
+    path: /static/images
+    title: Image
+    type: image-select
+
+  - key: my-accordion
+    title: accordion
+    type: accordion
+    fields:
+
+    - arrayTitle: true
+      key: title
+      title: Title
+      type: string
+
+    - key: description
+      title: Description
+      type: string
+      multiLine: true
+
+    - key: image
+      buttonTitle: select image
+      path: /static/images
+      title: Image
+      type: image-select
+
+    - key: primary_action
+      title: Primary Action
+      type: string
+
 singles:
+
+  - key: images
+    description: global images
+    _mergePartial: https://raw.githubusercontent.com/quiqr/model-partials/main/singles/global-images.yml
+
   - key: mainConfig
     title: Site Configuration
     file: config.yaml
@@ -23,3 +78,9 @@ singles:
         title: Base URL
         type: string
         tip: Your site URL.
+
+      - key: logo
+        buttonTitle: select image
+        path: /static/images
+        title: Logo
+        type: image-select
