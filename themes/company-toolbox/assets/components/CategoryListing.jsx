@@ -1,7 +1,7 @@
 import * as React from 'react';
-import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import CategoryCard from './CategoryCard';
+import Typography from '@mui/material/Typography';
 
 export default class CategoryListing extends React.Component {
 
@@ -34,16 +34,19 @@ export default class CategoryListing extends React.Component {
 
   render() {
     return (
+      <React.Fragment>
+        <Typography component="div" variant="h6">
+          Alle categorieën
+        </Typography>
 
-      <Container sx={{ py: 8 }} maxWidth="xl">
-        <Grid container spacing={4}>
+        <Grid container spacing={4} sx={{ py: 2 }}>
           {this.state.categories.map((catData) => (
             <Grid item key={catData.title} xs={12} sm={6} md={4} lg={3} xl={2}>
               <CategoryCard itemData={catData} />
             </Grid>
           ))}
         </Grid>
-      </Container>
+      </React.Fragment>
     );
   }
 }

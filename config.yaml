@@ -1,6 +1,6 @@
 baseUrl: http://toolbox.buwa.nl
 languageCode: en
-title: Company Toolbox
+title: Toolbox
 theme: company-toolbox
 disableKinds:
   - taxonomyTerm
@@ -16,3 +16,6 @@ outputs:
     - json
     - html
 logo: logo-waardenburg.png
+params:
+  logo: logo-waardenburg.png
+  resources: []

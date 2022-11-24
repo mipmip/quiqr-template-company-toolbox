@@ -94,11 +94,16 @@ singles:
         type: string
         tip: Your site URL.
 
-      - key: logo
-        buttonTitle: select image
-        path: /static/images
-        title: Logo
-        type: image-select
+      - key: params
+        group: params
+        type: pull
+        fields:
+
+          - key: logo
+            buttonTitle: select image
+            path: /static/images
+            title: Logo
+            type: image-select
 
       - key: "favicon"
         title: "Favicon Image"

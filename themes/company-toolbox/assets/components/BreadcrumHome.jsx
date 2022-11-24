@@ -19,6 +19,13 @@ export default function IconBreadcrumbs() {
           href="/"
         >
           <HomeIcon sx={{ mr: 0.5 }} fontSize="inherit" />
+          <Typography
+            sx={{ display: 'flex', alignItems: 'center' }}
+            color="common.blue"
+          >
+            Home
+          </Typography>
+
         </Link>
 
       </Breadcrumbs>

@@ -45,11 +45,18 @@ export default class Breadcrum extends React.Component {
             href="/"
           >
             <HomeIcon sx={{ mr: 0.5 }} fontSize="inherit" />
+            <Typography
+              sx={{ display: 'flex', alignItems: 'center' }}
+              color="common.blue"
+            >
+              Home
+            </Typography>
+
           </Link>
 
           <Typography
             sx={{ display: 'flex', alignItems: 'center' }}
-            color="text.primary"
+            color="common.blue"
           >
             {this.state.data.title}
           </Typography>
