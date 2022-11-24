@@ -1,7 +1,22 @@
 baseUrl: http://toolbox.buwa.nl
 languageCode: en
 title: Company Toolbox
+theme: company-toolbox
+
 disableKinds:
   - taxonomyTerm
+  - taxonomy
   - sitemap
   - RSS
+
+outputs:
+  home:
+    - html
+
+  section:
+    - json
+
+  page:
+    - json
+    - html
+

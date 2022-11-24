@@ -6,8 +6,11 @@ my-accordion:
     description: Main Hugo website
     resources: []
     primary_action: https://gohugo.io/
+image: finance.jpg
 
 ---
+
+
 
 
 

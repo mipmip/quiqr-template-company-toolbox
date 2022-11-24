@@ -1,0 +1,7 @@
+{{ define "response" }}
+  {
+  "title": "{{ .Title }}",
+  "type": "{{ .Type }}",
+  "permalink" : "{{ .Permalink }}"
+  }
+{{ end }}
