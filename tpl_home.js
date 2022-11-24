@@ -9444,7 +9444,7 @@
   var require_emotion_use_insertion_effect_with_fallbacks_cjs_prod = __commonJS((exports) => {
     "use strict";
     Object.defineProperty(exports, "__esModule", {value: true});
-    var React37 = require_react();
+    var React33 = require_react();
     function _interopNamespace(e) {
       if (e && e.__esModule)
         return e;
@@ -9465,14 +9465,14 @@
       n["default"] = e;
       return Object.freeze(n);
     }
-    var React__namespace = /* @__PURE__ */ _interopNamespace(React37);
+    var React__namespace = /* @__PURE__ */ _interopNamespace(React33);
     var isBrowser = typeof document !== "undefined";
     var syncFallback = function syncFallback2(create) {
       return create();
     };
     var useInsertionEffect = React__namespace["useInsertionEffect"] ? React__namespace["useInsertionEffect"] : false;
     var useInsertionEffectAlwaysWithSyncFallback = !isBrowser ? syncFallback : useInsertionEffect || syncFallback;
-    var useInsertionEffectWithLayoutFallback = useInsertionEffect || React37.useLayoutEffect;
+    var useInsertionEffectWithLayoutFallback = useInsertionEffect || React33.useLayoutEffect;
     exports.useInsertionEffectAlwaysWithSyncFallback = useInsertionEffectAlwaysWithSyncFallback;
     exports.useInsertionEffectWithLayoutFallback = useInsertionEffectWithLayoutFallback;
   });
@@ -9490,7 +9490,7 @@
   // node_modules/@emotion/react/dist/emotion-element-20108edd.cjs.prod.js
   var require_emotion_element_20108edd_cjs_prod = __commonJS((exports) => {
     "use strict";
-    var React37 = require_react();
+    var React33 = require_react();
     var createCache = require_emotion_cache_cjs();
     var _extends2 = require_extends();
     var weakMemoize = require_emotion_weak_memoize_cjs();
@@ -9505,28 +9505,28 @@
     var weakMemoize__default = /* @__PURE__ */ _interopDefault(weakMemoize);
     var isBrowser = typeof document !== "undefined";
     var hasOwnProperty = {}.hasOwnProperty;
-    var EmotionCacheContext = /* @__PURE__ */ React37.createContext(typeof HTMLElement !== "undefined" ? /* @__PURE__ */ createCache__default["default"]({
+    var EmotionCacheContext = /* @__PURE__ */ React33.createContext(typeof HTMLElement !== "undefined" ? /* @__PURE__ */ createCache__default["default"]({
       key: "css"
     }) : null);
     var CacheProvider = EmotionCacheContext.Provider;
     var __unsafe_useEmotionCache = function useEmotionCache() {
-      return React37.useContext(EmotionCacheContext);
+      return React33.useContext(EmotionCacheContext);
     };
     exports.withEmotionCache = function withEmotionCache(func) {
-      return /* @__PURE__ */ React37.forwardRef(function(props, ref) {
-        var cache = React37.useContext(EmotionCacheContext);
+      return /* @__PURE__ */ React33.forwardRef(function(props, ref) {
+        var cache = React33.useContext(EmotionCacheContext);
         return func(props, cache, ref);
       });
     };
     if (!isBrowser) {
       exports.withEmotionCache = function withEmotionCache(func) {
         return function(props) {
-          var cache = React37.useContext(EmotionCacheContext);
+          var cache = React33.useContext(EmotionCacheContext);
           if (cache === null) {
             cache = createCache__default["default"]({
               key: "css"
             });
-            return /* @__PURE__ */ React37.createElement(EmotionCacheContext.Provider, {
+            return /* @__PURE__ */ React33.createElement(EmotionCacheContext.Provider, {
               value: cache
             }, func(props, cache));
           } else {
@@ -9535,9 +9535,9 @@
         };
       };
     }
-    var ThemeContext = /* @__PURE__ */ React37.createContext({});
+    var ThemeContext = /* @__PURE__ */ React33.createContext({});
     var useTheme2 = function useTheme3() {
-      return React37.useContext(ThemeContext);
+      return React33.useContext(ThemeContext);
     };
     var getTheme = function getTheme2(outerTheme, theme2) {
       if (typeof theme2 === "function") {
@@ -9552,26 +9552,26 @@
       });
     });
     var ThemeProvider2 = function ThemeProvider3(props) {
-      var theme2 = React37.useContext(ThemeContext);
+      var theme2 = React33.useContext(ThemeContext);
       if (props.theme !== theme2) {
         theme2 = createCacheWithTheme(theme2)(props.theme);
       }
-      return /* @__PURE__ */ React37.createElement(ThemeContext.Provider, {
+      return /* @__PURE__ */ React33.createElement(ThemeContext.Provider, {
         value: theme2
       }, props.children);
     };
-    function withTheme(Component4) {
-      var componentName = Component4.displayName || Component4.name || "Component";
+    function withTheme(Component3) {
+      var componentName = Component3.displayName || Component3.name || "Component";
       var render = function render2(props, ref) {
-        var theme2 = React37.useContext(ThemeContext);
-        return /* @__PURE__ */ React37.createElement(Component4, _extends2({
+        var theme2 = React33.useContext(ThemeContext);
+        return /* @__PURE__ */ React33.createElement(Component3, _extends2({
           theme: theme2,
           ref
         }, props));
       };
-      var WithTheme = /* @__PURE__ */ React37.forwardRef(render);
+      var WithTheme = /* @__PURE__ */ React33.forwardRef(render);
       WithTheme.displayName = "WithTheme(" + componentName + ")";
-      return _isolatedHnrs_dist_emotionReact_isolatedHnrs["default"](WithTheme, Component4);
+      return _isolatedHnrs_dist_emotionReact_isolatedHnrs["default"](WithTheme, Component3);
     }
     var typePropName = "__EMOTION_TYPE_PLEASE_DO_NOT_USE__";
     var createEmotionProps = function createEmotionProps2(type, props) {
@@ -9598,7 +9598,7 @@
           serializedNames += " " + next.name;
           next = next.next;
         }
-        return /* @__PURE__ */ React37.createElement("style", (_ref2 = {}, _ref2["data-emotion"] = cache.key + " " + serializedNames, _ref2.dangerouslySetInnerHTML = {
+        return /* @__PURE__ */ React33.createElement("style", (_ref2 = {}, _ref2["data-emotion"] = cache.key + " " + serializedNames, _ref2.dangerouslySetInnerHTML = {
           __html: rules
         }, _ref2.nonce = cache.sheet.nonce, _ref2));
       }
@@ -9617,7 +9617,7 @@
       } else if (props.className != null) {
         className = props.className + " ";
       }
-      var serialized = serialize.serializeStyles(registeredStyles, void 0, React37.useContext(ThemeContext));
+      var serialized = serialize.serializeStyles(registeredStyles, void 0, React33.useContext(ThemeContext));
       className += cache.key + "-" + serialized.name;
       var newProps = {};
       for (var key in props) {
@@ -9627,11 +9627,11 @@
       }
       newProps.ref = ref;
       newProps.className = className;
-      return /* @__PURE__ */ React37.createElement(React37.Fragment, null, /* @__PURE__ */ React37.createElement(Insertion, {
+      return /* @__PURE__ */ React33.createElement(React33.Fragment, null, /* @__PURE__ */ React33.createElement(Insertion, {
         cache,
         serialized,
         isStringTag: typeof WrappedComponent === "string"
-      }), /* @__PURE__ */ React37.createElement(WrappedComponent, newProps));
+      }), /* @__PURE__ */ React33.createElement(WrappedComponent, newProps));
     });
     exports.CacheProvider = CacheProvider;
     exports.Emotion = Emotion;
@@ -9649,7 +9649,7 @@
   var require_emotion_react_cjs_prod = __commonJS((exports) => {
     "use strict";
     Object.defineProperty(exports, "__esModule", {value: true});
-    var React37 = require_react();
+    var React33 = require_react();
     require_emotion_cache_cjs();
     var emotionElement = require_emotion_element_20108edd_cjs_prod();
     require_extends();
@@ -9662,7 +9662,7 @@
     var jsx = function jsx2(type, props) {
       var args = arguments;
       if (props == null || !emotionElement.hasOwnProperty.call(props, "css")) {
-        return React37.createElement.apply(void 0, args);
+        return React33.createElement.apply(void 0, args);
       }
       var argsLength = args.length;
       var createElementArgArray = new Array(argsLength);
@@ -9671,11 +9671,11 @@
       for (var i = 2; i < argsLength; i++) {
         createElementArgArray[i] = args[i];
       }
-      return React37.createElement.apply(null, createElementArgArray);
+      return React33.createElement.apply(null, createElementArgArray);
     };
     var Global = /* @__PURE__ */ emotionElement.withEmotionCache(function(props, cache) {
       var styles2 = props.styles;
-      var serialized = serialize.serializeStyles([styles2], void 0, React37.useContext(emotionElement.ThemeContext));
+      var serialized = serialize.serializeStyles([styles2], void 0, React33.useContext(emotionElement.ThemeContext));
       if (!emotionElement.isBrowser) {
         var _ref;
         var serializedNames = serialized.name;
@@ -9694,11 +9694,11 @@
         if (shouldCache) {
           return null;
         }
-        return /* @__PURE__ */ React37.createElement("style", (_ref = {}, _ref["data-emotion"] = cache.key + "-global " + serializedNames, _ref.dangerouslySetInnerHTML = {
+        return /* @__PURE__ */ React33.createElement("style", (_ref = {}, _ref["data-emotion"] = cache.key + "-global " + serializedNames, _ref.dangerouslySetInnerHTML = {
           __html: rules
         }, _ref.nonce = cache.sheet.nonce, _ref));
       }
-      var sheetRef = React37.useRef();
+      var sheetRef = React33.useRef();
       useInsertionEffectWithFallbacks.useInsertionEffectWithLayoutFallback(function() {
         var key = cache.key + "-global";
         var sheet = new cache.sheet.constructor({
@@ -9820,7 +9820,7 @@
       });
       if (!emotionElement.isBrowser && rules.length !== 0) {
         var _ref2;
-        return /* @__PURE__ */ React37.createElement("style", (_ref2 = {}, _ref2["data-emotion"] = cache.key + " " + serializedArr.map(function(serialized) {
+        return /* @__PURE__ */ React33.createElement("style", (_ref2 = {}, _ref2["data-emotion"] = cache.key + " " + serializedArr.map(function(serialized) {
           return serialized.name;
         }).join(" "), _ref2.dangerouslySetInnerHTML = {
           __html: rules
@@ -9855,11 +9855,11 @@
       var content = {
         css: css3,
         cx,
-        theme: React37.useContext(emotionElement.ThemeContext)
+        theme: React33.useContext(emotionElement.ThemeContext)
       };
       var ele = props.children(content);
       hasRendered = true;
-      return /* @__PURE__ */ React37.createElement(React37.Fragment, null, /* @__PURE__ */ React37.createElement(Insertion, {
+      return /* @__PURE__ */ React33.createElement(React33.Fragment, null, /* @__PURE__ */ React33.createElement(Insertion, {
         cache,
         serializedArr
       }), ele);
@@ -9899,7 +9899,7 @@
     "use strict";
     Object.defineProperty(exports, "__esModule", {value: true});
     var _extends2 = require_extends();
-    var React37 = require_react();
+    var React33 = require_react();
     var isPropValid = require_emotion_is_prop_valid_cjs();
     var react = require_emotion_react_cjs();
     var utils = require_emotion_utils_cjs();
@@ -9944,7 +9944,7 @@
           serializedNames += " " + next.name;
           next = next.next;
         }
-        return /* @__PURE__ */ React37.createElement("style", (_ref2 = {}, _ref2["data-emotion"] = cache.key + " " + serializedNames, _ref2.dangerouslySetInnerHTML = {
+        return /* @__PURE__ */ React33.createElement("style", (_ref2 = {}, _ref2["data-emotion"] = cache.key + " " + serializedNames, _ref2.dangerouslySetInnerHTML = {
           __html: rules
         }, _ref2.nonce = cache.sheet.nonce, _ref2));
       }
@@ -9988,7 +9988,7 @@
             for (var key in props) {
               mergedProps[key] = props[key];
             }
-            mergedProps.theme = React37.useContext(react.ThemeContext);
+            mergedProps.theme = React33.useContext(react.ThemeContext);
           }
           if (typeof props.className === "string") {
             className = utils.getRegisteredStyles(cache.registered, classInterpolations, props.className);
@@ -10011,11 +10011,11 @@
           }
           newProps.className = className;
           newProps.ref = ref;
-          return /* @__PURE__ */ React37.createElement(React37.Fragment, null, /* @__PURE__ */ React37.createElement(Insertion, {
+          return /* @__PURE__ */ React33.createElement(React33.Fragment, null, /* @__PURE__ */ React33.createElement(Insertion, {
             cache,
             serialized,
             isStringTag: typeof FinalTag === "string"
-          }), /* @__PURE__ */ React37.createElement(FinalTag, newProps));
+          }), /* @__PURE__ */ React33.createElement(FinalTag, newProps));
         });
         Styled.displayName = identifierName !== void 0 ? identifierName : "Styled(" + (typeof baseTag === "string" ? baseTag : baseTag.displayName || baseTag.name || "Component") + ")";
         Styled.defaultProps = tag.defaultProps;
@@ -10260,7 +10260,7 @@
       value: true
     });
     exports.default = StyledEngineProvider;
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     var _propTypes = _interopRequireDefault(require_prop_types());
     var _react2 = require_emotion_react_cjs();
     var _cache = _interopRequireDefault(require_emotion_cache_cjs());
@@ -10347,7 +10347,7 @@
       value: true
     });
     exports.default = GlobalStyles2;
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     var _propTypes = _interopRequireDefault(require_prop_types());
     var _react2 = require_emotion_react_cjs();
     var _jsxRuntime = require_jsx_runtime();
@@ -10817,29 +10817,29 @@
       const name = match && match[1];
       return name || "";
     }
-    function getFunctionComponentName(Component4, fallback = "") {
-      return Component4.displayName || Component4.name || getFunctionName(Component4) || fallback;
+    function getFunctionComponentName(Component3, fallback = "") {
+      return Component3.displayName || Component3.name || getFunctionName(Component3) || fallback;
     }
     function getWrappedName(outerType, innerType, wrapperName) {
       const functionName = getFunctionComponentName(innerType);
       return outerType.displayName || (functionName !== "" ? `${wrapperName}(${functionName})` : wrapperName);
     }
-    function getDisplayName(Component4) {
-      if (Component4 == null) {
+    function getDisplayName(Component3) {
+      if (Component3 == null) {
         return void 0;
       }
-      if (typeof Component4 === "string") {
-        return Component4;
+      if (typeof Component3 === "string") {
+        return Component3;
       }
-      if (typeof Component4 === "function") {
-        return getFunctionComponentName(Component4, "Component");
+      if (typeof Component3 === "function") {
+        return getFunctionComponentName(Component3, "Component");
       }
-      if (typeof Component4 === "object") {
-        switch (Component4.$$typeof) {
+      if (typeof Component3 === "object") {
+        switch (Component3.$$typeof) {
           case _reactIs.ForwardRef:
-            return getWrappedName(Component4, Component4.render, "ForwardRef");
+            return getWrappedName(Component3, Component3.render, "ForwardRef");
           case _reactIs.Memo:
-            return getWrappedName(Component4, Component4.type, "memo");
+            return getWrappedName(Component3, Component3.type, "memo");
           default:
             return void 0;
         }
@@ -10986,7 +10986,7 @@
       value: true
     });
     exports.default = isMuiElement;
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
         return null;
@@ -11026,7 +11026,7 @@
       return newObj;
     }
     function isMuiElement(element, muiNames) {
-      return /* @__PURE__ */ React37.isValidElement(element) && muiNames.indexOf(element.type.muiName) !== -1;
+      return /* @__PURE__ */ React33.isValidElement(element) && muiNames.indexOf(element.type.muiName) !== -1;
     }
   });
 
@@ -11066,11 +11066,11 @@
     });
     exports.default = requirePropFactory;
     var _extends2 = _interopRequireDefault(require_extends());
-    function requirePropFactory(componentNameInError, Component4) {
+    function requirePropFactory(componentNameInError, Component3) {
       if (true) {
         return () => null;
       }
-      const prevPropTypes = Component4 ? (0, _extends2.default)({}, Component4.propTypes) : null;
+      const prevPropTypes = Component3 ? (0, _extends2.default)({}, Component3.propTypes) : null;
       const requireProp = (requiredProp) => (props, propName, componentName, location, propFullName, ...args) => {
         const propFullNameSafe = propFullName || propName;
         const defaultTypeChecker = prevPropTypes == null ? void 0 : prevPropTypes[propFullNameSafe];
@@ -11112,7 +11112,7 @@
       value: true
     });
     exports.default = void 0;
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
         return null;
@@ -11151,7 +11151,7 @@
       }
       return newObj;
     }
-    var useEnhancedEffect2 = typeof window !== "undefined" ? React37.useLayoutEffect : React37.useEffect;
+    var useEnhancedEffect2 = typeof window !== "undefined" ? React33.useLayoutEffect : React33.useEffect;
     var _default = useEnhancedEffect2;
     exports.default = _default;
   });
@@ -11163,7 +11163,7 @@
       value: true
     });
     exports.default = useId;
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
         return null;
@@ -11204,9 +11204,9 @@
     }
     var globalId = 0;
     function useGlobalId(idOverride) {
-      const [defaultId, setDefaultId] = React37.useState(idOverride);
+      const [defaultId, setDefaultId] = React33.useState(idOverride);
       const id = idOverride || defaultId;
-      React37.useEffect(() => {
+      React33.useEffect(() => {
         if (defaultId == null) {
           globalId += 1;
           setDefaultId(`mui-${globalId}`);
@@ -11214,7 +11214,7 @@
       }, [defaultId]);
       return id;
     }
-    var maybeReactUseId = React37["useId"];
+    var maybeReactUseId = React33["useId"];
     function useId(idOverride) {
       if (maybeReactUseId !== void 0) {
         const reactId = maybeReactUseId();
@@ -11250,7 +11250,7 @@
       value: true
     });
     exports.default = useControlled;
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
         return null;
@@ -11297,25 +11297,25 @@
     }) {
       const {
         current: isControlled
-      } = React37.useRef(controlled !== void 0);
-      const [valueState, setValue] = React37.useState(defaultProp);
+      } = React33.useRef(controlled !== void 0);
+      const [valueState, setValue] = React33.useState(defaultProp);
       const value = isControlled ? controlled : valueState;
       if (false) {
-        React37.useEffect(() => {
+        React33.useEffect(() => {
           if (isControlled !== (controlled !== void 0)) {
             console.error([`MUI: A component is changing the ${isControlled ? "" : "un"}controlled ${state} state of ${name} to be ${isControlled ? "un" : ""}controlled.`, "Elements should not switch from uncontrolled to controlled (or vice versa).", `Decide between using a controlled or uncontrolled ${name} element for the lifetime of the component.`, "The nature of the state is determined during the first render. It's considered controlled if the value is not `undefined`.", "More info: https://fb.me/react-controlled-components"].join("\n"));
           }
         }, [state, name, controlled]);
         const {
           current: defaultValue
-        } = React37.useRef(defaultProp);
-        React37.useEffect(() => {
+        } = React33.useRef(defaultProp);
+        React33.useEffect(() => {
           if (!isControlled && defaultValue !== defaultProp) {
             console.error([`MUI: A component is changing the default ${state} state of an uncontrolled ${name} after being initialized. To suppress this warning opt to use a controlled ${name}.`].join("\n"));
           }
         }, [JSON.stringify(defaultProp)]);
       }
-      const setValueIfUncontrolled = React37.useCallback((newValue) => {
+      const setValueIfUncontrolled = React33.useCallback((newValue) => {
         if (!isControlled) {
           setValue(newValue);
         }
@@ -11332,7 +11332,7 @@
       value: true
     });
     exports.default = useEventCallback2;
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     var _useEnhancedEffect = _interopRequireDefault(require_useEnhancedEffect());
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
@@ -11373,11 +11373,11 @@
       return newObj;
     }
     function useEventCallback2(fn) {
-      const ref = React37.useRef(fn);
+      const ref = React33.useRef(fn);
       (0, _useEnhancedEffect.default)(() => {
         ref.current = fn;
       });
-      return React37.useCallback((...args) => (0, ref.current)(...args), []);
+      return React33.useCallback((...args) => (0, ref.current)(...args), []);
     }
   });
 
@@ -11389,7 +11389,7 @@
       value: true
     });
     exports.default = useForkRef2;
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     var _setRef = _interopRequireDefault(require_setRef());
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
@@ -11430,7 +11430,7 @@
       return newObj;
     }
     function useForkRef2(...refs) {
-      return React37.useMemo(() => {
+      return React33.useMemo(() => {
         if (refs.every((ref) => ref == null)) {
           return null;
         }
@@ -11451,7 +11451,7 @@
     });
     exports.default = useIsFocusVisible2;
     exports.teardown = teardown;
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
         return null;
@@ -11565,12 +11565,12 @@
       return hadKeyboardEvent || focusTriggersKeyboardModality(target);
     }
     function useIsFocusVisible2() {
-      const ref = React37.useCallback((node) => {
+      const ref = React33.useCallback((node) => {
         if (node != null) {
           prepare(node.ownerDocument);
         }
       }, []);
-      const isFocusVisibleRef = React37.useRef(false);
+      const isFocusVisibleRef = React33.useRef(false);
       function handleBlurVisible() {
         if (isFocusVisibleRef.current) {
           hadFocusVisibleRecently = true;
@@ -11674,7 +11674,7 @@
       value: true
     });
     exports.default = void 0;
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
         return null;
@@ -11714,8 +11714,8 @@
       return newObj;
     }
     var usePreviousProps = (value) => {
-      const ref = React37.useRef({});
-      React37.useEffect(() => {
+      const ref = React33.useRef({});
+      React33.useEffect(() => {
         ref.current = value;
       });
       return ref.current;
@@ -11812,9 +11812,9 @@
     Object.defineProperty(exports, "__esModule", {
       value: true
     });
-    exports.default = resolveProps2;
+    exports.default = resolveProps;
     var _extends2 = _interopRequireDefault(require_extends());
-    function resolveProps2(defaultProps2, props) {
+    function resolveProps(defaultProps2, props) {
       const output = (0, _extends2.default)({}, props);
       Object.keys(defaultProps2).forEach((propName) => {
         if (output[propName] === void 0) {
@@ -11831,8 +11831,8 @@
     Object.defineProperty(exports, "__esModule", {
       value: true
     });
-    exports.default = composeClasses17;
-    function composeClasses17(slots, getUtilityClass, classes) {
+    exports.default = composeClasses14;
+    function composeClasses14(slots, getUtilityClass, classes) {
       const output = {};
       Object.keys(slots).forEach((slot) => {
         output[slot] = slots[slot].reduce((acc, key) => {
@@ -11915,7 +11915,7 @@
     Object.defineProperty(exports, "__esModule", {
       value: true
     });
-    exports.default = generateUtilityClass18;
+    exports.default = generateUtilityClass15;
     var _ClassNameGenerator = _interopRequireDefault(require_ClassNameGenerator2());
     var globalStateClassesMapping = {
       active: "active",
@@ -11929,7 +11929,7 @@
       required: "required",
       selected: "selected"
     };
-    function generateUtilityClass18(componentName, slot, globalStatePrefix = "Mui") {
+    function generateUtilityClass15(componentName, slot, globalStatePrefix = "Mui") {
       const globalStateClass = globalStateClassesMapping[slot];
       return globalStateClass ? `${globalStatePrefix}-${globalStateClass}` : `${_ClassNameGenerator.default.generate(componentName)}-${slot}`;
     }
@@ -12010,9 +12010,9 @@
     Object.defineProperty(exports, "__esModule", {
       value: true
     });
-    exports.default = generateUtilityClasses18;
+    exports.default = generateUtilityClasses15;
     var _generateUtilityClass = _interopRequireDefault(require_generateUtilityClass2());
-    function generateUtilityClasses18(componentName, slots, globalStatePrefix = "Mui") {
+    function generateUtilityClasses15(componentName, slots, globalStatePrefix = "Mui") {
       const result = {};
       slots.forEach((slot) => {
         result[slot] = (0, _generateUtilityClass.default)(componentName, slot, globalStatePrefix);
@@ -13592,7 +13592,7 @@
     var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require_objectWithoutPropertiesLoose());
     var _utils = require_utils();
     var _getThemeValue = require_getThemeValue();
-    var _excluded22 = ["sx"];
+    var _excluded19 = ["sx"];
     var splitProps = (props) => {
       const result = {
         systemProps: {},
@@ -13610,7 +13610,7 @@
     function extendSxProp3(props) {
       const {
         sx: inSx
-      } = props, other = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded22);
+      } = props, other = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded19);
       const {
         systemProps,
         otherProps
@@ -13773,7 +13773,7 @@
     exports.default = createBreakpoints;
     var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require_objectWithoutPropertiesLoose());
     var _extends2 = _interopRequireDefault(require_extends());
-    var _excluded22 = ["values", "unit", "step"];
+    var _excluded19 = ["values", "unit", "step"];
     var breakpointKeys = ["xs", "sm", "md", "lg", "xl"];
     exports.breakpointKeys = breakpointKeys;
     var sortBreakpointsValues = (values2) => {
@@ -13799,7 +13799,7 @@
         },
         unit = "px",
         step = 5
-      } = breakpoints, other = (0, _objectWithoutPropertiesLoose2.default)(breakpoints, _excluded22);
+      } = breakpoints, other = (0, _objectWithoutPropertiesLoose2.default)(breakpoints, _excluded19);
       const sortedValues = sortBreakpointsValues(values2);
       const keys = Object.keys(sortedValues);
       function up(key) {
@@ -13903,14 +13903,14 @@
     var _createBreakpoints = _interopRequireDefault(require_createBreakpoints());
     var _shape = _interopRequireDefault(require_shape());
     var _createSpacing = _interopRequireDefault(require_createSpacing());
-    var _excluded22 = ["breakpoints", "palette", "spacing", "shape"];
+    var _excluded19 = ["breakpoints", "palette", "spacing", "shape"];
     function createTheme2(options = {}, ...args) {
       const {
         breakpoints: breakpointsInput = {},
         palette: paletteInput = {},
         spacing: spacingInput,
         shape: shapeInput = {}
-      } = options, other = (0, _objectWithoutPropertiesLoose2.default)(options, _excluded22);
+      } = options, other = (0, _objectWithoutPropertiesLoose2.default)(options, _excluded19);
       const breakpoints = (0, _createBreakpoints.default)(breakpointsInput);
       const spacing = (0, _createSpacing.default)(spacingInput);
       let muiTheme = (0, _utils.deepmerge)({
@@ -13953,7 +13953,7 @@
       value: true
     });
     exports.default = void 0;
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
         return null;
@@ -13992,7 +13992,7 @@
       }
       return newObj;
     }
-    var ThemeContext = /* @__PURE__ */ React37.createContext(null);
+    var ThemeContext = /* @__PURE__ */ React33.createContext(null);
     if (false) {
       ThemeContext.displayName = "ThemeContext";
     }
@@ -14008,7 +14008,7 @@
       value: true
     });
     exports.default = useTheme2;
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     var _ThemeContext = _interopRequireDefault(require_ThemeContext());
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
@@ -14049,9 +14049,9 @@
       return newObj;
     }
     function useTheme2() {
-      const theme2 = React37.useContext(_ThemeContext.default);
+      const theme2 = React33.useContext(_ThemeContext.default);
       if (false) {
-        React37.useDebugValue(theme2);
+        React33.useDebugValue(theme2);
       }
       return theme2;
     }
@@ -14094,7 +14094,7 @@
     });
     exports.default = void 0;
     var _extends2 = _interopRequireDefault(require_extends());
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     var _propTypes = _interopRequireDefault(require_prop_types());
     var _utils = require_utils();
     var _ThemeContext = _interopRequireDefault(require_ThemeContext());
@@ -14162,7 +14162,7 @@
           console.error(["MUI: You are providing a theme function prop to the ThemeProvider component:", "<ThemeProvider theme={outerTheme => outerTheme} />", "", "However, no outer theme is present.", "Make sure a theme is already injected higher in the React tree or provide a theme object."].join("\n"));
         }
       }
-      const theme2 = React37.useMemo(() => {
+      const theme2 = React33.useMemo(() => {
         const output = outerTheme === null ? localTheme : mergeOuterLocalTheme(outerTheme, localTheme);
         if (output != null) {
           output[_nested.default] = outerTheme !== null;
@@ -14340,13 +14340,13 @@
     exports.default = createBox2;
     var _extends2 = _interopRequireDefault(require_extends());
     var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require_objectWithoutPropertiesLoose());
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     var _clsx = _interopRequireDefault(require_clsx());
     var _styledEngine = _interopRequireDefault(require_node());
     var _styleFunctionSx = _interopRequireWildcard(require_styleFunctionSx2());
     var _useTheme = _interopRequireDefault(require_useTheme3());
     var _jsxRuntime = require_jsx_runtime();
-    var _excluded22 = ["className", "component"];
+    var _excluded19 = ["className", "component"];
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
         return null;
@@ -14395,12 +14395,12 @@
       const BoxRoot = (0, _styledEngine.default)("div", {
         shouldForwardProp: (prop) => prop !== "theme" && prop !== "sx" && prop !== "as"
       })(styleFunctionSx);
-      const Box2 = /* @__PURE__ */ React37.forwardRef(function Box3(inProps, ref) {
+      const Box2 = /* @__PURE__ */ React33.forwardRef(function Box3(inProps, ref) {
         const theme2 = (0, _useTheme.default)(defaultTheme3);
         const _extendSxProp = (0, _styleFunctionSx.extendSxProp)(inProps), {
           className,
           component = "div"
-        } = _extendSxProp, other = (0, _objectWithoutPropertiesLoose2.default)(_extendSxProp, _excluded22);
+        } = _extendSxProp, other = (0, _objectWithoutPropertiesLoose2.default)(_extendSxProp, _excluded19);
         return /* @__PURE__ */ (0, _jsxRuntime.jsx)(BoxRoot, (0, _extends2.default)({
           as: component,
           ref,
@@ -14458,14 +14458,14 @@
     exports.default = propsToClassKey;
     var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require_objectWithoutPropertiesLoose());
     var _utils = require_utils();
-    var _excluded22 = ["variant"];
+    var _excluded19 = ["variant"];
     function isEmpty(string) {
       return string.length === 0;
     }
     function propsToClassKey(props) {
       const {
         variant
-      } = props, other = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded22);
+      } = props, other = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded19);
       let classKey = variant || "";
       Object.keys(other).sort().forEach((key) => {
         if (key === "color") {
@@ -14495,8 +14495,8 @@
     var _createTheme = _interopRequireDefault(require_createTheme2());
     var _propsToClassKey = _interopRequireDefault(require_propsToClassKey());
     var _styleFunctionSx = _interopRequireDefault(require_styleFunctionSx2());
-    var _excluded22 = ["name", "slot", "skipVariantsResolver", "skipSx", "overridesResolver"];
-    var _excluded23 = ["theme"];
+    var _excluded19 = ["name", "slot", "skipVariantsResolver", "skipSx", "overridesResolver"];
+    var _excluded22 = ["theme"];
     var _excluded32 = ["theme"];
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
@@ -14609,7 +14609,7 @@
           skipVariantsResolver: inputSkipVariantsResolver,
           skipSx: inputSkipSx,
           overridesResolver
-        } = inputOptions, options = (0, _objectWithoutPropertiesLoose2.default)(inputOptions, _excluded22);
+        } = inputOptions, options = (0, _objectWithoutPropertiesLoose2.default)(inputOptions, _excluded19);
         const skipVariantsResolver = inputSkipVariantsResolver !== void 0 ? inputSkipVariantsResolver : componentSlot && componentSlot !== "Root" || false;
         const skipSx = inputSkipSx || false;
         let label;
@@ -14635,7 +14635,7 @@
             return typeof stylesArg === "function" && stylesArg.__emotion_real !== stylesArg ? (_ref) => {
               let {
                 theme: themeInput
-              } = _ref, other = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded23);
+              } = _ref, other = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded22);
               return stylesArg((0, _extends2.default)({
                 theme: isEmpty(themeInput) ? defaultTheme3 : themeInput
               }, other));
@@ -14682,7 +14682,7 @@
               }, other));
             };
           }
-          const Component4 = defaultStyledResolver(transformedStyleArg, ...expressionsWithDefaultTheme);
+          const Component3 = defaultStyledResolver(transformedStyleArg, ...expressionsWithDefaultTheme);
           if (false) {
             let displayName;
             if (componentName) {
@@ -14691,9 +14691,9 @@
             if (displayName === void 0) {
               displayName = `Styled(${(0, _utils.getDisplayName)(tag)})`;
             }
-            Component4.displayName = displayName;
+            Component3.displayName = displayName;
           }
-          return Component4;
+          return Component3;
         };
         if (defaultStyledResolver.withConfig) {
           muiStyledResolver.withConfig = defaultStyledResolver.withConfig;
@@ -14792,7 +14792,7 @@
     Object.defineProperty(exports, "__esModule", {
       value: true
     });
-    exports.alpha = alpha5;
+    exports.alpha = alpha4;
     exports.colorChannel = void 0;
     exports.darken = darken3;
     exports.decomposeColor = decomposeColor2;
@@ -14935,7 +14935,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
       const lumB = getLuminance2(background);
       return (Math.max(lumA, lumB) + 0.05) / (Math.min(lumA, lumB) + 0.05);
     }
-    function alpha5(color, value) {
+    function alpha4(color, value) {
       color = decomposeColor2(color);
       value = clamp(value);
       if (color.type === "rgb" || color.type === "hsl") {
@@ -14989,7 +14989,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
       value: true
     });
     exports.default = void 0;
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     var _propTypes = _interopRequireDefault(require_prop_types());
     var _privateTheming = require_node2();
     var _utils = require_utils();
@@ -15176,7 +15176,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     });
     exports.DEFAULT_MODE_STORAGE_KEY = exports.DEFAULT_COLOR_SCHEME_STORAGE_KEY = exports.DEFAULT_ATTRIBUTE = void 0;
     exports.default = getInitColorSchemeScript;
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     var _jsxRuntime = require_jsx_runtime();
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
@@ -15275,7 +15275,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     exports.getColorScheme = getColorScheme;
     exports.getSystemMode = getSystemMode;
     var _extends2 = _interopRequireDefault(require_extends());
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     var _getInitColorSchemeScript = require_getInitColorSchemeScript();
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
@@ -15370,7 +15370,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         storageWindow = typeof window === "undefined" ? void 0 : window
       } = options;
       const joinedColorSchemes = supportedColorSchemes.join(",");
-      const [state, setState] = React37.useState(() => {
+      const [state, setState] = React33.useState(() => {
         const initialMode = initializeValue(modeStorageKey, defaultMode);
         const lightColorScheme = initializeValue(`${colorSchemeStorageKey}-light`, defaultLightColorScheme);
         const darkColorScheme = initializeValue(`${colorSchemeStorageKey}-dark`, defaultDarkColorScheme);
@@ -15382,7 +15382,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         };
       });
       const colorScheme = getColorScheme(state);
-      const setMode = React37.useCallback((mode) => {
+      const setMode = React33.useCallback((mode) => {
         setState((currentState) => {
           if (mode === currentState.mode) {
             return currentState;
@@ -15398,7 +15398,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
           });
         });
       }, [modeStorageKey, defaultMode]);
-      const setColorScheme = React37.useCallback((value) => {
+      const setColorScheme = React33.useCallback((value) => {
         if (!value) {
           setState((currentState) => {
             try {
@@ -15463,23 +15463,23 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
           });
         }
       }, [joinedColorSchemes, colorSchemeStorageKey, defaultLightColorScheme, defaultDarkColorScheme]);
-      const handleMediaQuery = React37.useCallback((e) => {
+      const handleMediaQuery = React33.useCallback((e) => {
         if (state.mode === "system") {
           setState((currentState) => (0, _extends2.default)({}, currentState, {
             systemMode: e != null && e.matches ? "dark" : "light"
           }));
         }
       }, [state.mode]);
-      const mediaListener = React37.useRef(handleMediaQuery);
+      const mediaListener = React33.useRef(handleMediaQuery);
       mediaListener.current = handleMediaQuery;
-      React37.useEffect(() => {
+      React33.useEffect(() => {
         const handler = (...args) => mediaListener.current(...args);
         const media = window.matchMedia("(prefers-color-scheme: dark)");
         media.addListener(handler);
         handler(media);
         return () => media.removeListener(handler);
       }, []);
-      React37.useEffect(() => {
+      React33.useEffect(() => {
         const handleStorage = (event) => {
           const value = event.newValue;
           if (typeof event.key === "string" && event.key.startsWith(colorSchemeStorageKey) && (!value || joinedColorSchemes.match(value))) {
@@ -15524,7 +15524,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     var _extends2 = _interopRequireDefault(require_extends());
     var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require_objectWithoutPropertiesLoose());
     var _utils = require_utils();
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     var _propTypes = _interopRequireDefault(require_prop_types());
     var _styledEngine = require_node();
     var _cssVarsParser = _interopRequireDefault(require_cssVarsParser());
@@ -15532,7 +15532,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     var _getInitColorSchemeScript = _interopRequireWildcard(require_getInitColorSchemeScript());
     var _useCurrentColorScheme = _interopRequireDefault(require_useCurrentColorScheme());
     var _jsxRuntime = require_jsx_runtime();
-    var _excluded22 = ["colorSchemes", "components", "cssVarPrefix"];
+    var _excluded19 = ["colorSchemes", "components", "cssVarPrefix"];
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
         return null;
@@ -15589,9 +15589,9 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
       if (!defaultTheme3.colorSchemes || typeof designSystemColorScheme === "string" && !defaultTheme3.colorSchemes[designSystemColorScheme] || typeof designSystemColorScheme === "object" && !defaultTheme3.colorSchemes[designSystemColorScheme == null ? void 0 : designSystemColorScheme.light] || typeof designSystemColorScheme === "object" && !defaultTheme3.colorSchemes[designSystemColorScheme == null ? void 0 : designSystemColorScheme.dark]) {
         console.error(`MUI: \`${designSystemColorScheme}\` does not exist in \`theme.colorSchemes\`.`);
       }
-      const ColorSchemeContext = /* @__PURE__ */ React37.createContext(void 0);
+      const ColorSchemeContext = /* @__PURE__ */ React33.createContext(void 0);
       const useColorScheme = () => {
-        const value = React37.useContext(ColorSchemeContext);
+        const value = React33.useContext(ColorSchemeContext);
         if (!value) {
           throw new Error(false ? `MUI: \`useColorScheme\` must be called under <CssVarsProvider />` : (0, _utils.formatMuiErrorMessage)(19));
         }
@@ -15612,12 +15612,12 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         colorSchemeSelector = ":root",
         shouldSkipGeneratingVar = designSystemShouldSkipGeneratingVar
       }) {
-        const hasMounted = React37.useRef(false);
+        const hasMounted = React33.useRef(false);
         const {
           colorSchemes = {},
           components = {},
           cssVarPrefix
-        } = themeProp, restThemeProp = (0, _objectWithoutPropertiesLoose2.default)(themeProp, _excluded22);
+        } = themeProp, restThemeProp = (0, _objectWithoutPropertiesLoose2.default)(themeProp, _excluded19);
         const allColorSchemes = Object.keys(colorSchemes);
         const defaultLightColorScheme2 = typeof defaultColorScheme === "string" ? defaultColorScheme : defaultColorScheme.light;
         const defaultDarkColorScheme2 = typeof defaultColorScheme === "string" ? defaultColorScheme : defaultColorScheme.dark;
@@ -15712,12 +15712,12 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
             otherColorSchemesStyleSheet[`${colorSchemeSelector === ":root" ? "" : colorSchemeSelector}[${attribute}="${key}"]`] = css2;
           }
         });
-        React37.useEffect(() => {
+        React33.useEffect(() => {
           if (colorScheme && colorSchemeNode) {
             colorSchemeNode.setAttribute(attribute, colorScheme);
           }
         }, [colorScheme, attribute, colorSchemeNode]);
-        React37.useEffect(() => {
+        React33.useEffect(() => {
           let timer;
           if (disableTransitionOnChange && hasMounted.current && documentNode) {
             const css2 = documentNode.createElement("style");
@@ -15732,7 +15732,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
             clearTimeout(timer);
           };
         }, [colorScheme, disableTransitionOnChange, documentNode]);
-        React37.useEffect(() => {
+        React33.useEffect(() => {
           hasMounted.current = true;
           return () => {
             hasMounted.current = false;
@@ -15831,7 +15831,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     exports.default = createContainer2;
     var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require_objectWithoutPropertiesLoose());
     var _extends2 = _interopRequireDefault(require_extends());
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     var _propTypes = _interopRequireDefault(require_prop_types());
     var _clsx = _interopRequireDefault(require_clsx());
     var _utils = require_utils();
@@ -15839,7 +15839,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     var _styled = _interopRequireDefault(require_styled());
     var _createTheme = _interopRequireDefault(require_createTheme2());
     var _jsxRuntime = require_jsx_runtime();
-    var _excluded22 = ["className", "component", "disableGutters", "fixed", "maxWidth", "classes"];
+    var _excluded19 = ["className", "component", "disableGutters", "fixed", "maxWidth", "classes"];
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
         return null;
@@ -15894,7 +15894,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
       name: "MuiContainer",
       defaultTheme: defaultTheme3
     });
-    var useUtilityClasses17 = (ownerState, componentName) => {
+    var useUtilityClasses14 = (ownerState, componentName) => {
       const getContainerUtilityClass = (slot) => {
         return (0, _utils.unstable_generateUtilityClass)(componentName, slot);
       };
@@ -15955,7 +15955,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
           maxWidth: `${theme2.breakpoints.values[ownerState.maxWidth]}${theme2.breakpoints.unit}`
         }
       }));
-      const Container2 = /* @__PURE__ */ React37.forwardRef(function Container3(inProps, ref) {
+      const Container2 = /* @__PURE__ */ React33.forwardRef(function Container3(inProps, ref) {
         const props = useThemeProps2(inProps);
         const {
           className,
@@ -15963,14 +15963,14 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
           disableGutters = false,
           fixed = false,
           maxWidth = "lg"
-        } = props, other = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded22);
+        } = props, other = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded19);
         const ownerState = (0, _extends2.default)({}, props, {
           component,
           disableGutters,
           fixed,
           maxWidth
         });
-        const classes = useUtilityClasses17(ownerState, componentName);
+        const classes = useUtilityClasses14(ownerState, componentName);
         return /* @__PURE__ */ (0, _jsxRuntime.jsx)(ContainerRoot, (0, _extends2.default)({
           as: component,
           ownerState,
@@ -16365,7 +16365,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     exports.default = createGrid;
     var _extends2 = _interopRequireDefault(require_extends());
     var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require_objectWithoutPropertiesLoose());
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     var _propTypes = _interopRequireDefault(require_prop_types());
     var _clsx = _interopRequireDefault(require_clsx());
     var _utils = require_utils();
@@ -16376,7 +16376,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     var _createTheme = _interopRequireDefault(require_createTheme2());
     var _gridGenerator = require_gridGenerator();
     var _jsxRuntime = require_jsx_runtime();
-    var _excluded22 = ["className", "columns", "container", "component", "direction", "wrap", "spacing", "rowSpacing", "columnSpacing", "disableEqualOverflow"];
+    var _excluded19 = ["className", "columns", "container", "component", "direction", "wrap", "spacing", "rowSpacing", "columnSpacing", "disableEqualOverflow"];
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
         return null;
@@ -16434,9 +16434,9 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         useThemeProps: useThemeProps2 = useThemePropsDefault,
         componentName = "MuiGrid"
       } = options;
-      const NestedContext = /* @__PURE__ */ React37.createContext(false);
-      const OverflowContext = /* @__PURE__ */ React37.createContext(void 0);
-      const useUtilityClasses17 = (ownerState, theme2) => {
+      const NestedContext = /* @__PURE__ */ React33.createContext(false);
+      const OverflowContext = /* @__PURE__ */ React33.createContext(void 0);
+      const useUtilityClasses14 = (ownerState, theme2) => {
         const {
           container,
           direction,
@@ -16450,13 +16450,13 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         return (0, _utils.unstable_composeClasses)(slots, (slot) => (0, _utils.unstable_generateUtilityClass)(componentName, slot), {});
       };
       const GridRoot2 = createStyledComponent(_gridGenerator.generateGridColumnsStyles, _gridGenerator.generateGridColumnSpacingStyles, _gridGenerator.generateGridRowSpacingStyles, _gridGenerator.generateGridSizeStyles, _gridGenerator.generateGridDirectionStyles, _gridGenerator.generateGridStyles, _gridGenerator.generateGridOffsetStyles);
-      const Grid3 = /* @__PURE__ */ React37.forwardRef(function Grid4(inProps, ref) {
+      const Grid3 = /* @__PURE__ */ React33.forwardRef(function Grid4(inProps, ref) {
         var _inProps$columns, _inProps$spacing, _ref, _inProps$rowSpacing, _ref2, _inProps$columnSpacin, _ref3, _disableEqualOverflow;
         const theme2 = (0, _useTheme.default)();
         const themeProps = useThemeProps2(inProps);
         const props = (0, _styleFunctionSx.extendSxProp)(themeProps);
-        const nested = React37.useContext(NestedContext);
-        const overflow = React37.useContext(OverflowContext);
+        const nested = React33.useContext(NestedContext);
+        const overflow = React33.useContext(OverflowContext);
         const {
           className,
           columns: columnsProp = 12,
@@ -16468,7 +16468,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
           rowSpacing: rowSpacingProp = spacingProp,
           columnSpacing: columnSpacingProp = spacingProp,
           disableEqualOverflow: themeDisableEqualOverflow
-        } = props, rest = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded22);
+        } = props, rest = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded19);
         let disableEqualOverflow = themeDisableEqualOverflow;
         if (nested && themeDisableEqualOverflow !== void 0) {
           disableEqualOverflow = inProps.disableEqualOverflow;
@@ -16503,7 +16503,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
           disableEqualOverflow: (_ref3 = (_disableEqualOverflow = disableEqualOverflow) != null ? _disableEqualOverflow : overflow) != null ? _ref3 : false,
           parentDisableEqualOverflow: overflow
         });
-        const classes = useUtilityClasses17(ownerState, theme2);
+        const classes = useUtilityClasses14(ownerState, theme2);
         let result = /* @__PURE__ */ (0, _jsxRuntime.jsx)(GridRoot2, (0, _extends2.default)({
           ref,
           as: component,
@@ -16742,7 +16742,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     exports.style = void 0;
     var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require_objectWithoutPropertiesLoose());
     var _extends2 = _interopRequireDefault(require_extends());
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     var _propTypes = _interopRequireDefault(require_prop_types());
     var _clsx = _interopRequireDefault(require_clsx());
     var _utils = require_utils();
@@ -16753,7 +16753,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     var _breakpoints = require_breakpoints();
     var _spacing = require_spacing();
     var _jsxRuntime = require_jsx_runtime();
-    var _excluded22 = ["component", "direction", "spacing", "divider", "children", "className"];
+    var _excluded19 = ["component", "direction", "spacing", "divider", "children", "className"];
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
         return null;
@@ -16806,11 +16806,11 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
       });
     }
     function joinChildren(children, separator) {
-      const childrenArray = React37.Children.toArray(children).filter(Boolean);
+      const childrenArray = React33.Children.toArray(children).filter(Boolean);
       return childrenArray.reduce((output, child, index) => {
         output.push(child);
         if (index < childrenArray.length - 1) {
-          output.push(/* @__PURE__ */ React37.cloneElement(separator, {
+          output.push(/* @__PURE__ */ React33.cloneElement(separator, {
             key: `separator-${index}`
           }));
         }
@@ -16887,14 +16887,14 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         useThemeProps: useThemeProps2 = useThemePropsDefault,
         componentName = "MuiStack"
       } = options;
-      const useUtilityClasses17 = () => {
+      const useUtilityClasses14 = () => {
         const slots = {
           root: ["root"]
         };
         return (0, _utils.unstable_composeClasses)(slots, (slot) => (0, _utils.unstable_generateUtilityClass)(componentName, slot), {});
       };
       const StackRoot = createStyledComponent(style);
-      const Stack = /* @__PURE__ */ React37.forwardRef(function Grid3(inProps, ref) {
+      const Stack = /* @__PURE__ */ React33.forwardRef(function Grid3(inProps, ref) {
         const themeProps = useThemeProps2(inProps);
         const props = (0, _styleFunctionSx.extendSxProp)(themeProps);
         const {
@@ -16904,12 +16904,12 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
           divider,
           children,
           className
-        } = props, other = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded22);
+        } = props, other = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded19);
         const ownerState = {
           direction,
           spacing
         };
-        const classes = useUtilityClasses17();
+        const classes = useUtilityClasses14();
         return /* @__PURE__ */ (0, _jsxRuntime.jsx)(StackRoot, (0, _extends2.default)({
           as: component,
           ownerState,
@@ -17835,14 +17835,14 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     var _appendOwnerState = _interopRequireDefault(require_appendOwnerState());
     var _mergeSlotProps = _interopRequireDefault(require_mergeSlotProps());
     var _resolveComponentProps = _interopRequireDefault(require_resolveComponentProps());
-    var _excluded22 = ["elementType", "externalSlotProps", "ownerState"];
+    var _excluded19 = ["elementType", "externalSlotProps", "ownerState"];
     function useSlotProps(parameters) {
       var _parameters$additiona;
       const {
         elementType,
         externalSlotProps,
         ownerState
-      } = parameters, rest = (0, _objectWithoutPropertiesLoose2.default)(parameters, _excluded22);
+      } = parameters, rest = (0, _objectWithoutPropertiesLoose2.default)(parameters, _excluded19);
       const resolvedComponentsProps = (0, _resolveComponentProps.default)(externalSlotProps, ownerState);
       const {
         props: mergedProps,
@@ -17950,7 +17950,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     exports.createFilterOptions = createFilterOptions;
     exports.default = useAutocomplete;
     var _extends2 = _interopRequireDefault(require_extends());
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     var _utils = require_utils();
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
@@ -18091,14 +18091,14 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         }
         return optionLabel;
       };
-      const ignoreFocus = React37.useRef(false);
-      const firstFocus = React37.useRef(true);
-      const inputRef = React37.useRef(null);
-      const listboxRef = React37.useRef(null);
-      const [anchorEl, setAnchorEl] = React37.useState(null);
-      const [focusedTag, setFocusedTag] = React37.useState(-1);
+      const ignoreFocus = React33.useRef(false);
+      const firstFocus = React33.useRef(true);
+      const inputRef = React33.useRef(null);
+      const listboxRef = React33.useRef(null);
+      const [anchorEl, setAnchorEl] = React33.useState(null);
+      const [focusedTag, setFocusedTag] = React33.useState(-1);
       const defaultHighlighted = autoHighlight ? 0 : -1;
-      const highlightedIndexRef = React37.useRef(defaultHighlighted);
+      const highlightedIndexRef = React33.useRef(defaultHighlighted);
       const [value, setValueState] = (0, _utils.unstable_useControlled)({
         controlled: valueProp,
         default: defaultValue,
@@ -18110,8 +18110,8 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         name: componentName,
         state: "inputValue"
       });
-      const [focused, setFocused] = React37.useState(false);
-      const resetInputValue = React37.useCallback((event, newValue) => {
+      const [focused, setFocused] = React33.useState(false);
+      const resetInputValue = React33.useCallback((event, newValue) => {
         const isOptionSelected = multiple ? value.length < newValue.length : newValue !== null;
         if (!isOptionSelected && !clearOnBlur) {
           return;
@@ -18133,8 +18133,8 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
           onInputChange(event, newInputValue, "reset");
         }
       }, [getOptionLabel, inputValue, multiple, onInputChange, setInputValueState, clearOnBlur, value]);
-      const prevValue = React37.useRef();
-      React37.useEffect(() => {
+      const prevValue = React33.useRef();
+      React33.useEffect(() => {
         const valueChange = value !== prevValue.current;
         prevValue.current = value;
         if (focused && !valueChange) {
@@ -18151,7 +18151,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         name: componentName,
         state: "open"
       });
-      const [inputPristine, setInputPristine] = React37.useState(true);
+      const [inputPristine, setInputPristine] = React33.useState(true);
       const inputValueIsSelectedValue = !multiple && value != null && inputValue === getOptionLabel(value);
       const popupOpen = open && !readOnly;
       const filteredOptions = popupOpen ? filterOptions(options.filter((option) => {
@@ -18179,7 +18179,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
           anchorEl.querySelector(`[data-tag-index="${tagToFocus}"]`).focus();
         }
       });
-      React37.useEffect(() => {
+      React33.useEffect(() => {
         if (multiple && focusedTag > value.length - 1) {
           setFocusedTag(-1);
           focusTag(-1);
@@ -18312,7 +18312,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
           }
         }
       });
-      const syncHighlightedIndex = React37.useCallback(() => {
+      const syncHighlightedIndex = React33.useCallback(() => {
         if (!popupOpen) {
           return;
         }
@@ -18370,7 +18370,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         syncHighlightedIndex();
       });
       if (false) {
-        React37.useEffect(() => {
+        React33.useEffect(() => {
           if (!inputRef.current || inputRef.current.nodeName !== "INPUT") {
             if (inputRef.current && inputRef.current.nodeName === "TEXTAREA") {
               console.warn([`A textarea element was provided to ${componentName} where input was expected.`, `This is not a supported scenario but it may work under certain conditions.`, `A textarea keyboard navigation may conflict with Autocomplete controls (e.g. enter and arrow keys).`, `Make sure to test keyboard navigation and add custom event handlers if necessary.`].join("\n"));
@@ -18380,7 +18380,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
           }
         }, [componentName]);
       }
-      React37.useEffect(() => {
+      React33.useEffect(() => {
         syncHighlightedIndex();
       }, [syncHighlightedIndex]);
       const handleOpen = (event) => {
@@ -18415,7 +18415,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         }
         setValueState(newValue);
       };
-      const isTouch = React37.useRef(false);
+      const isTouch = React33.useRef(false);
       const selectNewValue = (event, option, reasonProp = "selectOption", origin = "options") => {
         let reason = reasonProp;
         let newValue = option;
@@ -18996,14 +18996,14 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     exports.default = void 0;
     var _extends2 = _interopRequireDefault(require_extends());
     var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require_objectWithoutPropertiesLoose());
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     var _propTypes = _interopRequireDefault(require_prop_types());
     var _composeClasses = _interopRequireDefault(require_composeClasses3());
     var _useBadge = _interopRequireDefault(require_useBadge());
     var _badgeUnstyledClasses = require_badgeUnstyledClasses();
     var _utils = require_utils2();
     var _jsxRuntime = require_jsx_runtime();
-    var _excluded22 = ["badgeContent", "component", "children", "components", "componentsProps", "invisible", "max", "showZero"];
+    var _excluded19 = ["badgeContent", "component", "children", "components", "componentsProps", "invisible", "max", "showZero"];
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
         return null;
@@ -19042,7 +19042,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
       }
       return newObj;
     }
-    var useUtilityClasses17 = (ownerState) => {
+    var useUtilityClasses14 = (ownerState) => {
       const {
         invisible
       } = ownerState;
@@ -19052,7 +19052,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
       };
       return (0, _composeClasses.default)(slots, _badgeUnstyledClasses.getBadgeUnstyledUtilityClass, void 0);
     };
-    var BadgeUnstyled = /* @__PURE__ */ React37.forwardRef(function BadgeUnstyled2(props, ref) {
+    var BadgeUnstyled = /* @__PURE__ */ React33.forwardRef(function BadgeUnstyled2(props, ref) {
       const {
         component,
         children,
@@ -19060,7 +19060,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         componentsProps = {},
         max: maxProp = 99,
         showZero = false
-      } = props, other = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded22);
+      } = props, other = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded19);
       const {
         badgeContent,
         max,
@@ -19075,7 +19075,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         max,
         showZero
       });
-      const classes = useUtilityClasses17(ownerState);
+      const classes = useUtilityClasses14(ownerState);
       const Root = component || components.Root || "span";
       const rootProps = (0, _utils.useSlotProps)({
         elementType: Root,
@@ -19271,7 +19271,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     });
     exports.default = useButton;
     var _extends2 = _interopRequireDefault(require_extends());
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     var _utils = require_utils();
     var _extractEventHandlers = _interopRequireDefault(require_extractEventHandlers());
     function _getRequireWildcardCache(nodeInterop) {
@@ -19322,22 +19322,22 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         to,
         type
       } = parameters;
-      const buttonRef = React37.useRef();
-      const [active, setActive] = React37.useState(false);
+      const buttonRef = React33.useRef();
+      const [active, setActive] = React33.useState(false);
       const {
         isFocusVisibleRef,
         onFocus: handleFocusVisible,
         onBlur: handleBlurVisible,
         ref: focusVisibleRef
       } = (0, _utils.unstable_useIsFocusVisible)();
-      const [focusVisible, setFocusVisible] = React37.useState(false);
+      const [focusVisible, setFocusVisible] = React33.useState(false);
       if (disabled && !focusableWhenDisabled && focusVisible) {
         setFocusVisible(false);
       }
-      React37.useEffect(() => {
+      React33.useEffect(() => {
         isFocusVisibleRef.current = focusVisible;
       }, [focusVisible, isFocusVisibleRef]);
-      const [hostElementName, setHostElementName] = React37.useState("");
+      const [hostElementName, setHostElementName] = React33.useState("");
       const createHandleMouseLeave = (otherHandlers) => (event) => {
         var _otherHandlers$onMous;
         if (focusVisible) {
@@ -19419,7 +19419,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
           (_otherHandlers$onClic3 = otherHandlers.onClick) == null ? void 0 : _otherHandlers$onClic3.call(otherHandlers, event);
         }
       };
-      const updateHostElementName = React37.useCallback((instance) => {
+      const updateHostElementName = React33.useCallback((instance) => {
         var _instance$tagName;
         setHostElementName((_instance$tagName = instance == null ? void 0 : instance.tagName) != null ? _instance$tagName : "");
       }, []);
@@ -19480,14 +19480,14 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     exports.default = void 0;
     var _extends2 = _interopRequireDefault(require_extends());
     var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require_objectWithoutPropertiesLoose());
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     var _propTypes = _interopRequireDefault(require_prop_types());
     var _composeClasses = _interopRequireDefault(require_composeClasses3());
     var _buttonUnstyledClasses = require_buttonUnstyledClasses();
     var _useButton = _interopRequireDefault(require_useButton());
     var _utils = require_utils2();
     var _jsxRuntime = require_jsx_runtime();
-    var _excluded22 = ["action", "children", "component", "components", "componentsProps", "disabled", "focusableWhenDisabled", "onBlur", "onClick", "onFocus", "onFocusVisible", "onKeyDown", "onKeyUp", "onMouseLeave"];
+    var _excluded19 = ["action", "children", "component", "components", "componentsProps", "disabled", "focusableWhenDisabled", "onBlur", "onClick", "onFocus", "onFocusVisible", "onKeyDown", "onKeyUp", "onMouseLeave"];
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
         return null;
@@ -19526,7 +19526,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
       }
       return newObj;
     }
-    var useUtilityClasses17 = (ownerState) => {
+    var useUtilityClasses14 = (ownerState) => {
       const {
         active,
         disabled,
@@ -19537,7 +19537,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
       };
       return (0, _composeClasses.default)(slots, _buttonUnstyledClasses.getButtonUnstyledUtilityClass, {});
     };
-    var ButtonUnstyled = /* @__PURE__ */ React37.forwardRef(function ButtonUnstyled2(props, forwardedRef) {
+    var ButtonUnstyled = /* @__PURE__ */ React33.forwardRef(function ButtonUnstyled2(props, forwardedRef) {
       var _ref;
       const {
         action,
@@ -19546,8 +19546,8 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         components = {},
         componentsProps = {},
         focusableWhenDisabled = false
-      } = props, other = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded22);
-      const buttonRef = React37.useRef();
+      } = props, other = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded19);
+      const buttonRef = React33.useRef();
       const {
         active,
         focusVisible,
@@ -19556,7 +19556,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
       } = (0, _useButton.default)((0, _extends2.default)({}, props, {
         focusableWhenDisabled
       }));
-      React37.useImperativeHandle(action, () => ({
+      React33.useImperativeHandle(action, () => ({
         focusVisible: () => {
           setFocusVisible(true);
           buttonRef.current.focus();
@@ -19567,7 +19567,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         focusableWhenDisabled,
         focusVisible
       });
-      const classes = useUtilityClasses17(ownerState);
+      const classes = useUtilityClasses14(ownerState);
       const Root = (_ref = component != null ? component : components.Root) != null ? _ref : "button";
       const rootProps = (0, _utils.useSlotProps)({
         elementType: Root,
@@ -19745,7 +19745,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
       value: true
     });
     exports.default = void 0;
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     var _propTypes = _interopRequireDefault(require_prop_types());
     var _utils = require_utils();
     var _jsxRuntime = require_jsx_runtime();
@@ -19801,11 +19801,11 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         onClickAway,
         touchEvent = "onTouchEnd"
       } = props;
-      const movedRef = React37.useRef(false);
-      const nodeRef = React37.useRef(null);
-      const activatedRef = React37.useRef(false);
-      const syntheticEventRef = React37.useRef(false);
-      React37.useEffect(() => {
+      const movedRef = React33.useRef(false);
+      const nodeRef = React33.useRef(null);
+      const activatedRef = React33.useRef(false);
+      const syntheticEventRef = React33.useRef(false);
+      React33.useEffect(() => {
         setTimeout(() => {
           activatedRef.current = true;
         }, 0);
@@ -19848,7 +19848,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
       if (touchEvent !== false) {
         childrenProps[touchEvent] = createHandleSynthetic(touchEvent);
       }
-      React37.useEffect(() => {
+      React33.useEffect(() => {
         if (touchEvent !== false) {
           const mappedTouchEvent = mapEventPropToEvent(touchEvent);
           const doc = (0, _utils.unstable_ownerDocument)(nodeRef.current);
@@ -19867,7 +19867,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
       if (mouseEvent !== false) {
         childrenProps[mouseEvent] = createHandleSynthetic(mouseEvent);
       }
-      React37.useEffect(() => {
+      React33.useEffect(() => {
         if (mouseEvent !== false) {
           const mappedMouseEvent = mapEventPropToEvent(mouseEvent);
           const doc = (0, _utils.unstable_ownerDocument)(nodeRef.current);
@@ -19878,8 +19878,8 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         }
         return void 0;
       }, [handleClickAway, mouseEvent]);
-      return /* @__PURE__ */ (0, _jsxRuntime.jsx)(React37.Fragment, {
-        children: /* @__PURE__ */ React37.cloneElement(children, childrenProps)
+      return /* @__PURE__ */ (0, _jsxRuntime.jsx)(React33.Fragment, {
+        children: /* @__PURE__ */ React33.cloneElement(children, childrenProps)
       });
     }
     false ? ClickAwayListener.propTypes = {
@@ -19972,7 +19972,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
       value: true
     });
     exports.default = void 0;
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     var _propTypes = _interopRequireDefault(require_prop_types());
     var _utils = require_utils();
     var _jsxRuntime = require_jsx_runtime();
@@ -20078,22 +20078,22 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         isEnabled = defaultIsEnabled,
         open
       } = props;
-      const ignoreNextEnforceFocus = React37.useRef();
-      const sentinelStart = React37.useRef(null);
-      const sentinelEnd = React37.useRef(null);
-      const nodeToRestore = React37.useRef(null);
-      const reactFocusEventTarget = React37.useRef(null);
-      const activated = React37.useRef(false);
-      const rootRef = React37.useRef(null);
+      const ignoreNextEnforceFocus = React33.useRef();
+      const sentinelStart = React33.useRef(null);
+      const sentinelEnd = React33.useRef(null);
+      const nodeToRestore = React33.useRef(null);
+      const reactFocusEventTarget = React33.useRef(null);
+      const activated = React33.useRef(false);
+      const rootRef = React33.useRef(null);
       const handleRef = (0, _utils.unstable_useForkRef)(children.ref, rootRef);
-      const lastKeydown = React37.useRef(null);
-      React37.useEffect(() => {
+      const lastKeydown = React33.useRef(null);
+      React33.useEffect(() => {
         if (!open || !rootRef.current) {
           return;
         }
         activated.current = !disableAutoFocus;
       }, [disableAutoFocus, open]);
-      React37.useEffect(() => {
+      React33.useEffect(() => {
         if (!open || !rootRef.current) {
           return;
         }
@@ -20119,7 +20119,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
           }
         };
       }, [open]);
-      React37.useEffect(() => {
+      React33.useEffect(() => {
         if (!open || !rootRef.current) {
           return;
         }
@@ -20203,13 +20203,13 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         }
         activated.current = true;
       };
-      return /* @__PURE__ */ (0, _jsxRuntime.jsxs)(React37.Fragment, {
+      return /* @__PURE__ */ (0, _jsxRuntime.jsxs)(React33.Fragment, {
         children: [/* @__PURE__ */ (0, _jsxRuntime.jsx)("div", {
           tabIndex: open ? 0 : -1,
           onFocus: handleFocusSentinel,
           ref: sentinelStart,
           "data-testid": "sentinelStart"
-        }), /* @__PURE__ */ React37.cloneElement(children, {
+        }), /* @__PURE__ */ React33.cloneElement(children, {
           ref: handleRef,
           onFocus
         }), /* @__PURE__ */ (0, _jsxRuntime.jsx)("div", {
@@ -20259,7 +20259,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
       value: true
     });
     exports.default = void 0;
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
         return null;
@@ -20298,7 +20298,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
       }
       return newObj;
     }
-    var FormControlUnstyledContext = /* @__PURE__ */ React37.createContext(void 0);
+    var FormControlUnstyledContext = /* @__PURE__ */ React33.createContext(void 0);
     if (false) {
       FormControlUnstyledContext.displayName = "FormControlUnstyledContext";
     }
@@ -20335,7 +20335,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     exports.default = void 0;
     var _extends2 = _interopRequireDefault(require_extends());
     var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require_objectWithoutPropertiesLoose());
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     var _propTypes = _interopRequireDefault(require_prop_types());
     var _utils = require_utils();
     var _FormControlUnstyledContext = _interopRequireDefault(require_FormControlUnstyledContext());
@@ -20343,7 +20343,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     var _utils2 = require_utils2();
     var _composeClasses = _interopRequireDefault(require_composeClasses3());
     var _jsxRuntime = require_jsx_runtime();
-    var _excluded22 = ["defaultValue", "children", "component", "components", "componentsProps", "disabled", "error", "onChange", "required", "value"];
+    var _excluded19 = ["defaultValue", "children", "component", "components", "componentsProps", "disabled", "error", "onChange", "required", "value"];
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
         return null;
@@ -20385,7 +20385,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     function hasValue2(value) {
       return value != null && !(Array.isArray(value) && value.length === 0) && value !== "";
     }
-    function useUtilityClasses17(ownerState) {
+    function useUtilityClasses14(ownerState) {
       const {
         disabled,
         error,
@@ -20398,7 +20398,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
       };
       return (0, _composeClasses.default)(slots, _formControlUnstyledClasses.getFormControlUnstyledUtilityClass, {});
     }
-    var FormControlUnstyled = /* @__PURE__ */ React37.forwardRef(function FormControlUnstyled2(props, ref) {
+    var FormControlUnstyled = /* @__PURE__ */ React33.forwardRef(function FormControlUnstyled2(props, ref) {
       var _ref;
       const {
         defaultValue,
@@ -20411,7 +20411,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         onChange,
         required = false,
         value: incomingValue
-      } = props, other = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded22);
+      } = props, other = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded19);
       const [value, setValue] = (0, _utils.unstable_useControlled)({
         controlled: incomingValue,
         default: defaultValue,
@@ -20419,7 +20419,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         state: "value"
       });
       const filled = hasValue2(value);
-      const [focused, setFocused] = React37.useState(false);
+      const [focused, setFocused] = React33.useState(false);
       if (disabled && focused) {
         setFocused(false);
       }
@@ -20449,7 +20449,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         required,
         value: value != null ? value : ""
       };
-      const classes = useUtilityClasses17(ownerState);
+      const classes = useUtilityClasses14(ownerState);
       const renderChildren = () => {
         if (typeof children === "function") {
           return children(childContext);
@@ -20501,7 +20501,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
       value: true
     });
     exports.default = useFormControlUnstyledContext;
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     var _FormControlUnstyledContext = _interopRequireDefault(require_FormControlUnstyledContext());
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
@@ -20542,7 +20542,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
       return newObj;
     }
     function useFormControlUnstyledContext() {
-      return React37.useContext(_FormControlUnstyledContext.default);
+      return React33.useContext(_FormControlUnstyledContext.default);
     }
   });
 
@@ -20669,7 +20669,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     exports.default = useInput;
     var _extends2 = _interopRequireDefault(require_extends());
     var _utils = require_utils();
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     var _FormControlUnstyled = require_FormControlUnstyled2();
     var _extractEventHandlers = _interopRequireDefault(require_extractEventHandlers());
     function _getRequireWildcardCache(nodeInterop) {
@@ -20749,18 +20749,18 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
       }
       const {
         current: isControlled
-      } = React37.useRef(value != null);
-      const handleInputRefWarning = React37.useCallback((instance) => {
+      } = React33.useRef(value != null);
+      const handleInputRefWarning = React33.useCallback((instance) => {
         if (false) {
           if (instance && instance.nodeName !== "INPUT" && !instance.focus) {
             console.error(["MUI: You have provided a `components.Input` to the input component", "that does not correctly handle the `ref` prop.", "Make sure the `ref` prop is called with a HTMLInputElement."].join("\n"));
           }
         }
       }, []);
-      const inputRef = React37.useRef(null);
+      const inputRef = React33.useRef(null);
       const handleInputRef = (0, _utils.unstable_useForkRef)(inputRef, handleInputRefWarning);
-      const [focused, setFocused] = React37.useState(false);
-      React37.useEffect(() => {
+      const [focused, setFocused] = React33.useState(false);
+      React33.useEffect(() => {
         if (!formControlContext && disabled && focused) {
           setFocused(false);
           onBlur == null ? void 0 : onBlur();
@@ -20858,14 +20858,14 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     exports.default = void 0;
     var _extends2 = _interopRequireDefault(require_extends());
     var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require_objectWithoutPropertiesLoose());
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     var _propTypes = _interopRequireDefault(require_prop_types());
     var _isHostComponent = _interopRequireDefault(require_isHostComponent());
     var _inputUnstyledClasses = _interopRequireDefault(require_inputUnstyledClasses());
     var _useInput = _interopRequireDefault(require_useInput());
     var _utils = require_utils2();
     var _jsxRuntime = require_jsx_runtime();
-    var _excluded22 = ["aria-describedby", "aria-label", "aria-labelledby", "autoComplete", "autoFocus", "className", "component", "components", "componentsProps", "defaultValue", "disabled", "endAdornment", "error", "id", "multiline", "name", "onClick", "onChange", "onKeyDown", "onKeyUp", "onFocus", "onBlur", "placeholder", "readOnly", "required", "startAdornment", "value", "type", "rows", "minRows", "maxRows"];
+    var _excluded19 = ["aria-describedby", "aria-label", "aria-labelledby", "autoComplete", "autoFocus", "className", "component", "components", "componentsProps", "defaultValue", "disabled", "endAdornment", "error", "id", "multiline", "name", "onClick", "onChange", "onKeyDown", "onKeyUp", "onFocus", "onBlur", "placeholder", "readOnly", "required", "startAdornment", "value", "type", "rows", "minRows", "maxRows"];
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
         return null;
@@ -20904,7 +20904,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
       }
       return newObj;
     }
-    var InputUnstyled = /* @__PURE__ */ React37.forwardRef(function InputUnstyled2(props, forwardedRef) {
+    var InputUnstyled = /* @__PURE__ */ React33.forwardRef(function InputUnstyled2(props, forwardedRef) {
       var _ref, _components$Textarea, _components$Input;
       const {
         "aria-describedby": ariaDescribedby,
@@ -20938,7 +20938,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         rows,
         minRows,
         maxRows
-      } = props, other = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded22);
+      } = props, other = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded19);
       const {
         getRootProps,
         getInputProps,
@@ -21474,7 +21474,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     });
     exports.default = useControllableReducer;
     var _extends2 = _interopRequireDefault(require_extends());
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     var _areArraysEqual = _interopRequireDefault(require_areArraysEqual());
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
@@ -21532,7 +21532,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
       return optionComparer(option1, option2);
     }
     function useStateChangeDetection(nextState, internalPreviousState, propsRef, lastActionRef) {
-      React37.useEffect(() => {
+      React33.useEffect(() => {
         if (!propsRef.current || lastActionRef.current === null) {
           return;
         }
@@ -21570,24 +21570,24 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         value,
         defaultValue
       } = props;
-      const propsRef = React37.useRef(props);
+      const propsRef = React33.useRef(props);
       propsRef.current = props;
-      const actionRef = React37.useRef(null);
+      const actionRef = React33.useRef(null);
       const initialSelectedValue = (_ref = value === void 0 ? defaultValue : value) != null ? _ref : props.multiple ? [] : null;
       const initalState = {
         highlightedValue: null,
         selectedValue: initialSelectedValue
       };
-      const combinedReducer = React37.useCallback((state, action) => {
+      const combinedReducer = React33.useCallback((state, action) => {
         actionRef.current = action;
         if (externalReducer) {
           return externalReducer(getControlledState(state, propsRef.current), action);
         }
         return internalReducer(getControlledState(state, propsRef.current), action);
       }, [externalReducer, internalReducer, propsRef]);
-      const [nextState, dispatch] = React37.useReducer(combinedReducer, initalState);
-      const previousState = React37.useRef(initalState);
-      React37.useEffect(() => {
+      const [nextState, dispatch] = React33.useReducer(combinedReducer, initalState);
+      const previousState = React33.useRef(initalState);
+      React33.useEffect(() => {
         previousState.current = nextState;
       }, [previousState, nextState]);
       useStateChangeDetection(nextState, previousState.current, propsRef, actionRef);
@@ -21604,7 +21604,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     });
     exports.default = useListbox;
     var _extends2 = _interopRequireDefault(require_extends());
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     var _utils = require_utils();
     var _useListbox = require_useListbox_types();
     var _defaultListboxReducer = _interopRequireDefault(require_defaultListboxReducer());
@@ -21681,9 +21681,9 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         optionComparer,
         optionStringifier
       });
-      const listboxRef = React37.useRef(null);
+      const listboxRef = React33.useRef(null);
       const handleRef = (0, _utils.unstable_useForkRef)(externalListboxRef, listboxRef);
-      const textCriteriaRef = React37.useRef({
+      const textCriteriaRef = React33.useRef({
         searchString: "",
         lastTime: null
       });
@@ -21691,11 +21691,11 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         highlightedValue,
         selectedValue
       }, dispatch] = (0, _useControllableReducer.default)(_defaultListboxReducer.default, externalReducer, propsWithDefaults);
-      const highlightedIndex = React37.useMemo(() => {
+      const highlightedIndex = React33.useMemo(() => {
         return highlightedValue == null ? -1 : options.findIndex((option) => optionComparer(option, highlightedValue));
       }, [highlightedValue, options, optionComparer]);
-      const previousOptions = React37.useRef([]);
-      React37.useEffect(() => {
+      const previousOptions = React33.useRef([]);
+      React33.useEffect(() => {
         if ((0, _areArraysEqual.default)(previousOptions.current, options, optionComparer)) {
           return;
         }
@@ -21708,14 +21708,14 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         });
         previousOptions.current = options;
       }, [options, optionComparer, dispatch]);
-      const setSelectedValue = React37.useCallback((option) => {
+      const setSelectedValue = React33.useCallback((option) => {
         dispatch({
           type: _useListbox.ActionTypes.setValue,
           event: null,
           value: option
         });
       }, [dispatch]);
-      const setHighlightedValue = React37.useCallback((option) => {
+      const setHighlightedValue = React33.useCallback((option) => {
         dispatch({
           type: _useListbox.ActionTypes.setHighlight,
           event: null,
@@ -21852,7 +21852,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
           tabIndex: getOptionTabIndex(optionState)
         });
       };
-      React37.useDebugValue({
+      React33.useDebugValue({
         highlightedOption: options[highlightedIndex],
         selectedOption: selectedValue
       });
@@ -21917,7 +21917,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
       value: true
     });
     exports.default = void 0;
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
         return null;
@@ -21956,7 +21956,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
       }
       return newObj;
     }
-    var MenuUnstyledContext = /* @__PURE__ */ React37.createContext(null);
+    var MenuUnstyledContext = /* @__PURE__ */ React33.createContext(null);
     MenuUnstyledContext.displayName = "MenuUnstyledContext";
     var _default = MenuUnstyledContext;
     exports.default = _default;
@@ -21990,7 +21990,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     });
     exports.default = useMenu;
     var _extends2 = _interopRequireDefault(require_extends());
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     var _utils = require_utils();
     var _ListboxUnstyled = require_ListboxUnstyled();
     function _getRequireWildcardCache(nodeInterop) {
@@ -22050,17 +22050,17 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         onClose,
         listboxId
       } = parameters;
-      const [menuItems, setMenuItems] = React37.useState({});
-      const listboxRef = React37.useRef(null);
+      const [menuItems, setMenuItems] = React33.useState({});
+      const listboxRef = React33.useRef(null);
       const handleRef = (0, _utils.unstable_useForkRef)(listboxRef, listboxRefProp);
-      const registerItem = React37.useCallback((id, metadata) => {
+      const registerItem = React33.useCallback((id, metadata) => {
         setMenuItems((previousState) => {
           const newState = (0, _extends2.default)({}, previousState);
           newState[id] = metadata;
           return newState;
         });
       }, []);
-      const unregisterItem = React37.useCallback((id) => {
+      const unregisterItem = React33.useCallback((id) => {
         setMenuItems((previousState) => {
           const newState = (0, _extends2.default)({}, previousState);
           delete newState[id];
@@ -22089,17 +22089,17 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         stateReducer,
         disabledItemsFocusable: true
       });
-      const highlightFirstItem = React37.useCallback(() => {
+      const highlightFirstItem = React33.useCallback(() => {
         if (Object.keys(menuItems).length > 0) {
           setListboxHighlight(menuItems[Object.keys(menuItems)[0]].id);
         }
       }, [menuItems, setListboxHighlight]);
-      const highlightLastItem = React37.useCallback(() => {
+      const highlightLastItem = React33.useCallback(() => {
         if (Object.keys(menuItems).length > 0) {
           setListboxHighlight(menuItems[Object.keys(menuItems)[Object.keys(menuItems).length - 1]].id);
         }
       }, [menuItems, setListboxHighlight]);
-      React37.useEffect(() => {
+      React33.useEffect(() => {
         if (!open) {
           highlightFirstItem();
         }
@@ -22121,7 +22121,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
           onClose == null ? void 0 : onClose();
         }
       };
-      React37.useEffect(() => {
+      React33.useEffect(() => {
         var _listboxRef$current2;
         if ((_listboxRef$current2 = listboxRef.current) != null && _listboxRef$current2.contains(document.activeElement) && highlightedOption !== null) {
           var _menuItems$highlighte, _menuItems$highlighte2;
@@ -22147,7 +22147,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
           highlighted
         };
       };
-      React37.useDebugValue({
+      React33.useDebugValue({
         menuItems,
         highlightedOption
       });
@@ -23572,7 +23572,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
       value: true
     });
     exports.default = void 0;
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     var ReactDOM = _interopRequireWildcard(require_react_dom());
     var _propTypes = _interopRequireDefault(require_prop_types());
     var _utils = require_utils();
@@ -23618,14 +23618,14 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     function getContainer(container) {
       return typeof container === "function" ? container() : container;
     }
-    var Portal = /* @__PURE__ */ React37.forwardRef(function Portal2(props, ref) {
+    var Portal = /* @__PURE__ */ React33.forwardRef(function Portal2(props, ref) {
       const {
         children,
         container,
         disablePortal = false
       } = props;
-      const [mountNode, setMountNode] = React37.useState(null);
-      const handleRef = (0, _utils.unstable_useForkRef)(/* @__PURE__ */ React37.isValidElement(children) ? children.ref : null, ref);
+      const [mountNode, setMountNode] = React33.useState(null);
+      const handleRef = (0, _utils.unstable_useForkRef)(/* @__PURE__ */ React33.isValidElement(children) ? children.ref : null, ref);
       (0, _utils.unstable_useEnhancedEffect)(() => {
         if (!disablePortal) {
           setMountNode(getContainer(container) || document.body);
@@ -23641,14 +23641,14 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         return void 0;
       }, [ref, mountNode, disablePortal]);
       if (disablePortal) {
-        if (/* @__PURE__ */ React37.isValidElement(children)) {
-          return /* @__PURE__ */ React37.cloneElement(children, {
+        if (/* @__PURE__ */ React33.isValidElement(children)) {
+          return /* @__PURE__ */ React33.cloneElement(children, {
             ref: handleRef
           });
         }
         return children;
       }
-      return /* @__PURE__ */ (0, _jsxRuntime.jsx)(React37.Fragment, {
+      return /* @__PURE__ */ (0, _jsxRuntime.jsx)(React33.Fragment, {
         children: mountNode ? /* @__PURE__ */ ReactDOM.createPortal(children, mountNode) : mountNode
       });
     });
@@ -23709,7 +23709,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     exports.default = void 0;
     var _extends2 = _interopRequireDefault(require_extends());
     var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require_objectWithoutPropertiesLoose());
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     var _utils = require_utils();
     var _core = require_popper();
     var _propTypes = _interopRequireDefault(require_prop_types());
@@ -23718,8 +23718,8 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     var _popperUnstyledClasses = require_popperUnstyledClasses();
     var _utils2 = require_utils2();
     var _jsxRuntime = require_jsx_runtime();
-    var _excluded22 = ["anchorEl", "children", "component", "components", "componentsProps", "direction", "disablePortal", "modifiers", "open", "ownerState", "placement", "popperOptions", "popperRef", "TransitionProps"];
-    var _excluded23 = ["anchorEl", "children", "container", "direction", "disablePortal", "keepMounted", "modifiers", "open", "placement", "popperOptions", "popperRef", "style", "transition"];
+    var _excluded19 = ["anchorEl", "children", "component", "components", "componentsProps", "direction", "disablePortal", "modifiers", "open", "ownerState", "placement", "popperOptions", "popperRef", "TransitionProps"];
+    var _excluded22 = ["anchorEl", "children", "container", "direction", "disablePortal", "keepMounted", "modifiers", "open", "placement", "popperOptions", "popperRef", "style", "transition"];
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
         return null;
@@ -23778,14 +23778,14 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     function resolveAnchorEl(anchorEl) {
       return typeof anchorEl === "function" ? anchorEl() : anchorEl;
     }
-    var useUtilityClasses17 = () => {
+    var useUtilityClasses14 = () => {
       const slots = {
         root: ["root"]
       };
       return (0, _composeClasses.default)(slots, _popperUnstyledClasses.getPopperUnstyledUtilityClass, {});
     };
     var defaultPopperOptions = {};
-    var PopperTooltip = /* @__PURE__ */ React37.forwardRef(function PopperTooltip2(props, ref) {
+    var PopperTooltip = /* @__PURE__ */ React33.forwardRef(function PopperTooltip2(props, ref) {
       var _ref;
       const {
         anchorEl,
@@ -23802,19 +23802,19 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         popperOptions,
         popperRef: popperRefProp,
         TransitionProps
-      } = props, other = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded22);
-      const tooltipRef = React37.useRef(null);
+      } = props, other = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded19);
+      const tooltipRef = React33.useRef(null);
       const ownRef = (0, _utils.unstable_useForkRef)(tooltipRef, ref);
-      const popperRef = React37.useRef(null);
+      const popperRef = React33.useRef(null);
       const handlePopperRef = (0, _utils.unstable_useForkRef)(popperRef, popperRefProp);
-      const handlePopperRefRef = React37.useRef(handlePopperRef);
+      const handlePopperRefRef = React33.useRef(handlePopperRef);
       (0, _utils.unstable_useEnhancedEffect)(() => {
         handlePopperRefRef.current = handlePopperRef;
       }, [handlePopperRef]);
-      React37.useImperativeHandle(popperRefProp, () => popperRef.current, []);
+      React33.useImperativeHandle(popperRefProp, () => popperRef.current, []);
       const rtlPlacement = flipPlacement(initialPlacement, direction);
-      const [placement, setPlacement] = React37.useState(rtlPlacement);
-      React37.useEffect(() => {
+      const [placement, setPlacement] = React33.useState(rtlPlacement);
+      React33.useEffect(() => {
         if (popperRef.current) {
           popperRef.current.forceUpdate();
         }
@@ -23878,7 +23878,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
       if (TransitionProps !== null) {
         childProps.TransitionProps = TransitionProps;
       }
-      const classes = useUtilityClasses17();
+      const classes = useUtilityClasses14();
       const Root = (_ref = component != null ? component : components.Root) != null ? _ref : "div";
       const rootProps = (0, _utils2.useSlotProps)({
         elementType: Root,
@@ -23895,7 +23895,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         children: typeof children === "function" ? children(childProps) : children
       }));
     });
-    var PopperUnstyled = /* @__PURE__ */ React37.forwardRef(function PopperUnstyled2(props, ref) {
+    var PopperUnstyled = /* @__PURE__ */ React33.forwardRef(function PopperUnstyled2(props, ref) {
       const {
         anchorEl,
         children,
@@ -23910,8 +23910,8 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         popperRef,
         style,
         transition = false
-      } = props, other = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded23);
-      const [exited, setExited] = React37.useState(true);
+      } = props, other = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded22);
+      const [exited, setExited] = React33.useState(true);
       const handleEnter = () => {
         setExited(false);
       };
@@ -24030,7 +24030,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     exports.default = void 0;
     var _extends2 = _interopRequireDefault(require_extends());
     var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require_objectWithoutPropertiesLoose());
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     var _propTypes = _interopRequireDefault(require_prop_types());
     var _utils = require_utils();
     var _MenuUnstyledContext = _interopRequireDefault(require_MenuUnstyledContext());
@@ -24040,7 +24040,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     var _PopperUnstyled = _interopRequireDefault(require_PopperUnstyled2());
     var _useSlotProps = _interopRequireDefault(require_useSlotProps());
     var _jsxRuntime = require_jsx_runtime();
-    var _excluded22 = ["actions", "anchorEl", "children", "component", "components", "componentsProps", "keepMounted", "listboxId", "onClose", "open"];
+    var _excluded19 = ["actions", "anchorEl", "children", "component", "components", "componentsProps", "keepMounted", "listboxId", "onClose", "open"];
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
         return null;
@@ -24089,7 +24089,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
       };
       return (0, _composeClasses.default)(slots, _menuUnstyledClasses.getMenuUnstyledUtilityClass, {});
     }
-    var MenuUnstyled = /* @__PURE__ */ React37.forwardRef(function MenuUnstyled2(props, forwardedRef) {
+    var MenuUnstyled = /* @__PURE__ */ React33.forwardRef(function MenuUnstyled2(props, forwardedRef) {
       var _ref, _components$Listbox;
       const {
         actions,
@@ -24102,7 +24102,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         listboxId,
         onClose,
         open = false
-      } = props, other = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded22);
+      } = props, other = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded19);
       const {
         registerItem,
         unregisterItem,
@@ -24116,7 +24116,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         onClose,
         listboxId
       });
-      React37.useImperativeHandle(actions, () => ({
+      React33.useImperativeHandle(actions, () => ({
         highlightFirstItem,
         highlightLastItem
       }), [highlightFirstItem, highlightLastItem]);
@@ -24367,7 +24367,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     });
     exports.default = useMenuItem;
     var _extends2 = _interopRequireDefault(require_extends());
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     var _utils = require_utils();
     var _MenuUnstyled = require_MenuUnstyled2();
     var _ButtonUnstyled = require_ButtonUnstyled2();
@@ -24417,8 +24417,8 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         label
       } = props;
       const id = (0, _utils.unstable_useId)();
-      const menuContext = React37.useContext(_MenuUnstyled.MenuUnstyledContext);
-      const itemRef = React37.useRef(null);
+      const menuContext = React33.useContext(_MenuUnstyled.MenuUnstyledContext);
+      const itemRef = React33.useRef(null);
       const handleRef = (0, _utils.unstable_useForkRef)(itemRef, ref);
       if (menuContext === null) {
         throw new Error("MenuItemUnstyled must be used within a MenuUnstyled");
@@ -24428,7 +24428,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         unregisterItem,
         open
       } = menuContext;
-      React37.useEffect(() => {
+      React33.useEffect(() => {
         if (id === void 0) {
           return void 0;
         }
@@ -24448,17 +24448,17 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         focusableWhenDisabled: true,
         ref: handleRef
       });
-      const [focusRequested, requestFocus] = React37.useState(false);
-      const focusIfRequested = React37.useCallback(() => {
+      const [focusRequested, requestFocus] = React33.useState(false);
+      const focusIfRequested = React33.useCallback(() => {
         if (focusRequested && itemRef.current != null) {
           itemRef.current.focus();
           requestFocus(false);
         }
       }, [focusRequested]);
-      React37.useEffect(() => {
+      React33.useEffect(() => {
         focusIfRequested();
       });
-      React37.useDebugValue({
+      React33.useDebugValue({
         id,
         disabled,
         label
@@ -24469,7 +24469,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
       } = itemState != null ? itemState : {
         highlighted: false
       };
-      React37.useEffect(() => {
+      React33.useEffect(() => {
         requestFocus(highlighted && open);
       }, [highlighted, open]);
       if (id === void 0) {
@@ -24506,14 +24506,14 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     exports.default = void 0;
     var _extends2 = _interopRequireDefault(require_extends());
     var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require_objectWithoutPropertiesLoose());
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     var _propTypes = _interopRequireDefault(require_prop_types());
     var _menuItemUnstyledClasses = require_menuItemUnstyledClasses();
     var _useMenuItem = _interopRequireDefault(require_useMenuItem());
     var _composeClasses = _interopRequireDefault(require_composeClasses3());
     var _useSlotProps = _interopRequireDefault(require_useSlotProps());
     var _jsxRuntime = require_jsx_runtime();
-    var _excluded22 = ["children", "disabled", "component", "components", "componentsProps", "label"];
+    var _excluded19 = ["children", "disabled", "component", "components", "componentsProps", "label"];
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
         return null;
@@ -24562,7 +24562,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
       };
       return (0, _composeClasses.default)(slots, _menuItemUnstyledClasses.getMenuItemUnstyledUtilityClass, {});
     }
-    var MenuItemUnstyled = /* @__PURE__ */ React37.forwardRef(function MenuItemUnstyled2(props, ref) {
+    var MenuItemUnstyled = /* @__PURE__ */ React33.forwardRef(function MenuItemUnstyled2(props, ref) {
       var _ref;
       const {
         children,
@@ -24571,7 +24571,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         components = {},
         componentsProps = {},
         label
-      } = props, other = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded22);
+      } = props, other = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded19);
       const {
         getRootProps,
         disabled,
@@ -24970,7 +24970,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     exports.default = void 0;
     var _extends2 = _interopRequireDefault(require_extends());
     var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require_objectWithoutPropertiesLoose());
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     var _propTypes = _interopRequireDefault(require_prop_types());
     var _utils = require_utils();
     var _composeClasses = _interopRequireDefault(require_composeClasses3());
@@ -24980,7 +24980,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     var _modalUnstyledClasses = require_modalUnstyledClasses();
     var _utils2 = require_utils2();
     var _jsxRuntime = require_jsx_runtime();
-    var _excluded22 = ["children", "classes", "closeAfterTransition", "component", "components", "componentsProps", "container", "disableAutoFocus", "disableEnforceFocus", "disableEscapeKeyDown", "disablePortal", "disableRestoreFocus", "disableScrollLock", "hideBackdrop", "keepMounted", "manager", "onBackdropClick", "onClose", "onKeyDown", "open", "onTransitionEnter", "onTransitionExited"];
+    var _excluded19 = ["children", "classes", "closeAfterTransition", "component", "components", "componentsProps", "container", "disableAutoFocus", "disableEnforceFocus", "disableEscapeKeyDown", "disablePortal", "disableRestoreFocus", "disableScrollLock", "hideBackdrop", "keepMounted", "manager", "onBackdropClick", "onClose", "onKeyDown", "open", "onTransitionEnter", "onTransitionExited"];
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
         return null;
@@ -25019,7 +25019,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
       }
       return newObj;
     }
-    var useUtilityClasses17 = (ownerState) => {
+    var useUtilityClasses14 = (ownerState) => {
       const {
         open,
         exited,
@@ -25037,7 +25037,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
       return props.children ? props.children.props.hasOwnProperty("in") : false;
     }
     var defaultManager = new _ModalManager.default();
-    var ModalUnstyled = /* @__PURE__ */ React37.forwardRef(function ModalUnstyled2(props, ref) {
+    var ModalUnstyled = /* @__PURE__ */ React33.forwardRef(function ModalUnstyled2(props, ref) {
       var _props$ariaHidden;
       const {
         children,
@@ -25062,11 +25062,11 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         open,
         onTransitionEnter,
         onTransitionExited
-      } = props, other = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded22);
-      const [exited, setExited] = React37.useState(true);
-      const modal = React37.useRef({});
-      const mountNodeRef = React37.useRef(null);
-      const modalRef = React37.useRef(null);
+      } = props, other = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded19);
+      const [exited, setExited] = React33.useState(true);
+      const modal = React33.useRef({});
+      const mountNodeRef = React33.useRef(null);
+      const modalRef = React33.useRef(null);
       const handleRef = (0, _utils.unstable_useForkRef)(modalRef, ref);
       const hasTransition = getHasTransition(props);
       const ariaHiddenProp = (_props$ariaHidden = props["aria-hidden"]) != null ? _props$ariaHidden : true;
@@ -25089,7 +25089,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
           handleMounted();
         }
       });
-      const isTopModal = React37.useCallback(() => manager.isTopModal(getModal()), [manager]);
+      const isTopModal = React33.useCallback(() => manager.isTopModal(getModal()), [manager]);
       const handlePortalRef = (0, _utils.unstable_useEventCallback)((node) => {
         mountNodeRef.current = node;
         if (!node) {
@@ -25101,15 +25101,15 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
           (0, _ModalManager.ariaHidden)(modalRef.current, ariaHiddenProp);
         }
       });
-      const handleClose = React37.useCallback(() => {
+      const handleClose = React33.useCallback(() => {
         manager.remove(getModal(), ariaHiddenProp);
       }, [manager, ariaHiddenProp]);
-      React37.useEffect(() => {
+      React33.useEffect(() => {
         return () => {
           handleClose();
         };
       }, [handleClose]);
-      React37.useEffect(() => {
+      React33.useEffect(() => {
         if (open) {
           handleOpen();
         } else if (!hasTransition || !closeAfterTransition) {
@@ -25129,7 +25129,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         hideBackdrop,
         keepMounted
       });
-      const classes = useUtilityClasses17(ownerState);
+      const classes = useUtilityClasses14(ownerState);
       const handleEnter = () => {
         setExited(false);
         if (onTransitionEnter) {
@@ -25216,7 +25216,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
             disableRestoreFocus,
             isEnabled: isTopModal,
             open,
-            children: /* @__PURE__ */ React37.cloneElement(children, childProps)
+            children: /* @__PURE__ */ React33.cloneElement(children, childProps)
           })]
         }))
       });
@@ -25433,7 +25433,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     });
     exports.default = void 0;
     var _extends2 = _interopRequireDefault(require_extends());
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     var _utils = require_utils();
     var _ButtonUnstyled = require_ButtonUnstyled2();
     var _ListboxUnstyled = require_ListboxUnstyled();
@@ -25491,29 +25491,29 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         optionStringifier = _defaultOptionStringifier.default,
         value: valueProp
       } = props;
-      const buttonRef = React37.useRef(null);
+      const buttonRef = React33.useRef(null);
       const handleButtonRef = (0, _utils.unstable_useForkRef)(buttonRefProp, buttonRef);
-      const listboxRef = React37.useRef(null);
+      const listboxRef = React33.useRef(null);
       const [value, setValue] = (0, _utils.unstable_useControlled)({
         controlled: valueProp,
         default: defaultValue,
         name: "SelectUnstyled",
         state: "value"
       });
-      const ignoreEnterKeyUp = React37.useRef(false);
-      const ignoreClick = React37.useRef(false);
-      const [listboxFocusRequested, requestListboxFocus] = React37.useState(false);
-      const focusListboxIfRequested = React37.useCallback(() => {
+      const ignoreEnterKeyUp = React33.useRef(false);
+      const ignoreClick = React33.useRef(false);
+      const [listboxFocusRequested, requestListboxFocus] = React33.useState(false);
+      const focusListboxIfRequested = React33.useCallback(() => {
         if (listboxFocusRequested && listboxRef.current != null) {
           listboxRef.current.focus();
           requestListboxFocus(false);
         }
       }, [listboxFocusRequested]);
       const handleListboxRef = (0, _utils.unstable_useForkRef)(listboxRefProp, listboxRef, focusListboxIfRequested);
-      React37.useEffect(() => {
+      React33.useEffect(() => {
         focusListboxIfRequested();
       }, [focusListboxIfRequested]);
-      React37.useEffect(() => {
+      React33.useEffect(() => {
         requestListboxFocus(open);
       }, [open]);
       const createHandleMouseDown = (otherHandlers) => (event) => {
@@ -25597,7 +25597,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         disabled,
         ref: handleButtonRef
       });
-      const selectedOption = React37.useMemo(() => {
+      const selectedOption = React33.useMemo(() => {
         var _props$options$find;
         return props.multiple ? props.options.filter((o) => value.includes(o.value)) : (_props$options$find = props.options.find((o) => o.value === value)) != null ? _props$options$find : null;
       }, [props.multiple, props.options, value]);
@@ -25670,7 +25670,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
           onClick: createHandleListboxItemClick(otherHandlers)
         }));
       };
-      React37.useDebugValue({
+      React33.useDebugValue({
         selectedOption: listboxSelectedOption,
         highlightedOption,
         open
@@ -25698,7 +25698,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
       value: true
     });
     exports.SelectUnstyledContext = void 0;
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
         return null;
@@ -25737,7 +25737,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
       }
       return newObj;
     }
-    var SelectUnstyledContext = /* @__PURE__ */ React37.createContext(void 0);
+    var SelectUnstyledContext = /* @__PURE__ */ React33.createContext(void 0);
     exports.SelectUnstyledContext = SelectUnstyledContext;
   });
 
@@ -25770,7 +25770,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     exports.default = void 0;
     var _extends2 = _interopRequireDefault(require_extends());
     var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require_objectWithoutPropertiesLoose());
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     var _propTypes = _interopRequireDefault(require_prop_types());
     var _utils = require_utils();
     var _utils2 = require_utils3();
@@ -25782,7 +25782,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     var _selectUnstyledClasses = require_selectUnstyledClasses();
     var _defaultOptionStringifier = _interopRequireDefault(require_defaultOptionStringifier());
     var _jsxRuntime = require_jsx_runtime();
-    var _excluded22 = ["autoFocus", "children", "component", "components", "componentsProps", "defaultListboxOpen", "defaultValue", "disabled", "getSerializedValue", "listboxId", "listboxOpen", "name", "onChange", "onListboxOpenChange", "optionStringifier", "renderValue", "value"];
+    var _excluded19 = ["autoFocus", "children", "component", "components", "componentsProps", "defaultListboxOpen", "defaultValue", "disabled", "getSerializedValue", "listboxId", "listboxOpen", "name", "onChange", "onListboxOpenChange", "optionStringifier", "renderValue", "value"];
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
         return null;
@@ -25822,7 +25822,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
       return newObj;
     }
     function defaultRenderMultipleValues(selectedOptions) {
-      return /* @__PURE__ */ (0, _jsxRuntime.jsx)(React37.Fragment, {
+      return /* @__PURE__ */ (0, _jsxRuntime.jsx)(React33.Fragment, {
         children: selectedOptions.map((o) => o.label).join(", ")
       });
     }
@@ -25835,7 +25835,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
       }
       return JSON.stringify(selectedOptions.map((o) => o.value));
     }
-    function useUtilityClasses17(ownerState) {
+    function useUtilityClasses14(ownerState) {
       const {
         active,
         disabled,
@@ -25849,7 +25849,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
       };
       return (0, _composeClasses.default)(slots, _selectUnstyledClasses.getSelectUnstyledUtilityClass, {});
     }
-    var MultiSelectUnstyled = /* @__PURE__ */ React37.forwardRef(function MultiSelectUnstyled2(props, forwardedRef) {
+    var MultiSelectUnstyled = /* @__PURE__ */ React33.forwardRef(function MultiSelectUnstyled2(props, forwardedRef) {
       var _ref, _components$Listbox, _components$Popper;
       const {
         autoFocus,
@@ -25869,30 +25869,30 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         optionStringifier = _defaultOptionStringifier.default,
         renderValue: renderValueProp,
         value: valueProp
-      } = props, other = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded22);
+      } = props, other = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded19);
       const renderValue = renderValueProp != null ? renderValueProp : defaultRenderMultipleValues;
-      const [groupedOptions, setGroupedOptions] = React37.useState([]);
-      const options = React37.useMemo(() => (0, _utils2.flattenOptionGroups)(groupedOptions), [groupedOptions]);
+      const [groupedOptions, setGroupedOptions] = React33.useState([]);
+      const options = React33.useMemo(() => (0, _utils2.flattenOptionGroups)(groupedOptions), [groupedOptions]);
       const [listboxOpen, setListboxOpen] = (0, _utils.unstable_useControlled)({
         controlled: listboxOpenProp,
         default: defaultListboxOpen,
         name: "MultiSelectUnstyled",
         state: "listboxOpen"
       });
-      React37.useEffect(() => {
+      React33.useEffect(() => {
         setGroupedOptions((0, _utils2.getOptionsFromChildren)(children));
       }, [children]);
-      const [buttonDefined, setButtonDefined] = React37.useState(false);
-      const buttonRef = React37.useRef(null);
-      const listboxRef = React37.useRef(null);
-      const Button3 = (_ref = component != null ? component : components.Root) != null ? _ref : "button";
+      const [buttonDefined, setButtonDefined] = React33.useState(false);
+      const buttonRef = React33.useRef(null);
+      const listboxRef = React33.useRef(null);
+      const Button = (_ref = component != null ? component : components.Root) != null ? _ref : "button";
       const ListboxRoot = (_components$Listbox = components.Listbox) != null ? _components$Listbox : "ul";
       const Popper = (_components$Popper = components.Popper) != null ? _components$Popper : _PopperUnstyled.default;
-      const handleButtonRefChange = React37.useCallback((element) => {
+      const handleButtonRefChange = React33.useCallback((element) => {
         setButtonDefined(element != null);
       }, []);
       const handleButtonRef = (0, _utils.unstable_useForkRef)(forwardedRef, buttonRef, handleButtonRefChange);
-      React37.useEffect(() => {
+      React33.useEffect(() => {
         if (autoFocus) {
           buttonRef.current.focus();
         }
@@ -25932,15 +25932,15 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         renderValue,
         value
       });
-      const classes = useUtilityClasses17(ownerState);
-      const selectedOptions = React37.useMemo(() => {
+      const classes = useUtilityClasses14(ownerState);
+      const selectedOptions = React33.useMemo(() => {
         if (value == null) {
           return [];
         }
         return options.filter((o) => value.includes(o.value));
       }, [options, value]);
       const buttonProps = (0, _utils3.useSlotProps)({
-        elementType: Button3,
+        elementType: Button,
         getSlotProps: getButtonProps,
         externalSlotProps: componentsProps.root,
         externalForwardedProps: other,
@@ -25975,8 +25975,8 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         getOptionState,
         listboxRef
       };
-      return /* @__PURE__ */ (0, _jsxRuntime.jsxs)(React37.Fragment, {
-        children: [/* @__PURE__ */ (0, _jsxRuntime.jsx)(Button3, (0, _extends2.default)({}, buttonProps, {
+      return /* @__PURE__ */ (0, _jsxRuntime.jsxs)(React33.Fragment, {
+        children: [/* @__PURE__ */ (0, _jsxRuntime.jsx)(Button, (0, _extends2.default)({}, buttonProps, {
           children: renderValue(selectedOptions)
         })), buttonDefined && /* @__PURE__ */ (0, _jsxRuntime.jsx)(Popper, (0, _extends2.default)({}, popperProps, {
           children: /* @__PURE__ */ (0, _jsxRuntime.jsx)(ListboxRoot, (0, _extends2.default)({}, listboxProps, {
@@ -26071,7 +26071,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
       value: true
     });
     exports.default = void 0;
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     var _propTypes = _interopRequireDefault(require_prop_types());
     var _utils = require_utils();
     var _jsxRuntime = require_jsx_runtime();
@@ -26119,18 +26119,18 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         defer = false,
         fallback = null
       } = props;
-      const [mountedState, setMountedState] = React37.useState(false);
+      const [mountedState, setMountedState] = React33.useState(false);
       (0, _utils.unstable_useEnhancedEffect)(() => {
         if (!defer) {
           setMountedState(true);
         }
       }, [defer]);
-      React37.useEffect(() => {
+      React33.useEffect(() => {
         if (defer) {
           setMountedState(true);
         }
       }, [defer]);
-      return /* @__PURE__ */ (0, _jsxRuntime.jsx)(React37.Fragment, {
+      return /* @__PURE__ */ (0, _jsxRuntime.jsx)(React33.Fragment, {
         children: mountedState ? children : fallback
       });
     }
@@ -26221,8 +26221,8 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     var _optionGroupUnstyledClasses = require_optionGroupUnstyledClasses();
     var _utils = require_utils2();
     var _jsxRuntime = require_jsx_runtime();
-    var _excluded22 = ["component", "components", "disabled", "componentsProps"];
-    function useUtilityClasses17(disabled) {
+    var _excluded19 = ["component", "components", "disabled", "componentsProps"];
+    function useUtilityClasses14(disabled) {
       const slots = {
         root: ["root", disabled && "disabled"],
         label: ["label"],
@@ -26236,11 +26236,11 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         components = {},
         disabled = false,
         componentsProps = {}
-      } = props, other = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded22);
+      } = props, other = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded19);
       const Root = component || (components == null ? void 0 : components.Root) || "li";
       const Label = (components == null ? void 0 : components.Label) || "span";
       const List = (components == null ? void 0 : components.List) || "ul";
-      const classes = useUtilityClasses17(disabled);
+      const classes = useUtilityClasses14(disabled);
       const rootProps = (0, _utils.useSlotProps)({
         elementType: Root,
         externalSlotProps: componentsProps.root,
@@ -26429,8 +26429,8 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     var _optionUnstyledClasses = require_optionUnstyledClasses();
     var _utils2 = require_utils2();
     var _jsxRuntime = require_jsx_runtime();
-    var _excluded22 = ["children", "component", "components", "componentsProps", "disabled", "value", "label"];
-    function useUtilityClasses17(ownerState) {
+    var _excluded19 = ["children", "component", "components", "componentsProps", "disabled", "value", "label"];
+    function useUtilityClasses14(ownerState) {
       const {
         disabled,
         highlighted,
@@ -26450,7 +26450,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         disabled,
         value,
         label
-      } = props, other = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded22);
+      } = props, other = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded19);
       const selectContext = _react.default.useContext(_SelectUnstyledContext.SelectUnstyledContext);
       if (!selectContext) {
         throw new Error("OptionUnstyled must be used within a SelectUnstyled");
@@ -26481,7 +26481,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
           }
         }
       }, [optionState.highlighted, listboxRef]);
-      const classes = useUtilityClasses17(ownerState);
+      const classes = useUtilityClasses14(ownerState);
       const rootProps = (0, _utils2.useSlotProps)({
         elementType: Root,
         externalSlotProps: componentsProps.root,
@@ -26624,7 +26624,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     exports.default = void 0;
     var _extends2 = _interopRequireDefault(require_extends());
     var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require_objectWithoutPropertiesLoose());
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     var _propTypes = _interopRequireDefault(require_prop_types());
     var _utils = require_utils();
     var _utils2 = require_utils3();
@@ -26636,7 +26636,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     var _selectUnstyledClasses = require_selectUnstyledClasses();
     var _defaultOptionStringifier = _interopRequireDefault(require_defaultOptionStringifier());
     var _jsxRuntime = require_jsx_runtime();
-    var _excluded22 = ["autoFocus", "children", "component", "components", "componentsProps", "defaultValue", "defaultListboxOpen", "disabled", "getSerializedValue", "listboxId", "listboxOpen", "name", "onChange", "onListboxOpenChange", "optionStringifier", "renderValue", "value"];
+    var _excluded19 = ["autoFocus", "children", "component", "components", "componentsProps", "defaultValue", "defaultListboxOpen", "disabled", "getSerializedValue", "listboxId", "listboxOpen", "name", "onChange", "onListboxOpenChange", "optionStringifier", "renderValue", "value"];
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
         return null;
@@ -26688,7 +26688,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
       }
       return JSON.stringify(selectedOption.value);
     }
-    function useUtilityClasses17(ownerState) {
+    function useUtilityClasses14(ownerState) {
       const {
         active,
         disabled,
@@ -26702,7 +26702,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
       };
       return (0, _composeClasses.default)(slots, _selectUnstyledClasses.getSelectUnstyledUtilityClass, {});
     }
-    var SelectUnstyled = /* @__PURE__ */ React37.forwardRef(function SelectUnstyled2(props, forwardedRef) {
+    var SelectUnstyled = /* @__PURE__ */ React33.forwardRef(function SelectUnstyled2(props, forwardedRef) {
       var _ref, _components$Listbox, _components$Popper;
       const {
         autoFocus,
@@ -26722,30 +26722,30 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         optionStringifier = _defaultOptionStringifier.default,
         renderValue: renderValueProp,
         value: valueProp
-      } = props, other = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded22);
+      } = props, other = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded19);
       const renderValue = renderValueProp != null ? renderValueProp : defaultRenderSingleValue;
-      const [groupedOptions, setGroupedOptions] = React37.useState([]);
-      const options = React37.useMemo(() => (0, _utils2.flattenOptionGroups)(groupedOptions), [groupedOptions]);
+      const [groupedOptions, setGroupedOptions] = React33.useState([]);
+      const options = React33.useMemo(() => (0, _utils2.flattenOptionGroups)(groupedOptions), [groupedOptions]);
       const [listboxOpen, setListboxOpen] = (0, _utils.unstable_useControlled)({
         controlled: listboxOpenProp,
         default: defaultListboxOpen,
         name: "SelectUnstyled",
         state: "listboxOpen"
       });
-      React37.useEffect(() => {
+      React33.useEffect(() => {
         setGroupedOptions((0, _utils2.getOptionsFromChildren)(children));
       }, [children]);
-      const [buttonDefined, setButtonDefined] = React37.useState(false);
-      const buttonRef = React37.useRef(null);
-      const listboxRef = React37.useRef(null);
-      const Button3 = (_ref = component != null ? component : components.Root) != null ? _ref : "button";
+      const [buttonDefined, setButtonDefined] = React33.useState(false);
+      const buttonRef = React33.useRef(null);
+      const listboxRef = React33.useRef(null);
+      const Button = (_ref = component != null ? component : components.Root) != null ? _ref : "button";
       const ListboxRoot = (_components$Listbox = components.Listbox) != null ? _components$Listbox : "ul";
       const Popper = (_components$Popper = components.Popper) != null ? _components$Popper : _PopperUnstyled.default;
-      const handleButtonRefChange = React37.useCallback((element) => {
+      const handleButtonRefChange = React33.useCallback((element) => {
         setButtonDefined(element != null);
       }, []);
       const handleButtonRef = (0, _utils.unstable_useForkRef)(forwardedRef, buttonRef, handleButtonRefChange);
-      React37.useEffect(() => {
+      React33.useEffect(() => {
         if (autoFocus) {
           buttonRef.current.focus();
         }
@@ -26785,13 +26785,13 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         renderValue,
         value
       });
-      const classes = useUtilityClasses17(ownerState);
-      const selectedOption = React37.useMemo(() => {
+      const classes = useUtilityClasses14(ownerState);
+      const selectedOption = React33.useMemo(() => {
         var _options$find;
         return (_options$find = options.find((o) => value === o.value)) != null ? _options$find : null;
       }, [options, value]);
       const buttonProps = (0, _utils3.useSlotProps)({
-        elementType: Button3,
+        elementType: Button,
         getSlotProps: getButtonProps,
         externalSlotProps: componentsProps.root,
         externalForwardedProps: other,
@@ -26826,8 +26826,8 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         getOptionState,
         listboxRef
       };
-      return /* @__PURE__ */ (0, _jsxRuntime.jsxs)(React37.Fragment, {
-        children: [/* @__PURE__ */ (0, _jsxRuntime.jsx)(Button3, (0, _extends2.default)({}, buttonProps, {
+      return /* @__PURE__ */ (0, _jsxRuntime.jsxs)(React33.Fragment, {
+        children: [/* @__PURE__ */ (0, _jsxRuntime.jsx)(Button, (0, _extends2.default)({}, buttonProps, {
           children: renderValue(selectedOption)
         })), buttonDefined && /* @__PURE__ */ (0, _jsxRuntime.jsx)(Popper, (0, _extends2.default)({}, popperProps, {
           children: /* @__PURE__ */ (0, _jsxRuntime.jsx)(ListboxRoot, (0, _extends2.default)({}, listboxProps, {
@@ -27055,7 +27055,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
       value: true
     });
     exports.default = SliderValueLabelUnstyled;
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     var _propTypes = _interopRequireDefault(require_prop_types());
     var _clsx = _interopRequireDefault(require_clsx());
     var _sliderUnstyledClasses = _interopRequireDefault(require_sliderUnstyledClasses());
@@ -27116,9 +27116,9 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         value
       } = props;
       const classes = useValueLabelClasses(props);
-      return /* @__PURE__ */ React37.cloneElement(children, {
+      return /* @__PURE__ */ React33.cloneElement(children, {
         className: (0, _clsx.default)(children.props.className)
-      }, /* @__PURE__ */ (0, _jsxRuntime.jsxs)(React37.Fragment, {
+      }, /* @__PURE__ */ (0, _jsxRuntime.jsxs)(React33.Fragment, {
         children: [children.props.children, /* @__PURE__ */ (0, _jsxRuntime.jsx)("span", {
           className: (0, _clsx.default)(classes.offset, className),
           "aria-hidden": true,
@@ -27151,7 +27151,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     exports.default = useSlider;
     exports.valueToPercent = valueToPercent;
     var _extends2 = _interopRequireDefault(require_extends());
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     var _utils = require_utils();
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
@@ -27338,11 +27338,11 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         tabIndex,
         value: valueProp
       } = parameters;
-      const touchId = React37.useRef();
-      const [active, setActive] = React37.useState(-1);
-      const [open, setOpen] = React37.useState(-1);
-      const [dragging, setDragging] = React37.useState(false);
-      const moveCount = React37.useRef(0);
+      const touchId = React33.useRef();
+      const [active, setActive] = React33.useState(-1);
+      const [open, setOpen] = React33.useState(-1);
+      const [dragging, setDragging] = React33.useState(false);
+      const moveCount = React33.useRef(0);
       const [valueDerived, setValueState] = (0, _utils.unstable_useControlled)({
         controlled: valueProp,
         default: defaultValue != null ? defaultValue : min,
@@ -27373,8 +27373,8 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         onFocus: handleFocusVisible,
         ref: focusVisibleRef
       } = (0, _utils.unstable_useIsFocusVisible)();
-      const [focusedThumbIndex, setFocusedThumbIndex] = React37.useState(-1);
-      const sliderRef = React37.useRef();
+      const [focusedThumbIndex, setFocusedThumbIndex] = React33.useState(-1);
+      const sliderRef = React33.useRef();
       const handleFocusRef = (0, _utils.unstable_useForkRef)(focusVisibleRef, sliderRef);
       const handleRef = (0, _utils.unstable_useForkRef)(ref, handleFocusRef);
       const createHandleHiddenInputFocus = (otherHandlers) => (event) => {
@@ -27451,7 +27451,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
           onChangeCommitted(event, newValue);
         }
       };
-      const previousIndex = React37.useRef();
+      const previousIndex = React33.useRef();
       let axis = orientation;
       if (isRtl && orientation === "horizontal") {
         axis += "-reverse";
@@ -27599,14 +27599,14 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         doc.addEventListener("touchmove", handleTouchMove);
         doc.addEventListener("touchend", handleTouchEnd);
       });
-      const stopListening = React37.useCallback(() => {
+      const stopListening = React33.useCallback(() => {
         const doc = (0, _utils.unstable_ownerDocument)(sliderRef.current);
         doc.removeEventListener("mousemove", handleTouchMove);
         doc.removeEventListener("mouseup", handleTouchEnd);
         doc.removeEventListener("touchmove", handleTouchMove);
         doc.removeEventListener("touchend", handleTouchEnd);
       }, [handleTouchEnd, handleTouchMove]);
-      React37.useEffect(() => {
+      React33.useEffect(() => {
         const {
           current: slider
         } = sliderRef;
@@ -27620,7 +27620,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
           stopListening();
         };
       }, [stopListening, handleTouchStart]);
-      React37.useEffect(() => {
+      React33.useEffect(() => {
         if (disabled) {
           stopListening();
         }
@@ -27747,7 +27747,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     exports.default = void 0;
     var _extends2 = _interopRequireDefault(require_extends());
     var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require_objectWithoutPropertiesLoose());
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     var _propTypes = _interopRequireDefault(require_prop_types());
     var _clsx = _interopRequireDefault(require_clsx());
     var _utils = require_utils();
@@ -27758,7 +27758,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     var _useSlider = _interopRequireWildcard(require_useSlider());
     var _useSlotProps = _interopRequireDefault(require_useSlotProps());
     var _jsxRuntime = require_jsx_runtime();
-    var _excluded22 = ["aria-label", "aria-valuetext", "aria-labelledby", "className", "component", "classes", "disableSwap", "disabled", "getAriaLabel", "getAriaValueText", "marks", "max", "min", "name", "onChange", "onChangeCommitted", "orientation", "scale", "step", "tabIndex", "track", "value", "valueLabelDisplay", "valueLabelFormat", "isRtl", "components", "componentsProps"];
+    var _excluded19 = ["aria-label", "aria-valuetext", "aria-labelledby", "className", "component", "classes", "disableSwap", "disabled", "getAriaLabel", "getAriaValueText", "marks", "max", "min", "name", "onChange", "onChangeCommitted", "orientation", "scale", "step", "tabIndex", "track", "value", "valueLabelDisplay", "valueLabelFormat", "isRtl", "components", "componentsProps"];
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
         return null;
@@ -27798,7 +27798,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
       return newObj;
     }
     var Identity = (x) => x;
-    var useUtilityClasses17 = (ownerState) => {
+    var useUtilityClasses14 = (ownerState) => {
       const {
         disabled,
         dragging,
@@ -27826,7 +27826,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     var Forward = ({
       children
     }) => children;
-    var SliderUnstyled = /* @__PURE__ */ React37.forwardRef(function SliderUnstyled2(props, ref) {
+    var SliderUnstyled = /* @__PURE__ */ React33.forwardRef(function SliderUnstyled2(props, ref) {
       var _ref, _components$Rail, _components$Track, _components$Thumb, _components$ValueLabe, _components$Mark, _components$MarkLabel;
       const {
         "aria-label": ariaLabel,
@@ -27851,7 +27851,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         isRtl = false,
         components = {},
         componentsProps = {}
-      } = props, other = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded22);
+      } = props, other = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded19);
       const ownerState = (0, _extends2.default)({}, props, {
         marks: marksProp,
         classes: classesProp,
@@ -27887,7 +27887,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
       ownerState.marked = marks.length > 0 && marks.some((mark) => mark.label);
       ownerState.dragging = dragging;
       ownerState.focusedThumbIndex = focusedThumbIndex;
-      const classes = useUtilityClasses17(ownerState);
+      const classes = useUtilityClasses14(ownerState);
       const Root = (_ref = component != null ? component : components.Root) != null ? _ref : "span";
       const rootProps = (0, _useSlotProps.default)({
         elementType: Root,
@@ -27957,7 +27957,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
           } else {
             markActive = track === "normal" && (range ? mark.value >= values2[0] && mark.value <= values2[values2.length - 1] : mark.value <= values2[0]) || track === "inverted" && (range ? mark.value <= values2[0] || mark.value >= values2[values2.length - 1] : mark.value >= values2[0]);
           }
-          return /* @__PURE__ */ (0, _jsxRuntime.jsxs)(React37.Fragment, {
+          return /* @__PURE__ */ (0, _jsxRuntime.jsxs)(React33.Fragment, {
             children: [/* @__PURE__ */ (0, _jsxRuntime.jsx)(Mark, (0, _extends2.default)({
               "data-index": index
             }, markProps, !(0, _isHostComponent.default)(Mark) && {
@@ -27980,7 +27980,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
           const percent = (0, _useSlider.valueToPercent)(value, min, max);
           const style = axisProps[axis].offset(percent);
           const ValueLabelComponent = valueLabelDisplay === "off" ? Forward : ValueLabel;
-          return /* @__PURE__ */ (0, _jsxRuntime.jsx)(React37.Fragment, {
+          return /* @__PURE__ */ (0, _jsxRuntime.jsx)(React33.Fragment, {
             children: /* @__PURE__ */ (0, _jsxRuntime.jsx)(ValueLabelComponent, (0, _extends2.default)({}, !(0, _isHostComponent.default)(ValueLabelComponent) && {
               valueLabelFormat,
               valueLabelDisplay,
@@ -28212,7 +28212,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     });
     exports.default = useSnackbar;
     var _extends2 = _interopRequireDefault(require_extends());
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     var _utils = require_utils();
     var _extractEventHandlers = _interopRequireDefault(require_extractEventHandlers());
     function _getRequireWildcardCache(nodeInterop) {
@@ -28262,8 +28262,8 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         ref,
         resumeHideDuration
       } = parameters;
-      const timerAutoHide = React37.useRef();
-      React37.useEffect(() => {
+      const timerAutoHide = React33.useRef();
+      React33.useEffect(() => {
         if (!open) {
           return void 0;
         }
@@ -28291,7 +28291,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
           handleClose(null, "timeout");
         }, autoHideDurationParam);
       });
-      React37.useEffect(() => {
+      React33.useEffect(() => {
         if (open) {
           setAutoHideTimer(autoHideDuration);
         }
@@ -28305,7 +28305,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
       const handlePause = () => {
         clearTimeout(timerAutoHide.current);
       };
-      const handleResume = React37.useCallback(() => {
+      const handleResume = React33.useCallback(() => {
         if (autoHideDuration != null) {
           setAutoHideTimer(resumeHideDuration != null ? resumeHideDuration : autoHideDuration * 0.5);
         }
@@ -28330,7 +28330,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         onMouseLeaveCallback == null ? void 0 : onMouseLeaveCallback(event);
         handleResume();
       };
-      React37.useEffect(() => {
+      React33.useEffect(() => {
         if (!disableWindowBlurListener && open) {
           window.addEventListener("focus", handleResume);
           window.addEventListener("blur", handlePause);
@@ -28371,7 +28371,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     exports.default = void 0;
     var _extends2 = _interopRequireDefault(require_extends());
     var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require_objectWithoutPropertiesLoose());
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     var _propTypes = _interopRequireDefault(require_prop_types());
     var _ClickAwayListener = _interopRequireDefault(require_ClickAwayListener2());
     var _composeClasses = _interopRequireDefault(require_composeClasses3());
@@ -28379,7 +28379,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     var _useSnackbar = _interopRequireDefault(require_useSnackbar());
     var _utils = require_utils2();
     var _jsxRuntime = require_jsx_runtime();
-    var _excluded22 = ["autoHideDuration", "children", "component", "components", "componentsProps", "disableWindowBlurListener", "exited", "onBlur", "onClose", "onFocus", "onMouseEnter", "onMouseLeave", "open", "resumeHideDuration"];
+    var _excluded19 = ["autoHideDuration", "children", "component", "components", "componentsProps", "disableWindowBlurListener", "exited", "onBlur", "onClose", "onFocus", "onMouseEnter", "onMouseLeave", "open", "resumeHideDuration"];
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
         return null;
@@ -28418,13 +28418,13 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
       }
       return newObj;
     }
-    var useUtilityClasses17 = () => {
+    var useUtilityClasses14 = () => {
       const slots = {
         root: ["root"]
       };
       return (0, _composeClasses.default)(slots, _snackbarUnstyledClasses.getSnackbarUnstyledUtilityClass, void 0);
     };
-    var SnackbarUnstyled = /* @__PURE__ */ React37.forwardRef(function SnackbarUnstyled2(props, ref) {
+    var SnackbarUnstyled = /* @__PURE__ */ React33.forwardRef(function SnackbarUnstyled2(props, ref) {
       const {
         autoHideDuration = null,
         children,
@@ -28436,8 +28436,8 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         onClose,
         open,
         resumeHideDuration
-      } = props, other = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded22);
-      const classes = useUtilityClasses17();
+      } = props, other = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded19);
+      const classes = useUtilityClasses14();
       const {
         getRootProps,
         onClickAway
@@ -28652,7 +28652,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     });
     exports.default = useSwitch;
     var _extends2 = _interopRequireDefault(require_extends());
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     var _utils = require_utils();
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
@@ -28725,14 +28725,14 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         onFocus: handleFocusVisible,
         ref: focusVisibleRef
       } = (0, _utils.unstable_useIsFocusVisible)();
-      const [focusVisible, setFocusVisible] = React37.useState(false);
+      const [focusVisible, setFocusVisible] = React33.useState(false);
       if (disabled && focusVisible) {
         setFocusVisible(false);
       }
-      React37.useEffect(() => {
+      React33.useEffect(() => {
         isFocusVisibleRef.current = focusVisible;
       }, [focusVisible, isFocusVisibleRef]);
-      const inputRef = React37.useRef(null);
+      const inputRef = React33.useRef(null);
       const createHandleFocus = (otherProps) => (event) => {
         var _otherProps$onFocus;
         if (!inputRef.current) {
@@ -28808,14 +28808,14 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     exports.default = void 0;
     var _extends2 = _interopRequireDefault(require_extends());
     var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require_objectWithoutPropertiesLoose());
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     var _propTypes = _interopRequireDefault(require_prop_types());
     var _composeClasses = _interopRequireDefault(require_composeClasses3());
     var _useSwitch = _interopRequireDefault(require_useSwitch());
     var _switchUnstyledClasses = require_switchUnstyledClasses();
     var _utils = require_utils2();
     var _jsxRuntime = require_jsx_runtime();
-    var _excluded22 = ["checked", "component", "components", "componentsProps", "defaultChecked", "disabled", "onBlur", "onChange", "onFocus", "onFocusVisible", "readOnly", "required"];
+    var _excluded19 = ["checked", "component", "components", "componentsProps", "defaultChecked", "disabled", "onBlur", "onChange", "onFocus", "onFocusVisible", "readOnly", "required"];
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
         return null;
@@ -28854,7 +28854,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
       }
       return newObj;
     }
-    var useUtilityClasses17 = (ownerState) => {
+    var useUtilityClasses14 = (ownerState) => {
       const {
         checked,
         disabled,
@@ -28869,7 +28869,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
       };
       return (0, _composeClasses.default)(slots, _switchUnstyledClasses.getSwitchUnstyledUtilityClass, {});
     };
-    var SwitchUnstyled = /* @__PURE__ */ React37.forwardRef(function SwitchUnstyled2(props, ref) {
+    var SwitchUnstyled = /* @__PURE__ */ React33.forwardRef(function SwitchUnstyled2(props, ref) {
       var _ref, _components$Thumb, _components$Input, _components$Track;
       const {
         checked: checkedProp,
@@ -28883,7 +28883,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         onFocus,
         onFocusVisible,
         readOnly: readOnlyProp
-      } = props, other = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded22);
+      } = props, other = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded19);
       const useSwitchProps = {
         checked: checkedProp,
         defaultChecked,
@@ -28907,7 +28907,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         focusVisible,
         readOnly
       });
-      const classes = useUtilityClasses17(ownerState);
+      const classes = useUtilityClasses14(ownerState);
       const Root = (_ref = component != null ? component : components.Root) != null ? _ref : "span";
       const rootProps = (0, _utils.useSlotProps)({
         elementType: Root,
@@ -29116,10 +29116,10 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     exports.default = void 0;
     var _extends2 = _interopRequireDefault(require_extends());
     var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require_objectWithoutPropertiesLoose());
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     var _utils = require_utils2();
     var _jsxRuntime = require_jsx_runtime();
-    var _excluded22 = ["component", "components", "componentsProps", "count", "getItemAriaLabel", "onPageChange", "page", "rowsPerPage", "showFirstButton", "showLastButton", "direction", "ownerState"];
+    var _excluded19 = ["component", "components", "componentsProps", "count", "getItemAriaLabel", "onPageChange", "page", "rowsPerPage", "showFirstButton", "showLastButton", "direction", "ownerState"];
     var _span;
     var _span2;
     var _span3;
@@ -29185,7 +29185,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     function defaultGetAriaLabel(type) {
       return `Go to ${type} page`;
     }
-    var TablePaginationActionsUnstyled = /* @__PURE__ */ React37.forwardRef(function TablePaginationActionsUnstyled2(props, ref) {
+    var TablePaginationActionsUnstyled = /* @__PURE__ */ React33.forwardRef(function TablePaginationActionsUnstyled2(props, ref) {
       var _ref, _components$Root, _components$FirstButt, _components$LastButto, _components$NextButto, _components$BackButto, _components$LastPageI, _components$FirstPage, _components$NextPageI, _components$BackPageI;
       const {
         component,
@@ -29199,7 +29199,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         showFirstButton = false,
         showLastButton = false,
         direction
-      } = props, other = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded22);
+      } = props, other = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded19);
       const ownerState = props;
       const handleFirstPageButtonClick = (event) => {
         onPageChange(event, 0);
@@ -29320,7 +29320,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     exports.default = void 0;
     var _extends2 = _interopRequireDefault(require_extends());
     var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require_objectWithoutPropertiesLoose());
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     var _propTypes = _interopRequireDefault(require_prop_types());
     var _utils = require_utils();
     var _utils2 = require_utils2();
@@ -29329,7 +29329,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     var _TablePaginationActionsUnstyled = _interopRequireDefault(require_TablePaginationActionsUnstyled());
     var _tablePaginationUnstyledClasses = require_tablePaginationUnstyledClasses();
     var _jsxRuntime = require_jsx_runtime();
-    var _excluded22 = ["component", "components", "componentsProps", "colSpan", "count", "getItemAriaLabel", "labelDisplayedRows", "labelId", "labelRowsPerPage", "onPageChange", "onRowsPerPageChange", "page", "rowsPerPage", "rowsPerPageOptions", "selectId"];
+    var _excluded19 = ["component", "components", "componentsProps", "colSpan", "count", "getItemAriaLabel", "labelDisplayedRows", "labelId", "labelRowsPerPage", "onPageChange", "onRowsPerPageChange", "page", "rowsPerPage", "rowsPerPageOptions", "selectId"];
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
         return null;
@@ -29378,7 +29378,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     function defaultGetAriaLabel(type) {
       return `Go to ${type} page`;
     }
-    var useUtilityClasses17 = () => {
+    var useUtilityClasses14 = () => {
       const slots = {
         root: ["root"],
         toolbar: ["toolbar"],
@@ -29393,7 +29393,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
       };
       return (0, _composeClasses.default)(slots, _tablePaginationUnstyledClasses.getTablePaginationUnstyledUtilityClass, {});
     };
-    var TablePaginationUnstyled = /* @__PURE__ */ React37.forwardRef(function TablePaginationUnstyled2(props, ref) {
+    var TablePaginationUnstyled = /* @__PURE__ */ React33.forwardRef(function TablePaginationUnstyled2(props, ref) {
       var _ref, _components$Select, _components$Actions, _components$MenuItem, _components$SelectLab, _components$Displayed, _components$Toolbar, _components$Spacer;
       const {
         component,
@@ -29411,9 +29411,9 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         rowsPerPage,
         rowsPerPageOptions = [10, 25, 50, 100],
         selectId: selectIdProp
-      } = props, other = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded22);
+      } = props, other = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded19);
       const ownerState = props;
-      const classes = useUtilityClasses17();
+      const classes = useUtilityClasses14();
       let colSpan;
       if (!component || component === "td" || !(0, _isHostComponent.default)(component)) {
         colSpan = colSpanProp || 1e3;
@@ -29512,7 +29512,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
           children: [/* @__PURE__ */ (0, _jsxRuntime.jsx)(Spacer, (0, _extends2.default)({}, spacerProps)), rowsPerPageOptions.length > 1 && /* @__PURE__ */ (0, _jsxRuntime.jsx)(SelectLabel, (0, _extends2.default)({}, selectLabelProps, {
             children: labelRowsPerPage
           })), rowsPerPageOptions.length > 1 && /* @__PURE__ */ (0, _jsxRuntime.jsx)(Select, (0, _extends2.default)({}, selectProps, {
-            children: rowsPerPageOptions.map((rowsPerPageOption) => /* @__PURE__ */ (0, React37.createElement)(MenuItem, (0, _extends2.default)({}, menuItemProps, {
+            children: rowsPerPageOptions.map((rowsPerPageOption) => /* @__PURE__ */ (0, React33.createElement)(MenuItem, (0, _extends2.default)({}, menuItemProps, {
               key: typeof rowsPerPageOption !== "number" && rowsPerPageOption.label ? rowsPerPageOption.label : rowsPerPageOption,
               value: typeof rowsPerPageOption !== "number" && rowsPerPageOption.value ? rowsPerPageOption.value : rowsPerPageOption
             }), typeof rowsPerPageOption !== "number" && rowsPerPageOption.label ? rowsPerPageOption.label : rowsPerPageOption))
@@ -29761,7 +29761,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
       value: true
     });
     exports.default = void 0;
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     var _utils = require_utils();
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
@@ -29817,13 +29817,13 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         state: "value"
       });
       const idPrefix = (0, _utils.unstable_useId)();
-      const onSelected = React37.useCallback((e, newValue) => {
+      const onSelected = React33.useCallback((e, newValue) => {
         setValue(newValue);
         if (onChange) {
           onChange(e, newValue);
         }
       }, [onChange, setValue]);
-      const tabsContextValue = React37.useMemo(() => {
+      const tabsContextValue = React33.useMemo(() => {
         return {
           idPrefix,
           value,
@@ -29851,7 +29851,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     exports.getPanelId = getPanelId;
     exports.getTabId = getTabId;
     exports.useTabContext = useTabContext;
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
         return null;
@@ -29890,12 +29890,12 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
       }
       return newObj;
     }
-    var Context = /* @__PURE__ */ React37.createContext(null);
+    var Context = /* @__PURE__ */ React33.createContext(null);
     if (false) {
       Context.displayName = "TabsContext";
     }
     function useTabContext() {
-      return React37.useContext(Context);
+      return React33.useContext(Context);
     }
     function getPanelId(context, value) {
       const {
@@ -29929,7 +29929,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     exports.default = void 0;
     var _extends2 = _interopRequireDefault(require_extends());
     var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require_objectWithoutPropertiesLoose());
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     var _propTypes = _interopRequireDefault(require_prop_types());
     var _utils = require_utils2();
     var _composeClasses = _interopRequireDefault(require_composeClasses3());
@@ -29937,7 +29937,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     var _useTabs = _interopRequireDefault(require_useTabs());
     var _TabsContext = _interopRequireDefault(require_TabsContext());
     var _jsxRuntime = require_jsx_runtime();
-    var _excluded22 = ["children", "value", "defaultValue", "orientation", "direction", "component", "components", "componentsProps", "onChange", "selectionFollowsFocus"];
+    var _excluded19 = ["children", "value", "defaultValue", "orientation", "direction", "component", "components", "componentsProps", "onChange", "selectionFollowsFocus"];
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
         return null;
@@ -29976,7 +29976,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
       }
       return newObj;
     }
-    var useUtilityClasses17 = (ownerState) => {
+    var useUtilityClasses14 = (ownerState) => {
       const {
         orientation
       } = ownerState;
@@ -29985,7 +29985,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
       };
       return (0, _composeClasses.default)(slots, _tabsUnstyledClasses.getTabsUnstyledUtilityClass, {});
     };
-    var TabsUnstyled = /* @__PURE__ */ React37.forwardRef((props, ref) => {
+    var TabsUnstyled = /* @__PURE__ */ React33.forwardRef((props, ref) => {
       var _ref;
       const {
         children,
@@ -29994,7 +29994,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         component,
         components = {},
         componentsProps = {}
-      } = props, other = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded22);
+      } = props, other = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded19);
       const {
         tabsContextValue
       } = (0, _useTabs.default)(props);
@@ -30002,7 +30002,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         orientation,
         direction
       });
-      const classes = useUtilityClasses17(ownerState);
+      const classes = useUtilityClasses14(ownerState);
       const TabsRoot = (_ref = component != null ? component : components.Root) != null ? _ref : "div";
       const tabsRootProps = (0, _utils.useSlotProps)({
         elementType: TabsRoot,
@@ -30231,14 +30231,14 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     exports.default = void 0;
     var _extends2 = _interopRequireDefault(require_extends());
     var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require_objectWithoutPropertiesLoose());
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     var _propTypes = _interopRequireDefault(require_prop_types());
     var _utils = require_utils2();
     var _composeClasses = _interopRequireDefault(require_composeClasses3());
     var _tabPanelUnstyledClasses = require_tabPanelUnstyledClasses();
     var _useTabPanel = _interopRequireDefault(require_useTabPanel());
     var _jsxRuntime = require_jsx_runtime();
-    var _excluded22 = ["children", "value", "components", "componentsProps", "component"];
+    var _excluded19 = ["children", "value", "components", "componentsProps", "component"];
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
         return null;
@@ -30277,7 +30277,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
       }
       return newObj;
     }
-    var useUtilityClasses17 = (ownerState) => {
+    var useUtilityClasses14 = (ownerState) => {
       const {
         hidden
       } = ownerState;
@@ -30286,14 +30286,14 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
       };
       return (0, _composeClasses.default)(slots, _tabPanelUnstyledClasses.getTabPanelUnstyledUtilityClass, {});
     };
-    var TabPanelUnstyled = /* @__PURE__ */ React37.forwardRef(function TabPanelUnstyled2(props, ref) {
+    var TabPanelUnstyled = /* @__PURE__ */ React33.forwardRef(function TabPanelUnstyled2(props, ref) {
       var _ref;
       const {
         children,
         components = {},
         componentsProps = {},
         component
-      } = props, other = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded22);
+      } = props, other = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded19);
       const {
         hidden,
         getRootProps
@@ -30301,7 +30301,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
       const ownerState = (0, _extends2.default)({}, props, {
         hidden
       });
-      const classes = useUtilityClasses17(ownerState);
+      const classes = useUtilityClasses14(ownerState);
       const TabPanelRoot = (_ref = component != null ? component : components.Root) != null ? _ref : "div";
       const tabPanelRootProps = (0, _utils.useSlotProps)({
         elementType: TabPanelRoot,
@@ -30471,7 +30471,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     });
     exports.default = void 0;
     var _extends2 = _interopRequireDefault(require_extends());
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     var _utils = require_utils();
     var _reactIs = require_react_is2();
     var _TabsUnstyled = require_TabsUnstyled2();
@@ -30564,7 +30564,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         children,
         ref
       } = parameters;
-      const tabsListRef = /* @__PURE__ */ React37.createRef();
+      const tabsListRef = /* @__PURE__ */ React33.createRef();
       const handleRef = (0, _utils.unstable_useForkRef)(tabsListRef, ref);
       const context = (0, _TabsUnstyled.useTabContext)();
       if (context === null) {
@@ -30630,11 +30630,11 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
           ref: handleRef
         }, mergedEventHandlers);
       };
-      const processChildren = React37.useCallback(() => {
+      const processChildren = React33.useCallback(() => {
         const valueToIndex = new Map();
         let childIndex = 0;
-        const processedChildren = React37.Children.map(children, (child) => {
-          if (!/* @__PURE__ */ React37.isValidElement(child)) {
+        const processedChildren = React33.Children.map(children, (child) => {
+          if (!/* @__PURE__ */ React33.isValidElement(child)) {
             return null;
           }
           if (false) {
@@ -30645,7 +30645,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
           const childValue = child.props.value === void 0 ? childIndex : child.props.value;
           valueToIndex.set(childValue, childIndex);
           childIndex += 1;
-          return /* @__PURE__ */ React37.cloneElement(child, (0, _extends2.default)({
+          return /* @__PURE__ */ React33.cloneElement(child, (0, _extends2.default)({
             value: childValue
           }, childIndex === 1 && value === false && !child.props.tabIndex || value === childValue ? {
             tabIndex: 0
@@ -30677,14 +30677,14 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     exports.default = void 0;
     var _extends2 = _interopRequireDefault(require_extends());
     var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require_objectWithoutPropertiesLoose());
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     var _propTypes = _interopRequireDefault(require_prop_types());
     var _composeClasses = _interopRequireDefault(require_composeClasses3());
     var _utils = require_utils2();
     var _tabsListUnstyledClasses = require_tabsListUnstyledClasses();
     var _useTabsList = _interopRequireDefault(require_useTabsList());
     var _jsxRuntime = require_jsx_runtime();
-    var _excluded22 = ["children", "component", "components", "componentsProps"];
+    var _excluded19 = ["children", "component", "components", "componentsProps"];
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
         return null;
@@ -30723,7 +30723,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
       }
       return newObj;
     }
-    var useUtilityClasses17 = (ownerState) => {
+    var useUtilityClasses14 = (ownerState) => {
       const {
         orientation
       } = ownerState;
@@ -30732,13 +30732,13 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
       };
       return (0, _composeClasses.default)(slots, _tabsListUnstyledClasses.getTabsListUnstyledUtilityClass, {});
     };
-    var TabsListUnstyled = /* @__PURE__ */ React37.forwardRef((props, ref) => {
+    var TabsListUnstyled = /* @__PURE__ */ React33.forwardRef((props, ref) => {
       var _ref;
       const {
         component,
         components = {},
         componentsProps = {}
-      } = props, other = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded22);
+      } = props, other = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded19);
       const {
         isRtl,
         orientation,
@@ -30751,7 +30751,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         isRtl,
         orientation
       });
-      const classes = useUtilityClasses17(ownerState);
+      const classes = useUtilityClasses14(ownerState);
       const TabsListRoot = (_ref = component != null ? component : components.Root) != null ? _ref : "div";
       const tabsListRootProps = (0, _utils.useSlotProps)({
         elementType: TabsListRoot,
@@ -30943,7 +30943,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require_objectWithoutPropertiesLoose());
     var _TabsUnstyled = require_TabsUnstyled2();
     var _ButtonUnstyled = require_ButtonUnstyled2();
-    var _excluded22 = ["getRootProps"];
+    var _excluded19 = ["getRootProps"];
     var useTab = (parameters) => {
       var _getPanelId, _getTabId;
       const {
@@ -30954,7 +30954,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
       } = parameters;
       const _useButton = (0, _ButtonUnstyled.useButton)(parameters), {
         getRootProps: getRootPropsButton
-      } = _useButton, otherButtonProps = (0, _objectWithoutPropertiesLoose2.default)(_useButton, _excluded22);
+      } = _useButton, otherButtonProps = (0, _objectWithoutPropertiesLoose2.default)(_useButton, _excluded19);
       const context = (0, _TabsUnstyled.useTabContext)();
       if (context === null) {
         throw new Error("No TabContext provided");
@@ -31028,7 +31028,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     exports.default = void 0;
     var _extends2 = _interopRequireDefault(require_extends());
     var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require_objectWithoutPropertiesLoose());
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     var _propTypes = _interopRequireDefault(require_prop_types());
     var _utils = require_utils();
     var _composeClasses = _interopRequireDefault(require_composeClasses3());
@@ -31036,7 +31036,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     var _useTab = _interopRequireDefault(require_useTab());
     var _utils2 = require_utils2();
     var _jsxRuntime = require_jsx_runtime();
-    var _excluded22 = ["action", "children", "value", "disabled", "onChange", "onClick", "onFocus", "component", "components", "componentsProps"];
+    var _excluded19 = ["action", "children", "value", "disabled", "onChange", "onClick", "onFocus", "component", "components", "componentsProps"];
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
         return null;
@@ -31075,7 +31075,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
       }
       return newObj;
     }
-    var useUtilityClasses17 = (ownerState) => {
+    var useUtilityClasses14 = (ownerState) => {
       const {
         selected,
         disabled
@@ -31085,7 +31085,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
       };
       return (0, _composeClasses.default)(slots, _tabUnstyledClasses.getTabUnstyledUtilityClass, {});
     };
-    var TabUnstyled = /* @__PURE__ */ React37.forwardRef(function TabUnstyled2(props, ref) {
+    var TabUnstyled = /* @__PURE__ */ React33.forwardRef(function TabUnstyled2(props, ref) {
       var _ref;
       const {
         action,
@@ -31094,8 +31094,8 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         component,
         components = {},
         componentsProps = {}
-      } = props, other = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded22);
-      const tabRef = React37.useRef();
+      } = props, other = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded19);
+      const tabRef = React33.useRef();
       const handleRef = (0, _utils.unstable_useForkRef)(tabRef, ref);
       const {
         active,
@@ -31106,7 +31106,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
       } = (0, _useTab.default)((0, _extends2.default)({}, props, {
         ref: handleRef
       }));
-      React37.useImperativeHandle(action, () => ({
+      React33.useImperativeHandle(action, () => ({
         focusVisible: () => {
           setFocusVisible(true);
           tabRef.current.focus();
@@ -31118,7 +31118,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         disabled,
         selected
       });
-      const classes = useUtilityClasses17(ownerState);
+      const classes = useUtilityClasses14(ownerState);
       const TabRoot = (_ref = component != null ? component : components.Root) != null ? _ref : "button";
       const tabRootProps = (0, _utils2.useSlotProps)({
         elementType: TabRoot,
@@ -31301,12 +31301,12 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     exports.default = void 0;
     var _extends2 = _interopRequireDefault(require_extends());
     var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require_objectWithoutPropertiesLoose());
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     var _propTypes = _interopRequireDefault(require_prop_types());
     var _reactDom = require_react_dom();
     var _utils = require_utils();
     var _jsxRuntime = require_jsx_runtime();
-    var _excluded22 = ["onChange", "maxRows", "minRows", "style", "value"];
+    var _excluded19 = ["onChange", "maxRows", "minRows", "style", "value"];
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
         return null;
@@ -31362,23 +31362,23 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     function isEmpty(obj) {
       return obj === void 0 || obj === null || Object.keys(obj).length === 0;
     }
-    var TextareaAutosize2 = /* @__PURE__ */ React37.forwardRef(function TextareaAutosize3(props, ref) {
+    var TextareaAutosize2 = /* @__PURE__ */ React33.forwardRef(function TextareaAutosize3(props, ref) {
       const {
         onChange,
         maxRows,
         minRows = 1,
         style,
         value
-      } = props, other = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded22);
+      } = props, other = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded19);
       const {
         current: isControlled
-      } = React37.useRef(value != null);
-      const inputRef = React37.useRef(null);
+      } = React33.useRef(value != null);
+      const inputRef = React33.useRef(null);
       const handleRef = (0, _utils.unstable_useForkRef)(ref, inputRef);
-      const shadowRef = React37.useRef(null);
-      const renders = React37.useRef(0);
-      const [state, setState] = React37.useState({});
-      const getUpdatedState = React37.useCallback(() => {
+      const shadowRef = React33.useRef(null);
+      const renders = React33.useRef(0);
+      const [state, setState] = React33.useState({});
+      const getUpdatedState = React33.useCallback(() => {
         const input = inputRef.current;
         const containerWindow = (0, _utils.unstable_ownerWindow)(input);
         const computedStyle = containerWindow.getComputedStyle(input);
@@ -31431,7 +31431,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         }
         return prevState;
       };
-      const syncHeight = React37.useCallback(() => {
+      const syncHeight = React33.useCallback(() => {
         const newState = getUpdatedState();
         if (isEmpty(newState)) {
           return;
@@ -31451,7 +31451,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
           });
         });
       };
-      React37.useEffect(() => {
+      React33.useEffect(() => {
         const handleResize = (0, _utils.unstable_debounce)(() => {
           renders.current = 0;
           if (inputRef.current) {
@@ -31476,7 +31476,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
       (0, _utils.unstable_useEnhancedEffect)(() => {
         syncHeight();
       });
-      React37.useEffect(() => {
+      React33.useEffect(() => {
         renders.current = 0;
       }, [value]);
       const handleChange = (event) => {
@@ -31488,7 +31488,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
           onChange(event);
         }
       };
-      return /* @__PURE__ */ (0, _jsxRuntime.jsxs)(React37.Fragment, {
+      return /* @__PURE__ */ (0, _jsxRuntime.jsxs)(React33.Fragment, {
         children: [/* @__PURE__ */ (0, _jsxRuntime.jsx)("textarea", (0, _extends2.default)({
           value,
           onChange: handleChange,
@@ -32433,7 +32433,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
     var _blue = _interopRequireDefault(require_blue());
     var _lightBlue = _interopRequireDefault(require_lightBlue());
     var _green = _interopRequireDefault(require_green());
-    var _excluded22 = ["mode", "contrastThreshold", "tonalOffset"];
+    var _excluded19 = ["mode", "contrastThreshold", "tonalOffset"];
     var light2 = {
       text: {
         primary: "rgba(0, 0, 0, 0.87)",
@@ -32589,7 +32589,7 @@ The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rg
         mode = "light",
         contrastThreshold = 3,
         tonalOffset = 0.2
-      } = palette, other = (0, _objectWithoutPropertiesLoose2.default)(palette, _excluded22);
+      } = palette, other = (0, _objectWithoutPropertiesLoose2.default)(palette, _excluded19);
       const primary = palette.primary || getDefaultPrimary2(mode);
       const secondary = palette.secondary || getDefaultSecondary2(mode);
       const error = palette.error || getDefaultError2(mode);
@@ -32704,7 +32704,7 @@ const theme2 = createTheme({ palette: {
     var _extends2 = _interopRequireDefault(require_extends());
     var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require_objectWithoutPropertiesLoose());
     var _utils = require_utils();
-    var _excluded22 = ["fontFamily", "fontSize", "fontWeightLight", "fontWeightRegular", "fontWeightMedium", "fontWeightBold", "htmlFontSize", "allVariants", "pxToRem"];
+    var _excluded19 = ["fontFamily", "fontSize", "fontWeightLight", "fontWeightRegular", "fontWeightMedium", "fontWeightBold", "htmlFontSize", "allVariants", "pxToRem"];
     function round2(value) {
       return Math.round(value * 1e5) / 1e5;
     }
@@ -32723,7 +32723,7 @@ const theme2 = createTheme({ palette: {
         htmlFontSize = 16,
         allVariants,
         pxToRem: pxToRem2
-      } = _ref, other = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded22);
+      } = _ref, other = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded19);
       if (false) {
         if (typeof fontSize !== "number") {
           console.error("MUI: `fontSize` is required to be a number.");
@@ -32801,7 +32801,7 @@ const theme2 = createTheme({ palette: {
     exports.easing = exports.duration = void 0;
     var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require_objectWithoutPropertiesLoose());
     var _extends2 = _interopRequireDefault(require_extends());
-    var _excluded22 = ["duration", "easing", "delay"];
+    var _excluded19 = ["duration", "easing", "delay"];
     var easing2 = {
       easeInOut: "cubic-bezier(0.4, 0, 0.2, 1)",
       easeOut: "cubic-bezier(0.0, 0, 0.2, 1)",
@@ -32837,7 +32837,7 @@ const theme2 = createTheme({ palette: {
           duration: durationOption = mergedDuration.standard,
           easing: easingOption = mergedEasing.easeInOut,
           delay = 0
-        } = options, other = (0, _objectWithoutPropertiesLoose2.default)(options, _excluded22);
+        } = options, other = (0, _objectWithoutPropertiesLoose2.default)(options, _excluded19);
         if (false) {
           const isString = (value) => typeof value === "string";
           const isNumber = (value) => !isNaN(parseFloat(value));
@@ -32910,14 +32910,14 @@ const theme2 = createTheme({ palette: {
     var _shadows = _interopRequireDefault(require_shadows2());
     var _createTransitions = _interopRequireDefault(require_createTransitions());
     var _zIndex = _interopRequireDefault(require_zIndex());
-    var _excluded22 = ["breakpoints", "mixins", "spacing", "palette", "transitions", "typography", "shape"];
+    var _excluded19 = ["breakpoints", "mixins", "spacing", "palette", "transitions", "typography", "shape"];
     function createTheme2(options = {}, ...args) {
       const {
         mixins: mixinsInput = {},
         palette: paletteInput = {},
         transitions: transitionsInput = {},
         typography: typographyInput = {}
-      } = options, other = (0, _objectWithoutPropertiesLoose2.default)(options, _excluded22);
+      } = options, other = (0, _objectWithoutPropertiesLoose2.default)(options, _excluded19);
       if (options.vars) {
         throw new Error(false ? `MUI: \`vars\` is a private field used for CSS variables support.
 Please use another name.` : (0, _utils.formatMuiErrorMessage)(18));
@@ -33061,7 +33061,7 @@ Please use another name.` : (0, _utils.formatMuiErrorMessage)(18));
     exports.default = void 0;
     var _extends2 = _interopRequireDefault(require_extends());
     var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require_objectWithoutPropertiesLoose());
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     var _propTypes = _interopRequireDefault(require_prop_types());
     var _clsx = _interopRequireDefault(require_clsx());
     var _base = require_node3();
@@ -33070,7 +33070,7 @@ Please use another name.` : (0, _utils.formatMuiErrorMessage)(18));
     var _styled = _interopRequireDefault(require_styled2());
     var _svgIconClasses = require_svgIconClasses();
     var _jsxRuntime = require_jsx_runtime();
-    var _excluded22 = ["children", "className", "color", "component", "fontSize", "htmlColor", "inheritViewBox", "titleAccess", "viewBox"];
+    var _excluded19 = ["children", "className", "color", "component", "fontSize", "htmlColor", "inheritViewBox", "titleAccess", "viewBox"];
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
         return null;
@@ -33109,7 +33109,7 @@ Please use another name.` : (0, _utils.formatMuiErrorMessage)(18));
       }
       return newObj;
     }
-    var useUtilityClasses17 = (ownerState) => {
+    var useUtilityClasses14 = (ownerState) => {
       const {
         color,
         fontSize,
@@ -33157,7 +33157,7 @@ Please use another name.` : (0, _utils.formatMuiErrorMessage)(18));
         }[ownerState.color]
       };
     });
-    var SvgIcon3 = /* @__PURE__ */ React37.forwardRef(function SvgIcon4(inProps, ref) {
+    var SvgIcon3 = /* @__PURE__ */ React33.forwardRef(function SvgIcon4(inProps, ref) {
       const props = (0, _useThemeProps.default)({
         props: inProps,
         name: "MuiSvgIcon"
@@ -33172,7 +33172,7 @@ Please use another name.` : (0, _utils.formatMuiErrorMessage)(18));
         inheritViewBox = false,
         titleAccess,
         viewBox = "0 0 24 24"
-      } = props, other = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded22);
+      } = props, other = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded19);
       const ownerState = (0, _extends2.default)({}, props, {
         color,
         component,
@@ -33185,7 +33185,7 @@ Please use another name.` : (0, _utils.formatMuiErrorMessage)(18));
       if (!inheritViewBox) {
         more.viewBox = viewBox;
       }
-      const classes = useUtilityClasses17(ownerState);
+      const classes = useUtilityClasses14(ownerState);
       return /* @__PURE__ */ (0, _jsxRuntime.jsxs)(SvgIconRoot2, (0, _extends2.default)({
         as: component,
         className: (0, _clsx.default)(classes.root, className),
@@ -33307,7 +33307,7 @@ Please use another name.` : (0, _utils.formatMuiErrorMessage)(18));
     });
     exports.default = createSvgIcon2;
     var _extends2 = _interopRequireDefault(require_extends());
-    var React37 = _interopRequireWildcard(require_react());
+    var React33 = _interopRequireWildcard(require_react());
     var _SvgIcon = _interopRequireDefault(require_SvgIcon2());
     var _jsxRuntime = require_jsx_runtime();
     function _getRequireWildcardCache(nodeInterop) {
@@ -33349,7 +33349,7 @@ Please use another name.` : (0, _utils.formatMuiErrorMessage)(18));
       return newObj;
     }
     function createSvgIcon2(path, displayName) {
-      function Component4(props, ref) {
+      function Component3(props, ref) {
         return /* @__PURE__ */ (0, _jsxRuntime.jsx)(_SvgIcon.default, (0, _extends2.default)({
           "data-testid": `${displayName}Icon`,
           ref
@@ -33358,10 +33358,10 @@ Please use another name.` : (0, _utils.formatMuiErrorMessage)(18));
         }));
       }
       if (false) {
-        Component4.displayName = `${displayName}Icon`;
+        Component3.displayName = `${displayName}Icon`;
       }
-      Component4.muiName = _SvgIcon.default.muiName;
-      return /* @__PURE__ */ React37.memo(/* @__PURE__ */ React37.forwardRef(Component4));
+      Component3.muiName = _SvgIcon.default.muiName;
+      return /* @__PURE__ */ React33.memo(/* @__PURE__ */ React33.forwardRef(Component3));
     }
   });
 
@@ -33718,7 +33718,7 @@ Please use another name.` : (0, _utils.formatMuiErrorMessage)(18));
   });
 
   // <stdin>
-  var React36 = __toModule(require_react());
+  var React32 = __toModule(require_react());
   var import_client = __toModule(require_client());
 
   // node_modules/@babel/runtime/helpers/esm/extends.js
@@ -34648,25 +34648,6 @@ Please use another name.` : import_utils4.formatMuiErrorMessage(18));
   } : void 0;
   var Paper_default = Paper;
 
-  // ns-hugo:/home/runner/work/quiqr-template-company-toolbox/quiqr-template-company-toolbox/themes/company-toolbox/assets/theme.jsx
-  var theme = createTheme_default({
-    palette: {
-      xprimary: {
-        main: "#556cd6"
-      },
-      xsecondary: {
-        main: "#19857b"
-      },
-      white: {
-        main: "#ffffff"
-      },
-      error: {
-        main: red_default.A400
-      }
-    }
-  });
-  var theme_default = theme;
-
   // ns-hugo:/home/runner/work/quiqr-template-company-toolbox/quiqr-template-company-toolbox/themes/company-toolbox/assets/components/App.jsx
   var React14 = __toModule(require_react());
 
@@ -34813,10 +34794,10 @@ Please use another name.` : import_utils4.formatMuiErrorMessage(18));
       variant,
       variantMapping
     });
-    const Component4 = component || (paragraph ? "p" : variantMapping[variant] || defaultVariantMapping[variant]) || "span";
+    const Component3 = component || (paragraph ? "p" : variantMapping[variant] || defaultVariantMapping[variant]) || "span";
     const classes = useUtilityClasses2(ownerState);
     return /* @__PURE__ */ import_jsx_runtime5.jsx(TypographyRoot, _extends({
-      as: Component4,
+      as: Component3,
       ref,
       ownerState,
       className: import_clsx2.default(classes.root, className)
@@ -36133,11 +36114,11 @@ Please use another name.` : import_utils4.formatMuiErrorMessage(18));
     }, /* @__PURE__ */ React14.createElement(SearchAppBar, null), children));
   }
 
-  // ns-hugo:/home/runner/work/quiqr-template-company-toolbox/quiqr-template-company-toolbox/themes/company-toolbox/assets/components/ResourceListing.jsx
-  var React28 = __toModule(require_react());
+  // ns-hugo:/home/runner/work/quiqr-template-company-toolbox/quiqr-template-company-toolbox/themes/company-toolbox/assets/components/CategoryListing.jsx
+  var React24 = __toModule(require_react());
 
-  // ns-hugo:/home/runner/work/quiqr-template-company-toolbox/quiqr-template-company-toolbox/themes/company-toolbox/assets/components/ResourceCard.jsx
-  var React27 = __toModule(require_react());
+  // ns-hugo:/home/runner/work/quiqr-template-company-toolbox/quiqr-template-company-toolbox/themes/company-toolbox/assets/components/CategoryCard.jsx
+  var React23 = __toModule(require_react());
 
   // node_modules/@mui/material/esm/Card/Card.js
   var React15 = __toModule(require_react());
@@ -36376,19 +36357,6 @@ Please use another name.` : import_utils4.formatMuiErrorMessage(18));
   } : void 0;
   var CardContent_default = CardContent;
 
-  // node_modules/@mui/material/esm/CardActionArea/CardActionArea.js
-  var React23 = __toModule(require_react());
-  var import_clsx13 = __toModule(require_clsx());
-  var import_base22 = __toModule(require_node3());
-
-  // node_modules/@mui/material/esm/CardActionArea/cardActionAreaClasses.js
-  var import_base19 = __toModule(require_node3());
-  function getCardActionAreaUtilityClass(slot) {
-    return import_base19.generateUtilityClass("MuiCardActionArea", slot);
-  }
-  var cardActionAreaClasses = import_base19.generateUtilityClasses("MuiCardActionArea", ["root", "focusVisible", "focusHighlight"]);
-  var cardActionAreaClasses_default = cardActionAreaClasses;
-
   // node_modules/@mui/material/esm/ButtonBase/ButtonBase.js
   var React22 = __toModule(require_react());
   var import_clsx12 = __toModule(require_clsx());
@@ -36597,20 +36565,20 @@ Please use another name.` : import_utils4.formatMuiErrorMessage(18));
       }
     };
     _proto.render = function render() {
-      var _this$props = this.props, Component4 = _this$props.component, childFactory2 = _this$props.childFactory, props = _objectWithoutPropertiesLoose(_this$props, ["component", "childFactory"]);
+      var _this$props = this.props, Component3 = _this$props.component, childFactory2 = _this$props.childFactory, props = _objectWithoutPropertiesLoose(_this$props, ["component", "childFactory"]);
       var contextValue = this.state.contextValue;
       var children = values(this.state.children).map(childFactory2);
       delete props.appear;
       delete props.enter;
       delete props.exit;
-      if (Component4 === null) {
+      if (Component3 === null) {
         return /* @__PURE__ */ import_react3.default.createElement(TransitionGroupContext_default.Provider, {
           value: contextValue
         }, children);
       }
       return /* @__PURE__ */ import_react3.default.createElement(TransitionGroupContext_default.Provider, {
         value: contextValue
-      }, /* @__PURE__ */ import_react3.default.createElement(Component4, props, children));
+      }, /* @__PURE__ */ import_react3.default.createElement(Component3, props, children));
     };
     return TransitionGroup2;
   }(import_react3.default.Component);
@@ -36688,8 +36656,8 @@ Please use another name.` : import_utils4.formatMuiErrorMessage(18));
   var Ripple_default = Ripple;
 
   // node_modules/@mui/material/esm/ButtonBase/touchRippleClasses.js
-  var import_base20 = __toModule(require_node3());
-  var touchRippleClasses = import_base20.generateUtilityClasses("MuiTouchRipple", ["root", "ripple", "rippleVisible", "ripplePulsate", "child", "childLeaving", "childPulsate"]);
+  var import_base19 = __toModule(require_node3());
+  var touchRippleClasses = import_base19.generateUtilityClasses("MuiTouchRipple", ["root", "ripple", "rippleVisible", "ripplePulsate", "child", "childLeaving", "childPulsate"]);
   var touchRippleClasses_default = touchRippleClasses;
 
   // node_modules/@mui/material/esm/ButtonBase/TouchRipple.js
@@ -36978,11 +36946,11 @@ Please use another name.` : import_utils4.formatMuiErrorMessage(18));
   var TouchRipple_default = TouchRipple;
 
   // node_modules/@mui/material/esm/ButtonBase/buttonBaseClasses.js
-  var import_base21 = __toModule(require_node3());
+  var import_base20 = __toModule(require_node3());
   function getButtonBaseUtilityClass(slot) {
-    return import_base21.generateUtilityClass("MuiButtonBase", slot);
+    return import_base20.generateUtilityClass("MuiButtonBase", slot);
   }
-  var buttonBaseClasses = import_base21.generateUtilityClasses("MuiButtonBase", ["root", "disabled", "focusVisible"]);
+  var buttonBaseClasses = import_base20.generateUtilityClasses("MuiButtonBase", ["root", "disabled", "focusVisible"]);
   var buttonBaseClasses_default = buttonBaseClasses;
 
   // node_modules/@mui/material/esm/ButtonBase/ButtonBase.js
@@ -37298,518 +37266,48 @@ Please use another name.` : import_utils4.formatMuiErrorMessage(18));
   } : void 0;
   var ButtonBase_default = ButtonBase;
 
-  // node_modules/@mui/material/esm/CardActionArea/CardActionArea.js
-  var import_jsx_runtime18 = __toModule(require_jsx_runtime());
-  var import_jsx_runtime19 = __toModule(require_jsx_runtime());
-  var _excluded16 = ["children", "className", "focusVisibleClassName"];
-  var useUtilityClasses11 = (ownerState) => {
-    const {
-      classes
-    } = ownerState;
-    const slots = {
-      root: ["root"],
-      focusHighlight: ["focusHighlight"]
-    };
-    return import_base22.unstable_composeClasses(slots, getCardActionAreaUtilityClass, classes);
-  };
-  var CardActionAreaRoot = styled_default(ButtonBase_default, {
-    name: "MuiCardActionArea",
-    slot: "Root",
-    overridesResolver: (props, styles2) => styles2.root
-  })(({
-    theme: theme2
-  }) => ({
-    display: "block",
-    textAlign: "inherit",
-    width: "100%",
-    [`&:hover .${cardActionAreaClasses_default.focusHighlight}`]: {
-      opacity: (theme2.vars || theme2).palette.action.hoverOpacity,
-      "@media (hover: none)": {
-        opacity: 0
-      }
-    },
-    [`&.${cardActionAreaClasses_default.focusVisible} .${cardActionAreaClasses_default.focusHighlight}`]: {
-      opacity: (theme2.vars || theme2).palette.action.focusOpacity
-    }
-  }));
-  var CardActionAreaFocusHighlight = styled_default("span", {
-    name: "MuiCardActionArea",
-    slot: "FocusHighlight",
-    overridesResolver: (props, styles2) => styles2.focusHighlight
-  })(({
-    theme: theme2
-  }) => ({
-    overflow: "hidden",
-    pointerEvents: "none",
-    position: "absolute",
-    top: 0,
-    right: 0,
-    bottom: 0,
-    left: 0,
-    borderRadius: "inherit",
-    opacity: 0,
-    backgroundColor: "currentcolor",
-    transition: theme2.transitions.create("opacity", {
-      duration: theme2.transitions.duration.short
-    })
-  }));
-  var CardActionArea = /* @__PURE__ */ React23.forwardRef(function CardActionArea2(inProps, ref) {
-    const props = useThemeProps({
-      props: inProps,
-      name: "MuiCardActionArea"
-    });
-    const {
-      children,
-      className,
-      focusVisibleClassName
-    } = props, other = _objectWithoutPropertiesLoose(props, _excluded16);
-    const ownerState = props;
-    const classes = useUtilityClasses11(ownerState);
-    return /* @__PURE__ */ import_jsx_runtime19.jsxs(CardActionAreaRoot, _extends({
-      className: import_clsx13.default(classes.root, className),
-      focusVisibleClassName: import_clsx13.default(focusVisibleClassName, classes.focusVisible),
-      ref,
-      ownerState
-    }, other, {
-      children: [children, /* @__PURE__ */ import_jsx_runtime18.jsx(CardActionAreaFocusHighlight, {
-        className: classes.focusHighlight,
-        ownerState
-      })]
-    }));
-  });
-  false ? CardActionArea.propTypes = {
-    children: import_prop_types.default.node,
-    classes: import_prop_types.default.object,
-    className: import_prop_types.default.string,
-    focusVisibleClassName: import_prop_types.default.string,
-    sx: import_prop_types.default.oneOfType([import_prop_types.default.arrayOf(import_prop_types.default.oneOfType([import_prop_types.default.func, import_prop_types.default.object, import_prop_types.default.bool])), import_prop_types.default.func, import_prop_types.default.object])
-  } : void 0;
-  var CardActionArea_default = CardActionArea;
-
-  // node_modules/@mui/material/esm/CardActions/CardActions.js
-  var React24 = __toModule(require_react());
-  var import_clsx14 = __toModule(require_clsx());
-  var import_base24 = __toModule(require_node3());
-
-  // node_modules/@mui/material/esm/CardActions/cardActionsClasses.js
-  var import_base23 = __toModule(require_node3());
-  function getCardActionsUtilityClass(slot) {
-    return import_base23.generateUtilityClass("MuiCardActions", slot);
-  }
-  var cardActionsClasses = import_base23.generateUtilityClasses("MuiCardActions", ["root", "spacing"]);
-
-  // node_modules/@mui/material/esm/CardActions/CardActions.js
-  var import_jsx_runtime20 = __toModule(require_jsx_runtime());
-  var _excluded17 = ["disableSpacing", "className"];
-  var useUtilityClasses12 = (ownerState) => {
-    const {
-      classes,
-      disableSpacing
-    } = ownerState;
-    const slots = {
-      root: ["root", !disableSpacing && "spacing"]
-    };
-    return import_base24.unstable_composeClasses(slots, getCardActionsUtilityClass, classes);
-  };
-  var CardActionsRoot = styled_default("div", {
-    name: "MuiCardActions",
-    slot: "Root",
-    overridesResolver: (props, styles2) => {
-      const {
-        ownerState
-      } = props;
-      return [styles2.root, !ownerState.disableSpacing && styles2.spacing];
-    }
-  })(({
-    ownerState
-  }) => _extends({
-    display: "flex",
-    alignItems: "center",
-    padding: 8
-  }, !ownerState.disableSpacing && {
-    "& > :not(:first-of-type)": {
-      marginLeft: 8
-    }
-  }));
-  var CardActions = /* @__PURE__ */ React24.forwardRef(function CardActions2(inProps, ref) {
-    const props = useThemeProps({
-      props: inProps,
-      name: "MuiCardActions"
-    });
-    const {
-      disableSpacing = false,
-      className
-    } = props, other = _objectWithoutPropertiesLoose(props, _excluded17);
-    const ownerState = _extends({}, props, {
-      disableSpacing
-    });
-    const classes = useUtilityClasses12(ownerState);
-    return /* @__PURE__ */ import_jsx_runtime20.jsx(CardActionsRoot, _extends({
-      className: import_clsx14.default(classes.root, className),
-      ownerState,
-      ref
-    }, other));
-  });
-  false ? CardActions.propTypes = {
-    children: import_prop_types.default.node,
-    classes: import_prop_types.default.object,
-    className: import_prop_types.default.string,
-    disableSpacing: import_prop_types.default.bool,
-    sx: import_prop_types.default.oneOfType([import_prop_types.default.arrayOf(import_prop_types.default.oneOfType([import_prop_types.default.func, import_prop_types.default.object, import_prop_types.default.bool])), import_prop_types.default.func, import_prop_types.default.object])
-  } : void 0;
-  var CardActions_default = CardActions;
-
-  // node_modules/@mui/material/esm/Button/Button.js
-  var React26 = __toModule(require_react());
-  var import_clsx15 = __toModule(require_clsx());
-  var import_utils14 = __toModule(require_utils());
-  var import_base26 = __toModule(require_node3());
-  var import_system15 = __toModule(require_system());
-
-  // node_modules/@mui/material/esm/Button/buttonClasses.js
-  var import_base25 = __toModule(require_node3());
-  function getButtonUtilityClass(slot) {
-    return import_base25.generateUtilityClass("MuiButton", slot);
-  }
-  var buttonClasses = import_base25.generateUtilityClasses("MuiButton", ["root", "text", "textInherit", "textPrimary", "textSecondary", "textSuccess", "textError", "textInfo", "textWarning", "outlined", "outlinedInherit", "outlinedPrimary", "outlinedSecondary", "outlinedSuccess", "outlinedError", "outlinedInfo", "outlinedWarning", "contained", "containedInherit", "containedPrimary", "containedSecondary", "containedSuccess", "containedError", "containedInfo", "containedWarning", "disableElevation", "focusVisible", "disabled", "colorInherit", "textSizeSmall", "textSizeMedium", "textSizeLarge", "outlinedSizeSmall", "outlinedSizeMedium", "outlinedSizeLarge", "containedSizeSmall", "containedSizeMedium", "containedSizeLarge", "sizeMedium", "sizeSmall", "sizeLarge", "fullWidth", "startIcon", "endIcon", "iconSizeSmall", "iconSizeMedium", "iconSizeLarge"]);
-  var buttonClasses_default = buttonClasses;
-
-  // node_modules/@mui/material/esm/ButtonGroup/ButtonGroupContext.js
-  var React25 = __toModule(require_react());
-  var ButtonGroupContext = /* @__PURE__ */ React25.createContext({});
-  if (false) {
-    ButtonGroupContext.displayName = "ButtonGroupContext";
-  }
-  var ButtonGroupContext_default = ButtonGroupContext;
-
-  // node_modules/@mui/material/esm/Button/Button.js
-  var import_jsx_runtime21 = __toModule(require_jsx_runtime());
-  var import_jsx_runtime22 = __toModule(require_jsx_runtime());
-  var _excluded18 = ["children", "color", "component", "className", "disabled", "disableElevation", "disableFocusRipple", "endIcon", "focusVisibleClassName", "fullWidth", "size", "startIcon", "type", "variant"];
-  var useUtilityClasses13 = (ownerState) => {
-    const {
-      color,
-      disableElevation,
-      fullWidth,
-      size,
-      variant,
-      classes
-    } = ownerState;
-    const slots = {
-      root: ["root", variant, `${variant}${capitalize_default(color)}`, `size${capitalize_default(size)}`, `${variant}Size${capitalize_default(size)}`, color === "inherit" && "colorInherit", disableElevation && "disableElevation", fullWidth && "fullWidth"],
-      label: ["label"],
-      startIcon: ["startIcon", `iconSize${capitalize_default(size)}`],
-      endIcon: ["endIcon", `iconSize${capitalize_default(size)}`]
-    };
-    const composedClasses = import_base26.unstable_composeClasses(slots, getButtonUtilityClass, classes);
-    return _extends({}, classes, composedClasses);
-  };
-  var commonIconStyles = (ownerState) => _extends({}, ownerState.size === "small" && {
-    "& > *:nth-of-type(1)": {
-      fontSize: 18
-    }
-  }, ownerState.size === "medium" && {
-    "& > *:nth-of-type(1)": {
-      fontSize: 20
-    }
-  }, ownerState.size === "large" && {
-    "& > *:nth-of-type(1)": {
-      fontSize: 22
-    }
-  });
-  var ButtonRoot = styled_default(ButtonBase_default, {
-    shouldForwardProp: (prop) => rootShouldForwardProp(prop) || prop === "classes",
-    name: "MuiButton",
-    slot: "Root",
-    overridesResolver: (props, styles2) => {
-      const {
-        ownerState
-      } = props;
-      return [styles2.root, styles2[ownerState.variant], styles2[`${ownerState.variant}${capitalize_default(ownerState.color)}`], styles2[`size${capitalize_default(ownerState.size)}`], styles2[`${ownerState.variant}Size${capitalize_default(ownerState.size)}`], ownerState.color === "inherit" && styles2.colorInherit, ownerState.disableElevation && styles2.disableElevation, ownerState.fullWidth && styles2.fullWidth];
-    }
-  })(({
-    theme: theme2,
-    ownerState
-  }) => {
-    var _theme$palette$getCon, _theme$palette;
-    return _extends({}, theme2.typography.button, {
-      minWidth: 64,
-      padding: "6px 16px",
-      borderRadius: (theme2.vars || theme2).shape.borderRadius,
-      transition: theme2.transitions.create(["background-color", "box-shadow", "border-color", "color"], {
-        duration: theme2.transitions.duration.short
-      }),
-      "&:hover": _extends({
-        textDecoration: "none",
-        backgroundColor: theme2.vars ? `rgba(${theme2.vars.palette.text.primaryChannel} / ${theme2.vars.palette.action.hoverOpacity})` : import_system15.alpha(theme2.palette.text.primary, theme2.palette.action.hoverOpacity),
-        "@media (hover: none)": {
-          backgroundColor: "transparent"
-        }
-      }, ownerState.variant === "text" && ownerState.color !== "inherit" && {
-        backgroundColor: theme2.vars ? `rgba(${theme2.vars.palette[ownerState.color].mainChannel} / ${theme2.vars.palette.action.hoverOpacity})` : import_system15.alpha(theme2.palette[ownerState.color].main, theme2.palette.action.hoverOpacity),
-        "@media (hover: none)": {
-          backgroundColor: "transparent"
-        }
-      }, ownerState.variant === "outlined" && ownerState.color !== "inherit" && {
-        border: `1px solid ${(theme2.vars || theme2).palette[ownerState.color].main}`,
-        backgroundColor: theme2.vars ? `rgba(${theme2.vars.palette[ownerState.color].mainChannel} / ${theme2.vars.palette.action.hoverOpacity})` : import_system15.alpha(theme2.palette[ownerState.color].main, theme2.palette.action.hoverOpacity),
-        "@media (hover: none)": {
-          backgroundColor: "transparent"
-        }
-      }, ownerState.variant === "contained" && {
-        backgroundColor: (theme2.vars || theme2).palette.grey.A100,
-        boxShadow: (theme2.vars || theme2).shadows[4],
-        "@media (hover: none)": {
-          boxShadow: (theme2.vars || theme2).shadows[2],
-          backgroundColor: (theme2.vars || theme2).palette.grey[300]
-        }
-      }, ownerState.variant === "contained" && ownerState.color !== "inherit" && {
-        backgroundColor: (theme2.vars || theme2).palette[ownerState.color].dark,
-        "@media (hover: none)": {
-          backgroundColor: (theme2.vars || theme2).palette[ownerState.color].main
-        }
-      }),
-      "&:active": _extends({}, ownerState.variant === "contained" && {
-        boxShadow: (theme2.vars || theme2).shadows[8]
-      }),
-      [`&.${buttonClasses_default.focusVisible}`]: _extends({}, ownerState.variant === "contained" && {
-        boxShadow: (theme2.vars || theme2).shadows[6]
-      }),
-      [`&.${buttonClasses_default.disabled}`]: _extends({
-        color: (theme2.vars || theme2).palette.action.disabled
-      }, ownerState.variant === "outlined" && {
-        border: `1px solid ${(theme2.vars || theme2).palette.action.disabledBackground}`
-      }, ownerState.variant === "outlined" && ownerState.color === "secondary" && {
-        border: `1px solid ${(theme2.vars || theme2).palette.action.disabled}`
-      }, ownerState.variant === "contained" && {
-        color: (theme2.vars || theme2).palette.action.disabled,
-        boxShadow: (theme2.vars || theme2).shadows[0],
-        backgroundColor: (theme2.vars || theme2).palette.action.disabledBackground
-      })
-    }, ownerState.variant === "text" && {
-      padding: "6px 8px"
-    }, ownerState.variant === "text" && ownerState.color !== "inherit" && {
-      color: (theme2.vars || theme2).palette[ownerState.color].main
-    }, ownerState.variant === "outlined" && {
-      padding: "5px 15px",
-      border: "1px solid currentColor"
-    }, ownerState.variant === "outlined" && ownerState.color !== "inherit" && {
-      color: (theme2.vars || theme2).palette[ownerState.color].main,
-      border: theme2.vars ? `1px solid rgba(${theme2.vars.palette[ownerState.color].mainChannel} / 0.5)` : `1px solid ${import_system15.alpha(theme2.palette[ownerState.color].main, 0.5)}`
-    }, ownerState.variant === "contained" && {
-      color: theme2.vars ? theme2.vars.palette.text.primary : (_theme$palette$getCon = (_theme$palette = theme2.palette).getContrastText) == null ? void 0 : _theme$palette$getCon.call(_theme$palette, theme2.palette.grey[300]),
-      backgroundColor: (theme2.vars || theme2).palette.grey[300],
-      boxShadow: (theme2.vars || theme2).shadows[2]
-    }, ownerState.variant === "contained" && ownerState.color !== "inherit" && {
-      color: (theme2.vars || theme2).palette[ownerState.color].contrastText,
-      backgroundColor: (theme2.vars || theme2).palette[ownerState.color].main
-    }, ownerState.color === "inherit" && {
-      color: "inherit",
-      borderColor: "currentColor"
-    }, ownerState.size === "small" && ownerState.variant === "text" && {
-      padding: "4px 5px",
-      fontSize: theme2.typography.pxToRem(13)
-    }, ownerState.size === "large" && ownerState.variant === "text" && {
-      padding: "8px 11px",
-      fontSize: theme2.typography.pxToRem(15)
-    }, ownerState.size === "small" && ownerState.variant === "outlined" && {
-      padding: "3px 9px",
-      fontSize: theme2.typography.pxToRem(13)
-    }, ownerState.size === "large" && ownerState.variant === "outlined" && {
-      padding: "7px 21px",
-      fontSize: theme2.typography.pxToRem(15)
-    }, ownerState.size === "small" && ownerState.variant === "contained" && {
-      padding: "4px 10px",
-      fontSize: theme2.typography.pxToRem(13)
-    }, ownerState.size === "large" && ownerState.variant === "contained" && {
-      padding: "8px 22px",
-      fontSize: theme2.typography.pxToRem(15)
-    }, ownerState.fullWidth && {
-      width: "100%"
-    });
-  }, ({
-    ownerState
-  }) => ownerState.disableElevation && {
-    boxShadow: "none",
-    "&:hover": {
-      boxShadow: "none"
-    },
-    [`&.${buttonClasses_default.focusVisible}`]: {
-      boxShadow: "none"
-    },
-    "&:active": {
-      boxShadow: "none"
-    },
-    [`&.${buttonClasses_default.disabled}`]: {
-      boxShadow: "none"
-    }
-  });
-  var ButtonStartIcon = styled_default("span", {
-    name: "MuiButton",
-    slot: "StartIcon",
-    overridesResolver: (props, styles2) => {
-      const {
-        ownerState
-      } = props;
-      return [styles2.startIcon, styles2[`iconSize${capitalize_default(ownerState.size)}`]];
-    }
-  })(({
-    ownerState
-  }) => _extends({
-    display: "inherit",
-    marginRight: 8,
-    marginLeft: -4
-  }, ownerState.size === "small" && {
-    marginLeft: -2
-  }, commonIconStyles(ownerState)));
-  var ButtonEndIcon = styled_default("span", {
-    name: "MuiButton",
-    slot: "EndIcon",
-    overridesResolver: (props, styles2) => {
-      const {
-        ownerState
-      } = props;
-      return [styles2.endIcon, styles2[`iconSize${capitalize_default(ownerState.size)}`]];
-    }
-  })(({
-    ownerState
-  }) => _extends({
-    display: "inherit",
-    marginRight: -4,
-    marginLeft: 8
-  }, ownerState.size === "small" && {
-    marginRight: -2
-  }, commonIconStyles(ownerState)));
-  var Button = /* @__PURE__ */ React26.forwardRef(function Button2(inProps, ref) {
-    const contextProps = React26.useContext(ButtonGroupContext_default);
-    const resolvedProps = import_utils14.internal_resolveProps(contextProps, inProps);
-    const props = useThemeProps({
-      props: resolvedProps,
-      name: "MuiButton"
-    });
-    const {
-      children,
-      color = "primary",
-      component = "button",
-      className,
-      disabled = false,
-      disableElevation = false,
-      disableFocusRipple = false,
-      endIcon: endIconProp,
-      focusVisibleClassName,
-      fullWidth = false,
-      size = "medium",
-      startIcon: startIconProp,
-      type,
-      variant = "text"
-    } = props, other = _objectWithoutPropertiesLoose(props, _excluded18);
-    const ownerState = _extends({}, props, {
-      color,
-      component,
-      disabled,
-      disableElevation,
-      disableFocusRipple,
-      fullWidth,
-      size,
-      type,
-      variant
-    });
-    const classes = useUtilityClasses13(ownerState);
-    const startIcon = startIconProp && /* @__PURE__ */ import_jsx_runtime21.jsx(ButtonStartIcon, {
-      className: classes.startIcon,
-      ownerState,
-      children: startIconProp
-    });
-    const endIcon = endIconProp && /* @__PURE__ */ import_jsx_runtime21.jsx(ButtonEndIcon, {
-      className: classes.endIcon,
-      ownerState,
-      children: endIconProp
-    });
-    return /* @__PURE__ */ import_jsx_runtime22.jsxs(ButtonRoot, _extends({
-      ownerState,
-      className: import_clsx15.default(contextProps.className, classes.root, className),
-      component,
-      disabled,
-      focusRipple: !disableFocusRipple,
-      focusVisibleClassName: import_clsx15.default(classes.focusVisible, focusVisibleClassName),
-      ref,
-      type
-    }, other, {
-      classes,
-      children: [startIcon, children, endIcon]
-    }));
-  });
-  false ? Button.propTypes = {
-    children: import_prop_types.default.node,
-    classes: import_prop_types.default.object,
-    className: import_prop_types.default.string,
-    color: import_prop_types.default.oneOfType([import_prop_types.default.oneOf(["inherit", "primary", "secondary", "success", "error", "info", "warning"]), import_prop_types.default.string]),
-    component: import_prop_types.default.elementType,
-    disabled: import_prop_types.default.bool,
-    disableElevation: import_prop_types.default.bool,
-    disableFocusRipple: import_prop_types.default.bool,
-    disableRipple: import_prop_types.default.bool,
-    endIcon: import_prop_types.default.node,
-    focusVisibleClassName: import_prop_types.default.string,
-    fullWidth: import_prop_types.default.bool,
-    href: import_prop_types.default.string,
-    size: import_prop_types.default.oneOfType([import_prop_types.default.oneOf(["small", "medium", "large"]), import_prop_types.default.string]),
-    startIcon: import_prop_types.default.node,
-    sx: import_prop_types.default.oneOfType([import_prop_types.default.arrayOf(import_prop_types.default.oneOfType([import_prop_types.default.func, import_prop_types.default.object, import_prop_types.default.bool])), import_prop_types.default.func, import_prop_types.default.object]),
-    type: import_prop_types.default.oneOfType([import_prop_types.default.oneOf(["button", "reset", "submit"]), import_prop_types.default.string]),
-    variant: import_prop_types.default.oneOfType([import_prop_types.default.oneOf(["contained", "outlined", "text"]), import_prop_types.default.string])
-  } : void 0;
-  var Button_default = Button;
-
-  // ns-hugo:/home/runner/work/quiqr-template-company-toolbox/quiqr-template-company-toolbox/themes/company-toolbox/assets/components/ResourceCard.jsx
-  var ResourceCard = class extends React27.Component {
+  // ns-hugo:/home/runner/work/quiqr-template-company-toolbox/quiqr-template-company-toolbox/themes/company-toolbox/assets/components/CategoryCard.jsx
+  var CategoryCard = class extends React23.Component {
     render() {
-      return /* @__PURE__ */ React27.createElement(Card_default, {
-        sx: {maxWidth: 500, height: "100%", display: "flex", flexDirection: "column"}
-      }, /* @__PURE__ */ React27.createElement(CardActionArea_default, {
+      return /* @__PURE__ */ React23.createElement(Card_default, {
+        sx: {
+          display: "flex",
+          cursor: "pointer"
+        },
         onClick: () => {
-          if (this.props.itemData.actions.length > 0) {
-            window.open(this.props.itemData.actions[0].url);
-          }
+          window.location.href = this.props.itemData.rel_permalink.substring(0, this.props.itemData.rel_permalink.lastIndexOf("/"));
         }
-      }, /* @__PURE__ */ React27.createElement(CardMedia_default, {
+      }, /* @__PURE__ */ React23.createElement(CardMedia_default, {
         component: "img",
         sx: {
-          maxHeight: 200
+          maxWidth: 151
         },
-        image: "/images/" + this.props.itemData.image,
-        alt: "random"
-      }), /* @__PURE__ */ React27.createElement(CardContent_default, {
-        sx: {flexGrow: 1}
-      }, /* @__PURE__ */ React27.createElement(Typography_default, {
-        gutterBottom: true,
-        variant: "h5",
-        component: "h2"
-      }, this.props.itemData.title), /* @__PURE__ */ React27.createElement(Typography_default, null, this.props.itemData.description))), /* @__PURE__ */ React27.createElement(CardActions_default, null, this.props.itemData.actions.map((actionItem) => /* @__PURE__ */ React27.createElement(Button_default, {
-        key: actionItem.title,
-        onClick: () => {
-          window.open(actionItem.url);
-        },
-        size: "small"
-      }, actionItem.title))));
+        image: "/images/" + this.props.itemData.image
+      }), /* @__PURE__ */ React23.createElement(Box_default, {
+        sx: {display: "flex", flexDirection: "column"}
+      }, /* @__PURE__ */ React23.createElement(CardContent_default, {
+        sx: {flex: "1 0 auto"}
+      }, /* @__PURE__ */ React23.createElement(Typography_default, {
+        component: "div",
+        variant: "h6"
+      }, this.props.itemData.title), /* @__PURE__ */ React23.createElement(Typography_default, null, this.props.itemData.description))));
     }
   };
-  var ResourceCard_default = ResourceCard;
+  var CategoryCard_default = CategoryCard;
 
-  // ns-hugo:/home/runner/work/quiqr-template-company-toolbox/quiqr-template-company-toolbox/themes/company-toolbox/assets/components/ResourceListing.jsx
-  var ResourceListing = class extends React28.Component {
+  // ns-hugo:/home/runner/work/quiqr-template-company-toolbox/quiqr-template-company-toolbox/themes/company-toolbox/assets/components/CategoryListing.jsx
+  var CategoryListing = class extends React24.Component {
     constructor(props) {
       super(props);
       this.state = {
-        resources: [],
-        catData: {}
+        categories: []
       };
     }
     readDataLink() {
+      console.log(this.props.dataLink);
       return fetch(this.props.dataLink).then((response) => response.json()).then((responseJson) => {
         this.setState({
-          resources: responseJson.data.resources,
-          catData: responseJson.data
+          categories: responseJson.data
         });
       }).catch((error) => {
         console.error(error);
@@ -37819,64 +37317,83 @@ Please use another name.` : import_utils4.formatMuiErrorMessage(18));
       this.readDataLink();
     }
     render() {
-      return /* @__PURE__ */ React28.createElement(React28.Fragment, null, /* @__PURE__ */ React28.createElement(Typography_default, {
+      return /* @__PURE__ */ React24.createElement(React24.Fragment, null, /* @__PURE__ */ React24.createElement(Typography_default, {
         component: "div",
         variant: "h6"
-      }, this.state.catData.title), /* @__PURE__ */ React28.createElement(Grid_default, {
+      }, "Alle categorie\xEBn"), /* @__PURE__ */ React24.createElement(Grid_default, {
         container: true,
         spacing: 4,
         sx: {py: 2}
-      }, this.state.resources.map((resource) => /* @__PURE__ */ React28.createElement(Grid_default, {
+      }, this.state.categories.map((catData) => /* @__PURE__ */ React24.createElement(Grid_default, {
         item: true,
-        key: resource.title,
+        key: catData.title,
         xs: 12,
         sm: 6,
         md: 4,
         lg: 3,
         xl: 2
-      }, /* @__PURE__ */ React28.createElement(ResourceCard_default, {
-        itemData: resource
+      }, /* @__PURE__ */ React24.createElement(CategoryCard_default, {
+        itemData: catData
       })))));
     }
   };
-  var ResourceListing_default = ResourceListing;
+  var CategoryListing_default = CategoryListing;
 
-  // ns-hugo:/home/runner/work/quiqr-template-company-toolbox/quiqr-template-company-toolbox/themes/company-toolbox/assets/components/Breadcrum.jsx
-  var React35 = __toModule(require_react());
+  // ns-hugo:/home/runner/work/quiqr-template-company-toolbox/quiqr-template-company-toolbox/themes/company-toolbox/assets/theme.jsx
+  var theme = createTheme_default({
+    palette: {
+      xprimary: {
+        main: "#556cd6"
+      },
+      xsecondary: {
+        main: "#19857b"
+      },
+      white: {
+        main: "#ffffff"
+      },
+      error: {
+        main: red_default.A400
+      }
+    }
+  });
+  var theme_default = theme;
 
-  // node_modules/@mui/material/esm/Breadcrumbs/Breadcrumbs.js
-  var React33 = __toModule(require_react());
-  var import_react_is = __toModule(require_react_is2());
-  var import_clsx17 = __toModule(require_clsx());
-  var import_base30 = __toModule(require_node3());
-
-  // node_modules/@mui/material/esm/Breadcrumbs/BreadcrumbCollapsed.js
-  var React32 = __toModule(require_react());
-  var import_system16 = __toModule(require_system());
-
-  // node_modules/@mui/material/esm/internal/svg-icons/MoreHoriz.js
+  // ns-hugo:/home/runner/work/quiqr-template-company-toolbox/quiqr-template-company-toolbox/themes/company-toolbox/assets/components/BreadcrumHome.jsx
   var React31 = __toModule(require_react());
 
+  // node_modules/@mui/material/esm/Breadcrumbs/Breadcrumbs.js
+  var React29 = __toModule(require_react());
+  var import_react_is = __toModule(require_react_is2());
+  var import_clsx14 = __toModule(require_clsx());
+  var import_base24 = __toModule(require_node3());
+
+  // node_modules/@mui/material/esm/Breadcrumbs/BreadcrumbCollapsed.js
+  var React28 = __toModule(require_react());
+  var import_system15 = __toModule(require_system());
+
+  // node_modules/@mui/material/esm/internal/svg-icons/MoreHoriz.js
+  var React27 = __toModule(require_react());
+
   // node_modules/@mui/material/esm/utils/createSvgIcon.js
-  var React30 = __toModule(require_react());
+  var React26 = __toModule(require_react());
 
   // node_modules/@mui/material/esm/SvgIcon/SvgIcon.js
-  var React29 = __toModule(require_react());
-  var import_clsx16 = __toModule(require_clsx());
-  var import_base28 = __toModule(require_node3());
+  var React25 = __toModule(require_react());
+  var import_clsx13 = __toModule(require_clsx());
+  var import_base22 = __toModule(require_node3());
 
   // node_modules/@mui/material/esm/SvgIcon/svgIconClasses.js
-  var import_base27 = __toModule(require_node3());
+  var import_base21 = __toModule(require_node3());
   function getSvgIconUtilityClass(slot) {
-    return import_base27.generateUtilityClass("MuiSvgIcon", slot);
+    return import_base21.generateUtilityClass("MuiSvgIcon", slot);
   }
-  var svgIconClasses = import_base27.generateUtilityClasses("MuiSvgIcon", ["root", "colorPrimary", "colorSecondary", "colorAction", "colorError", "colorDisabled", "fontSizeInherit", "fontSizeSmall", "fontSizeMedium", "fontSizeLarge"]);
+  var svgIconClasses = import_base21.generateUtilityClasses("MuiSvgIcon", ["root", "colorPrimary", "colorSecondary", "colorAction", "colorError", "colorDisabled", "fontSizeInherit", "fontSizeSmall", "fontSizeMedium", "fontSizeLarge"]);
 
   // node_modules/@mui/material/esm/SvgIcon/SvgIcon.js
-  var import_jsx_runtime23 = __toModule(require_jsx_runtime());
-  var import_jsx_runtime24 = __toModule(require_jsx_runtime());
-  var _excluded19 = ["children", "className", "color", "component", "fontSize", "htmlColor", "inheritViewBox", "titleAccess", "viewBox"];
-  var useUtilityClasses14 = (ownerState) => {
+  var import_jsx_runtime18 = __toModule(require_jsx_runtime());
+  var import_jsx_runtime19 = __toModule(require_jsx_runtime());
+  var _excluded16 = ["children", "className", "color", "component", "fontSize", "htmlColor", "inheritViewBox", "titleAccess", "viewBox"];
+  var useUtilityClasses11 = (ownerState) => {
     const {
       color,
       fontSize,
@@ -37885,7 +37402,7 @@ Please use another name.` : import_utils4.formatMuiErrorMessage(18));
     const slots = {
       root: ["root", color !== "inherit" && `color${capitalize_default(color)}`, `fontSize${capitalize_default(fontSize)}`]
     };
-    return import_base28.unstable_composeClasses(slots, getSvgIconUtilityClass, classes);
+    return import_base22.unstable_composeClasses(slots, getSvgIconUtilityClass, classes);
   };
   var SvgIconRoot = styled_default("svg", {
     name: "MuiSvgIcon",
@@ -37924,7 +37441,7 @@ Please use another name.` : import_utils4.formatMuiErrorMessage(18));
       }[ownerState.color]
     };
   });
-  var SvgIcon = /* @__PURE__ */ React29.forwardRef(function SvgIcon2(inProps, ref) {
+  var SvgIcon = /* @__PURE__ */ React25.forwardRef(function SvgIcon2(inProps, ref) {
     const props = useThemeProps({
       props: inProps,
       name: "MuiSvgIcon"
@@ -37939,7 +37456,7 @@ Please use another name.` : import_utils4.formatMuiErrorMessage(18));
       inheritViewBox = false,
       titleAccess,
       viewBox = "0 0 24 24"
-    } = props, other = _objectWithoutPropertiesLoose(props, _excluded19);
+    } = props, other = _objectWithoutPropertiesLoose(props, _excluded16);
     const ownerState = _extends({}, props, {
       color,
       component,
@@ -37952,10 +37469,10 @@ Please use another name.` : import_utils4.formatMuiErrorMessage(18));
     if (!inheritViewBox) {
       more.viewBox = viewBox;
     }
-    const classes = useUtilityClasses14(ownerState);
-    return /* @__PURE__ */ import_jsx_runtime24.jsxs(SvgIconRoot, _extends({
+    const classes = useUtilityClasses11(ownerState);
+    return /* @__PURE__ */ import_jsx_runtime19.jsxs(SvgIconRoot, _extends({
       as: component,
-      className: import_clsx16.default(classes.root, className),
+      className: import_clsx13.default(classes.root, className),
       focusable: "false",
       color: htmlColor,
       "aria-hidden": titleAccess ? void 0 : true,
@@ -37963,7 +37480,7 @@ Please use another name.` : import_utils4.formatMuiErrorMessage(18));
       ref
     }, more, other, {
       ownerState,
-      children: [children, titleAccess ? /* @__PURE__ */ import_jsx_runtime23.jsx("title", {
+      children: [children, titleAccess ? /* @__PURE__ */ import_jsx_runtime18.jsx("title", {
         children: titleAccess
       }) : null]
     }));
@@ -37986,10 +37503,10 @@ Please use another name.` : import_utils4.formatMuiErrorMessage(18));
   var SvgIcon_default = SvgIcon;
 
   // node_modules/@mui/material/esm/utils/createSvgIcon.js
-  var import_jsx_runtime25 = __toModule(require_jsx_runtime());
+  var import_jsx_runtime20 = __toModule(require_jsx_runtime());
   function createSvgIcon(path, displayName) {
-    function Component4(props, ref) {
-      return /* @__PURE__ */ import_jsx_runtime25.jsx(SvgIcon_default, _extends({
+    function Component3(props, ref) {
+      return /* @__PURE__ */ import_jsx_runtime20.jsx(SvgIcon_default, _extends({
         "data-testid": `${displayName}Icon`,
         ref
       }, props, {
@@ -37997,20 +37514,20 @@ Please use another name.` : import_utils4.formatMuiErrorMessage(18));
       }));
     }
     if (false) {
-      Component4.displayName = `${displayName}Icon`;
+      Component3.displayName = `${displayName}Icon`;
     }
-    Component4.muiName = SvgIcon_default.muiName;
-    return /* @__PURE__ */ React30.memo(/* @__PURE__ */ React30.forwardRef(Component4));
+    Component3.muiName = SvgIcon_default.muiName;
+    return /* @__PURE__ */ React26.memo(/* @__PURE__ */ React26.forwardRef(Component3));
   }
 
   // node_modules/@mui/material/esm/internal/svg-icons/MoreHoriz.js
-  var import_jsx_runtime26 = __toModule(require_jsx_runtime());
-  var MoreHoriz_default = createSvgIcon(/* @__PURE__ */ import_jsx_runtime26.jsx("path", {
+  var import_jsx_runtime21 = __toModule(require_jsx_runtime());
+  var MoreHoriz_default = createSvgIcon(/* @__PURE__ */ import_jsx_runtime21.jsx("path", {
     d: "M6 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-6 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
   }), "MoreHoriz");
 
   // node_modules/@mui/material/esm/Breadcrumbs/BreadcrumbCollapsed.js
-  var import_jsx_runtime27 = __toModule(require_jsx_runtime());
+  var import_jsx_runtime22 = __toModule(require_jsx_runtime());
   var BreadcrumbCollapsedButton = styled_default(ButtonBase_default)(({
     theme: theme2
   }) => _extends({
@@ -38033,9 +37550,9 @@ Please use another name.` : import_utils4.formatMuiErrorMessage(18));
     "&:active": _extends({
       boxShadow: theme2.shadows[0]
     }, theme2.palette.mode === "light" ? {
-      backgroundColor: import_system16.emphasize(theme2.palette.grey[200], 0.12)
+      backgroundColor: import_system15.emphasize(theme2.palette.grey[200], 0.12)
     } : {
-      backgroundColor: import_system16.emphasize(theme2.palette.grey[600], 0.12)
+      backgroundColor: import_system15.emphasize(theme2.palette.grey[600], 0.12)
     })
   }));
   var BreadcrumbCollapsedIcon = styled_default(MoreHoriz_default)({
@@ -38044,12 +37561,12 @@ Please use another name.` : import_utils4.formatMuiErrorMessage(18));
   });
   function BreadcrumbCollapsed(props) {
     const ownerState = props;
-    return /* @__PURE__ */ import_jsx_runtime27.jsx("li", {
-      children: /* @__PURE__ */ import_jsx_runtime27.jsx(BreadcrumbCollapsedButton, _extends({
+    return /* @__PURE__ */ import_jsx_runtime22.jsx("li", {
+      children: /* @__PURE__ */ import_jsx_runtime22.jsx(BreadcrumbCollapsedButton, _extends({
         focusRipple: true
       }, props, {
         ownerState,
-        children: /* @__PURE__ */ import_jsx_runtime27.jsx(BreadcrumbCollapsedIcon, {
+        children: /* @__PURE__ */ import_jsx_runtime22.jsx(BreadcrumbCollapsedIcon, {
           ownerState
         })
       }))
@@ -38061,17 +37578,17 @@ Please use another name.` : import_utils4.formatMuiErrorMessage(18));
   var BreadcrumbCollapsed_default = BreadcrumbCollapsed;
 
   // node_modules/@mui/material/esm/Breadcrumbs/breadcrumbsClasses.js
-  var import_base29 = __toModule(require_node3());
+  var import_base23 = __toModule(require_node3());
   function getBreadcrumbsUtilityClass(slot) {
-    return import_base29.generateUtilityClass("MuiBreadcrumbs", slot);
+    return import_base23.generateUtilityClass("MuiBreadcrumbs", slot);
   }
-  var breadcrumbsClasses = import_base29.generateUtilityClasses("MuiBreadcrumbs", ["root", "ol", "li", "separator"]);
+  var breadcrumbsClasses = import_base23.generateUtilityClasses("MuiBreadcrumbs", ["root", "ol", "li", "separator"]);
   var breadcrumbsClasses_default = breadcrumbsClasses;
 
   // node_modules/@mui/material/esm/Breadcrumbs/Breadcrumbs.js
-  var import_jsx_runtime28 = __toModule(require_jsx_runtime());
-  var _excluded20 = ["children", "className", "component", "expandText", "itemsAfterCollapse", "itemsBeforeCollapse", "maxItems", "separator"];
-  var useUtilityClasses15 = (ownerState) => {
+  var import_jsx_runtime23 = __toModule(require_jsx_runtime());
+  var _excluded17 = ["children", "className", "component", "expandText", "itemsAfterCollapse", "itemsBeforeCollapse", "maxItems", "separator"];
+  var useUtilityClasses12 = (ownerState) => {
     const {
       classes
     } = ownerState;
@@ -38081,7 +37598,7 @@ Please use another name.` : import_utils4.formatMuiErrorMessage(18));
       ol: ["ol"],
       separator: ["separator"]
     };
-    return import_base30.unstable_composeClasses(slots, getBreadcrumbsUtilityClass, classes);
+    return import_base24.unstable_composeClasses(slots, getBreadcrumbsUtilityClass, classes);
   };
   var BreadcrumbsRoot = styled_default(Typography_default, {
     name: "MuiBreadcrumbs",
@@ -38117,7 +37634,7 @@ Please use another name.` : import_utils4.formatMuiErrorMessage(18));
   function insertSeparators(items, className, separator, ownerState) {
     return items.reduce((acc, current, index) => {
       if (index < items.length - 1) {
-        acc = acc.concat(current, /* @__PURE__ */ import_jsx_runtime28.jsx(BreadcrumbsSeparator, {
+        acc = acc.concat(current, /* @__PURE__ */ import_jsx_runtime23.jsx(BreadcrumbsSeparator, {
           "aria-hidden": true,
           className,
           ownerState,
@@ -38129,7 +37646,7 @@ Please use another name.` : import_utils4.formatMuiErrorMessage(18));
       return acc;
     }, []);
   }
-  var Breadcrumbs = /* @__PURE__ */ React33.forwardRef(function Breadcrumbs2(inProps, ref) {
+  var Breadcrumbs = /* @__PURE__ */ React29.forwardRef(function Breadcrumbs2(inProps, ref) {
     const props = useThemeProps({
       props: inProps,
       name: "MuiBreadcrumbs"
@@ -38143,8 +37660,8 @@ Please use another name.` : import_utils4.formatMuiErrorMessage(18));
       itemsBeforeCollapse = 1,
       maxItems = 8,
       separator = "/"
-    } = props, other = _objectWithoutPropertiesLoose(props, _excluded20);
-    const [expanded, setExpanded] = React33.useState(false);
+    } = props, other = _objectWithoutPropertiesLoose(props, _excluded17);
+    const [expanded, setExpanded] = React29.useState(false);
     const ownerState = _extends({}, props, {
       component,
       expanded,
@@ -38154,8 +37671,8 @@ Please use another name.` : import_utils4.formatMuiErrorMessage(18));
       maxItems,
       separator
     });
-    const classes = useUtilityClasses15(ownerState);
-    const listRef = React33.useRef(null);
+    const classes = useUtilityClasses12(ownerState);
+    const listRef = React29.useRef(null);
     const renderItemsBeforeAndAfter = (allItems2) => {
       const handleClickExpand = () => {
         setExpanded(true);
@@ -38170,30 +37687,30 @@ Please use another name.` : import_utils4.formatMuiErrorMessage(18));
         }
         return allItems2;
       }
-      return [...allItems2.slice(0, itemsBeforeCollapse), /* @__PURE__ */ import_jsx_runtime28.jsx(BreadcrumbCollapsed_default, {
+      return [...allItems2.slice(0, itemsBeforeCollapse), /* @__PURE__ */ import_jsx_runtime23.jsx(BreadcrumbCollapsed_default, {
         "aria-label": expandText,
         onClick: handleClickExpand
       }, "ellipsis"), ...allItems2.slice(allItems2.length - itemsAfterCollapse, allItems2.length)];
     };
-    const allItems = React33.Children.toArray(children).filter((child) => {
+    const allItems = React29.Children.toArray(children).filter((child) => {
       if (false) {
         if (import_react_is.isFragment(child)) {
           console.error(["MUI: The Breadcrumbs component doesn't accept a Fragment as a child.", "Consider providing an array instead."].join("\n"));
         }
       }
-      return /* @__PURE__ */ React33.isValidElement(child);
-    }).map((child, index) => /* @__PURE__ */ import_jsx_runtime28.jsx("li", {
+      return /* @__PURE__ */ React29.isValidElement(child);
+    }).map((child, index) => /* @__PURE__ */ import_jsx_runtime23.jsx("li", {
       className: classes.li,
       children: child
     }, `child-${index}`));
-    return /* @__PURE__ */ import_jsx_runtime28.jsx(BreadcrumbsRoot, _extends({
+    return /* @__PURE__ */ import_jsx_runtime23.jsx(BreadcrumbsRoot, _extends({
       ref,
       component,
       color: "text.secondary",
-      className: import_clsx17.default(classes.root, className),
+      className: import_clsx14.default(classes.root, className),
       ownerState
     }, other, {
-      children: /* @__PURE__ */ import_jsx_runtime28.jsx(BreadcrumbsOl, {
+      children: /* @__PURE__ */ import_jsx_runtime23.jsx(BreadcrumbsOl, {
         className: classes.ol,
         ref: listRef,
         ownerState,
@@ -38216,20 +37733,20 @@ Please use another name.` : import_utils4.formatMuiErrorMessage(18));
   var Breadcrumbs_default = Breadcrumbs;
 
   // node_modules/@mui/material/esm/Link/Link.js
-  var React34 = __toModule(require_react());
-  var import_clsx18 = __toModule(require_clsx());
-  var import_base32 = __toModule(require_node3());
+  var React30 = __toModule(require_react());
+  var import_clsx15 = __toModule(require_clsx());
+  var import_base26 = __toModule(require_node3());
 
   // node_modules/@mui/material/esm/Link/linkClasses.js
-  var import_base31 = __toModule(require_node3());
+  var import_base25 = __toModule(require_node3());
   function getLinkUtilityClass(slot) {
-    return import_base31.generateUtilityClass("MuiLink", slot);
+    return import_base25.generateUtilityClass("MuiLink", slot);
   }
-  var linkClasses = import_base31.generateUtilityClasses("MuiLink", ["root", "underlineNone", "underlineHover", "underlineAlways", "button", "focusVisible"]);
+  var linkClasses = import_base25.generateUtilityClasses("MuiLink", ["root", "underlineNone", "underlineHover", "underlineAlways", "button", "focusVisible"]);
   var linkClasses_default = linkClasses;
 
   // node_modules/@mui/material/esm/Link/getTextDecoration.js
-  var import_system17 = __toModule(require_system());
+  var import_system16 = __toModule(require_system());
   var colorTransformations2 = {
     primary: "primary.main",
     textPrimary: "text.primary",
@@ -38245,19 +37762,19 @@ Please use another name.` : import_utils4.formatMuiErrorMessage(18));
     ownerState
   }) => {
     const transformedColor = transformDeprecatedColors2(ownerState.color);
-    const color = import_system17.getPath(theme2, `palette.${transformedColor}`, false) || ownerState.color;
-    const channelColor = import_system17.getPath(theme2, `palette.${transformedColor}Channel`);
+    const color = import_system16.getPath(theme2, `palette.${transformedColor}`, false) || ownerState.color;
+    const channelColor = import_system16.getPath(theme2, `palette.${transformedColor}Channel`);
     if ("vars" in theme2 && channelColor) {
       return `rgba(${channelColor} / 0.4)`;
     }
-    return import_system17.alpha(color, 0.4);
+    return import_system16.alpha(color, 0.4);
   };
   var getTextDecoration_default = getTextDecoration;
 
   // node_modules/@mui/material/esm/Link/Link.js
-  var import_jsx_runtime29 = __toModule(require_jsx_runtime());
-  var _excluded21 = ["className", "color", "component", "onBlur", "onFocus", "TypographyClasses", "underline", "variant", "sx"];
-  var useUtilityClasses16 = (ownerState) => {
+  var import_jsx_runtime24 = __toModule(require_jsx_runtime());
+  var _excluded18 = ["className", "color", "component", "onBlur", "onFocus", "TypographyClasses", "underline", "variant", "sx"];
+  var useUtilityClasses13 = (ownerState) => {
     const {
       classes,
       component,
@@ -38267,7 +37784,7 @@ Please use another name.` : import_utils4.formatMuiErrorMessage(18));
     const slots = {
       root: ["root", `underline${capitalize_default(underline)}`, component === "button" && "button", focusVisible && "focusVisible"]
     };
-    return import_base32.unstable_composeClasses(slots, getLinkUtilityClass, classes);
+    return import_base26.unstable_composeClasses(slots, getLinkUtilityClass, classes);
   };
   var LinkRoot = styled_default(Typography_default, {
     name: "MuiLink",
@@ -38322,7 +37839,7 @@ Please use another name.` : import_utils4.formatMuiErrorMessage(18));
       }
     });
   });
-  var Link = /* @__PURE__ */ React34.forwardRef(function Link2(inProps, ref) {
+  var Link = /* @__PURE__ */ React30.forwardRef(function Link2(inProps, ref) {
     const props = useThemeProps({
       props: inProps,
       name: "MuiLink"
@@ -38337,14 +37854,14 @@ Please use another name.` : import_utils4.formatMuiErrorMessage(18));
       underline = "always",
       variant = "inherit",
       sx
-    } = props, other = _objectWithoutPropertiesLoose(props, _excluded21);
+    } = props, other = _objectWithoutPropertiesLoose(props, _excluded18);
     const {
       isFocusVisibleRef,
       onBlur: handleBlurVisible,
       onFocus: handleFocusVisible,
       ref: focusVisibleRef
     } = useIsFocusVisible_default();
-    const [focusVisible, setFocusVisible] = React34.useState(false);
+    const [focusVisible, setFocusVisible] = React30.useState(false);
     const handlerRef = useForkRef_default(ref, focusVisibleRef);
     const handleBlur = (event) => {
       handleBlurVisible(event);
@@ -38371,10 +37888,10 @@ Please use another name.` : import_utils4.formatMuiErrorMessage(18));
       underline,
       variant
     });
-    const classes = useUtilityClasses16(ownerState);
-    return /* @__PURE__ */ import_jsx_runtime29.jsx(LinkRoot, _extends({
+    const classes = useUtilityClasses13(ownerState);
+    return /* @__PURE__ */ import_jsx_runtime24.jsx(LinkRoot, _extends({
       color,
-      className: import_clsx18.default(classes.root, className),
+      className: import_clsx15.default(classes.root, className),
       classes: TypographyClasses,
       component,
       onBlur: handleBlur,
@@ -38402,59 +37919,33 @@ Please use another name.` : import_utils4.formatMuiErrorMessage(18));
   } : void 0;
   var Link_default = Link;
 
-  // ns-hugo:/home/runner/work/quiqr-template-company-toolbox/quiqr-template-company-toolbox/themes/company-toolbox/assets/components/Breadcrum.jsx
+  // ns-hugo:/home/runner/work/quiqr-template-company-toolbox/quiqr-template-company-toolbox/themes/company-toolbox/assets/components/BreadcrumHome.jsx
   var import_Home = __toModule(require_Home());
-  var Breadcrum = class extends React35.Component {
-    constructor(props) {
-      super(props);
-      this.state = {
-        data: []
-      };
-    }
-    readDataLink() {
-      return fetch(this.props.dataLink).then((response) => response.json()).then((responseJson) => {
-        this.setState({
-          data: responseJson.data
-        });
-      }).catch((error) => {
-        console.error(error);
-      });
-    }
-    componentDidMount() {
-      this.readDataLink();
-    }
-    render() {
-      return /* @__PURE__ */ React35.createElement(Box_default, {
-        sx: {my: 2}
-      }, /* @__PURE__ */ React35.createElement(Breadcrumbs_default, {
-        "aria-label": "breadcrumb"
-      }, /* @__PURE__ */ React35.createElement(Link_default, {
-        underline: "hover",
-        sx: {display: "flex", alignItems: "center"},
-        color: "inherit",
-        href: "/"
-      }, /* @__PURE__ */ React35.createElement(import_Home.default, {
-        sx: {mr: 0.5},
-        fontSize: "inherit"
-      }), /* @__PURE__ */ React35.createElement(Typography_default, {
-        sx: {display: "flex", alignItems: "center"},
-        color: "common.blue"
-      }, "Home")), /* @__PURE__ */ React35.createElement(Typography_default, {
-        sx: {display: "flex", alignItems: "center"},
-        color: "common.blue"
-      }, this.state.data.title)));
-    }
-  };
-  var Breadcrum_default = Breadcrum;
+  function IconBreadcrumbs() {
+    return /* @__PURE__ */ React31.createElement(Box_default, {
+      sx: {my: 2}
+    }, /* @__PURE__ */ React31.createElement(Breadcrumbs_default, {
+      "aria-label": "breadcrumb"
+    }, /* @__PURE__ */ React31.createElement(Link_default, {
+      underline: "hover",
+      sx: {display: "flex", alignItems: "center"},
+      color: "inherit",
+      href: "/"
+    }, /* @__PURE__ */ React31.createElement(import_Home.default, {
+      sx: {mr: 0.5},
+      fontSize: "inherit"
+    }), /* @__PURE__ */ React31.createElement(Typography_default, {
+      sx: {display: "flex", alignItems: "center"},
+      color: "common.blue"
+    }, "Home"))));
+  }
 
   // <stdin>
   var rootElement = document.getElementById("root");
   var root = import_client.createRoot(rootElement);
-  root.render(/* @__PURE__ */ React36.createElement(import_system7.ThemeProvider, {
+  root.render(/* @__PURE__ */ React32.createElement(import_system7.ThemeProvider, {
     theme: theme_default
-  }, /* @__PURE__ */ React36.createElement(CssBaseline_default, null), /* @__PURE__ */ React36.createElement(App, null, /* @__PURE__ */ React36.createElement(Breadcrum_default, {
-    dataLink
-  }), /* @__PURE__ */ React36.createElement(ResourceListing_default, {
+  }, /* @__PURE__ */ React32.createElement(CssBaseline_default, null), /* @__PURE__ */ React32.createElement(App, null, /* @__PURE__ */ React32.createElement(IconBreadcrumbs, null), /* @__PURE__ */ React32.createElement(CategoryListing_default, {
     dataLink
   }))));
 })();
