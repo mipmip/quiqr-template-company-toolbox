@@ -35,8 +35,8 @@ collections:
     title: Image
     type: image-select
 
-  - key: my-accordion
-    title: accordion
+  - key: resource_links
+    title: Resources
     type: accordion
     fields:
 
@@ -56,9 +56,24 @@ collections:
       title: Image
       type: image-select
 
-    - key: primary_action
-      title: Primary Action
-      type: string
+    - key: actions
+      title: Actions
+      type: accordion
+      fields:
+
+      - key: info
+        type: info
+        content: Only the first 3 items are used. 1st action is primary
+        size: small
+
+      - arrayTitle: true
+        key: title
+        title: Title
+        type: string
+
+      - key: url
+        title: url
+        type: string
 
 singles:
 
@@ -84,3 +99,12 @@ singles:
         path: /static/images
         title: Logo
         type: image-select
+
+      - key: "favicon"
+        title: "Favicon Image"
+        type: "bundle-manager"
+        tip: "upload the image to be used as favicon"
+        path: "/static/"
+        forceFileName: "favicon.png"
+        extensions: ["png"]
+

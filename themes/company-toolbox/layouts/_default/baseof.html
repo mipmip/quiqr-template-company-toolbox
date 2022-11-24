@@ -11,13 +11,24 @@
 }
 </style>
 
-<meta charset="utf-8">
-{{ with resources.Get "index.jsx" }}
-{{ $options := dict "defines" (dict "process.env.NODE_ENV" "\"development\"" "process.env.BaseURL" (printf `"%s"` $.Site.BaseURL)) }}
-{{ $script := . | js.Build $options }}
-<script src="{{ $script.RelPermalink }}" defer></script>
+<meta charset="utf-8" />
+<link rel="shortcut icon" href="/favicon.png">
 
+{{ $assetPage := "tpl_category.jsx" }}
+{{ if .IsHome }}
+  {{ $assetPage = "tpl_home.jsx" }}
+  <script>const dataLink = "{{ .Permalink }}/category/index.json"</script>
+{{else}}
+  <script>const dataLink = "{{ .Permalink }}index.json"</script>
 {{ end }}
+
+{{ with resources.Get $assetPage }}
+  {{ $options := dict "defines" (dict "process.env.NODE_ENV" "\"development\"" "process.env.BaseURL" (printf `"%s"` $.Site.BaseURL)) }}
+  {{ $script := . | js.Build $options }}
+  <script src="{{ $script.RelPermalink }}" defer></script>
+{{ end }}
+
+
 </head>
 
 <body>
@@ -25,4 +36,3 @@
 {{- block "main" . }}{{- end }}
 </body>
 </html>
-

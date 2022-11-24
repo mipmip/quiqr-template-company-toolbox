@@ -1,7 +1,7 @@
 ---
 title: Quiqr
 description: ''
-my-accordion:
+resource_links:
   - title: learning
     description: ''
     resources: []

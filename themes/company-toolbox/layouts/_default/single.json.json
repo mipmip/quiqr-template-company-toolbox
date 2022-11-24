@@ -1,7 +1,3 @@
 {{ define "response" }}
-  {
-  "title": "{{ .Title }}",
-  "type": "{{ .Type }}",
-  "permalink" : "{{ .Permalink }}"
-  }
+ {{ partial "item.json.json" . }}
 {{ end }}
