@@ -8,6 +8,7 @@ import CategoryListing from './components/CategoryListing';
 import theme from './theme';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
 import BreadcrumHome from './components/BreadcrumHome';
 
 const rootElement = document.getElementById('root');
@@ -18,6 +19,7 @@ root.render(
     {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
     <CssBaseline />
     <App>
+
       <BreadcrumHome/>
       <CategoryListing dataLink={dataLink} />
     </App>

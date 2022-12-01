@@ -105,6 +105,12 @@ singles:
             title: Logo
             type: image-select
 
+          - key: home_bg_image
+            buttonTitle: select image
+            path: /static/images
+            title: Home Background Image
+            type: image-select
+
       - key: "favicon"
         title: "Favicon Image"
         type: "bundle-manager"
