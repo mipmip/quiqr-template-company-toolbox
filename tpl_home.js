@@ -37272,7 +37272,9 @@ Please use another name.` : import_utils4.formatMuiErrorMessage(18));
       return /* @__PURE__ */ React23.createElement(Card_default, {
         sx: {
           display: "flex",
-          cursor: "pointer"
+          cursor: "pointer",
+          width: 350,
+          height: 120
         },
         onClick: () => {
           window.location.href = this.props.itemData.rel_permalink.substring(0, this.props.itemData.rel_permalink.lastIndexOf("/"));
@@ -37328,10 +37330,10 @@ Please use another name.` : import_utils4.formatMuiErrorMessage(18));
         item: true,
         key: catData.title,
         xs: 12,
-        sm: 6,
-        md: 4,
-        lg: 3,
-        xl: 2
+        sm: 7,
+        md: 5,
+        lg: 3.5,
+        xl: 3
       }, /* @__PURE__ */ React24.createElement(CategoryCard_default, {
         itemData: catData
       })))));
