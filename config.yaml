@@ -7,6 +7,10 @@ disableKinds:
   - taxonomy
   - sitemap
   - RSS
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
 outputs:
   home:
     - html

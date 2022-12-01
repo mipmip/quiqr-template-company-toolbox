@@ -41,7 +41,7 @@ export default class CategoryListing extends React.Component {
 
         <Grid container spacing={4} sx={{ py: 2 }}>
           {this.state.categories.map((catData) => (
-            <Grid item key={catData.title} xs={12} sm={6} md={4} lg={3} xl={2}>
+            <Grid item key={catData.title} xs={12} sm={7} md={5} lg={3.5} xl={3}>
               <CategoryCard itemData={catData} />
             </Grid>
           ))}

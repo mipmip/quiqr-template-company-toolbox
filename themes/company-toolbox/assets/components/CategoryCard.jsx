@@ -14,7 +14,9 @@ export default class CategoryCard extends React.Component {
       <Card
         sx={{
           display: 'flex',
-          cursor: 'pointer'
+          cursor: 'pointer',
+          width: 350,
+          height: 120
         }}
         onClick={
           ()=>{

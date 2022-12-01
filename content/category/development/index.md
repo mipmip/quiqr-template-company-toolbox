@@ -29,8 +29,25 @@ resource_links:
     actions:
       - title: Slashdot
         url: https://slashdot.org
+  - title: Wholesale
+    description: >-
+      Het IJsselmeer is onderdeel van het IJsselmeergebied en ontstond door het
+      afsluiten van een deel van de Zuiderzee. De Afsluitdijk werd voltooid op
+      28 mei 1932 en de officiële naamsverandering van het afgesloten deel van
+      de Zuiderzee vond plaats op 20 september 1932. Het meer werd genoemd naar
+      de rivier de IJssel, die erin uitmondt. Tegelijkertijd kreeg het
+      niet-afgesloten deel de naam Waddenzee. Later werden de Friese en
+      Groninger wadden ook tot de Waddenzee gerekend.
+    resources: []
+    actions:
+      - title: Open
+        url: https://buwa.nl
 
 ---
+
+
+
+
 
 
 
