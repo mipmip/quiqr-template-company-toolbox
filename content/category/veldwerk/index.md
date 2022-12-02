@@ -1,6 +1,6 @@
 ---
-title: development
-description: All about development
+title: Veldwerk
+description: Digitaal gereedschap voor in het veld
 image: development.jpg
 resource_links:
   - title: Storage
@@ -44,6 +44,8 @@ resource_links:
         url: https://buwa.nl
 
 ---
+
+
 
 
 

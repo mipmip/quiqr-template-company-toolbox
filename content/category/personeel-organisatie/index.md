@@ -1,6 +1,6 @@
 ---
-title: Human Resources
-description: All about human resources.
+title: P&O
+description: Personeel en organisatie
 resource_links:
   - title: learning
     description: ''
@@ -27,6 +27,8 @@ resource_links:
 image: hr.jpg
 
 ---
+
+
 
 
 
