@@ -41,23 +41,8 @@ body{
 <link rel="shortcut icon" href="/favicon.png">
 
 <script>
-  var appCnf = {};
-  appCnf.logoWidth = "{{ .Site.Params.logo_width }}";
-  appCnf.title = "{{ .Site.Title }}";
-  appCnf.rewriteRules = [];
-
-{{ range .Site.Params.rewriteRules }}
-  var rule = {};
-
-  rule.regex = "{{ .regex }}";
-  rule.replace = "{{ .replace }}";
-  rule.condition = "{{ .agent_condition }}";
-
-  appCnf.rewriteRules.push(rule);
-
-{{ end }}
-
-
+  const setLogoWidth = 200;
+    const setTitle = {{.Site.Titlwe}} ;
 </script>
 
 {{ $assetPage := "tpl_category.jsx" }}

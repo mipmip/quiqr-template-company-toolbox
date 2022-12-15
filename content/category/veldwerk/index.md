@@ -9,8 +9,9 @@ resource_links:
     primary_action: https://storage.com
     image: storage.jpg
     actions:
-      - title: open storage
-        url: https://storage.com
+      - title: open Samba
+        url: >-
+          smb://buwadata02.buwa.nl/Buwa-algemeen/BW-Data/BW-Sjablonen/Sjablonen-Office-365-Offertes-Rapporten/Hoe%20maak%20ik%20een%20toegankelijke%20PDF.docx
       - title: more info
         url: https://about.com
   - title: Tools
@@ -44,6 +45,8 @@ resource_links:
         url: https://buwa.nl
 
 ---
+
+
 
 
 

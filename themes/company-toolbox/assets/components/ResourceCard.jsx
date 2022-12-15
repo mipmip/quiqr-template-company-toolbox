@@ -27,6 +27,11 @@ export default class ResourceCard extends React.Component {
       snackbarNoLinkOpen : false,
       dialogOpen : false,
     }
+
+    //console.log(this.props.appCnf.rewriteRules)
+
+
+
   }
 
   snackbarHandleClose(){
@@ -34,18 +39,20 @@ export default class ResourceCard extends React.Component {
   render(){
 
     let image = this.props.itemData.image
-    console.log( image)
 
     if(image.includes("no value")){
       image = "scholver.jpg";
     }
 
+    const rules = this.props.appCnf.rewriteRules || [];
+
+
     return (
 
       <Card
         sx={{
-        width: 350,
-        height: 480,
+        width: 300,
+        height: 400,
         display: 'flex',
         flexDirection: 'column' }}
       >
@@ -89,7 +96,14 @@ export default class ResourceCard extends React.Component {
               <Button key={actionItem.title}
                 onClick={
                   ()=>{
-                    window.open(actionItem.url)
+
+                    let url = actionItem.url;
+                    rules.forEach((rule)=>{
+                      //console.log(rule);
+                      url = url.replace(rule.regex, rule.replace);
+                    });
+
+                    window.open(url)
                   }
                 }
                 size="small">{(i===0 ? "► " : "")}{actionItem.title}</Button>
@@ -104,7 +118,13 @@ export default class ResourceCard extends React.Component {
         <CardActionArea onClick={
           (e)=>{
             if(this.props.itemData.actions.length > 0){
-              window.open(this.props.itemData.actions[0].url)
+
+              let url = this.props.itemData.actions[0].url
+              rules.forEach((rule)=>{
+                url = url.replace(rule.regex, rule.replace);
+              });
+
+              window.open(url)
             }
             else{
               this.setState({snackbarNoLinkOpen: true})
@@ -114,12 +134,13 @@ export default class ResourceCard extends React.Component {
         <CardMedia
           component="img"
           sx={{
-            maxHeight: 200
+            minHeight: 150,
+            maxHeight: 150
           }}
           image={"/images/" + image}
           alt={"img: " + this.props.itemData.title}
         />
-          <CardContent sx={{ height:220 }}>
+          <CardContent sx={{ height:170 }}>
             <Typography gutterBottom variant="h5" component="h2">
               {this.props.itemData.title}
 
@@ -143,7 +164,7 @@ export default class ResourceCard extends React.Component {
 
             </Typography>
           <Typography>
-            <div style={{height: 150, textOverflow: "ellipsis", overflow: 'hidden'}}>
+            <div style={{height: 100, textOverflow: "ellipsis", overflow: 'hidden'}}>
             {this.props.itemData.description}
             </div>
           </Typography>
@@ -154,7 +175,13 @@ export default class ResourceCard extends React.Component {
             <Button key={actionItem.title}
               onClick={
                 ()=>{
-                  window.open(actionItem.url)
+
+                  let url = actionItem.url
+                  rules.forEach((rule)=>{
+                    url = url.replace(rule.regex, rule.replace);
+                  });
+
+                  window.open(url)
                 }
               }
               size="small">{(i===0 ? "► " : "")}{actionItem.title}</Button>

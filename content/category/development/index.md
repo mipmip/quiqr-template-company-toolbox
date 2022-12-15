@@ -13,6 +13,7 @@ resource_links:
         url: https://storage.com
       - title: more info
         url: https://about.com
+    keywords: []
   - title: Tools
     description: about tools
     image: tools.jpg
@@ -21,6 +22,7 @@ resource_links:
     actions:
       - title: Open
         url: https://tools.com
+    keywords: []
   - title: Project Management
     description: All about Project Management
     image: development.jpg
@@ -29,6 +31,7 @@ resource_links:
     actions:
       - title: Slashdot
         url: https://slashdot.org
+    keywords: []
   - title: Wholesale
     description: >-
       Het IJsselmeer is onderdeel van het IJsselmeergebied en ontstond door het
@@ -42,8 +45,18 @@ resource_links:
     actions:
       - title: Open
         url: https://buwa.nl
+      - title: Too much text
+        url: many.com
+      - title: And still more to come
+        url: more.com
+    image: logo-waardenburg.png
+    keywords: []
 
 ---
+
+
+
+
 
 
 

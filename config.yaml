@@ -1,6 +1,6 @@
 baseUrl: https://company-toolbox.quiqr.org
 languageCode: en
-title: Toolbox
+title: Company Toolbox
 theme: company-toolbox
 disableKinds:
   - taxonomyTerm
@@ -21,6 +21,12 @@ outputs:
     - html
 logo: logo-waardenburg.png
 params:
-  logo: logo-waardenburg.png
+  logo: hugo-logo-wide.svg
   resources: []
   home_bg_image: peter-vroon-lu2FEBkK2OE-unsplash.jpg
+  logo_width: 170
+  rewriteRules:
+    - title: Samba to Linux
+      regex: smb://buwadata02.buwa.nl
+      replace: http://VolumesLinux
+      agent_condition: navigator.platform.toUpperCase().indexOf('LINUX')>=0;
