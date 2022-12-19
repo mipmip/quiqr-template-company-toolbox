@@ -87,8 +87,8 @@ export default class ResourceCard extends React.Component {
             {this.props.itemData.title}
           </DialogTitle>
           <DialogContent>
-            <DialogContentText id="alert-dialog-description">
-            {this.props.itemData.description}
+            <DialogContentText id="alert-dialog-description" >
+              <div dangerouslySetInnerHTML={{__html:this.props.itemData.description.replace(/(?:\r\n|\r|\n)/g, '<br/>') }} />
             </DialogContentText>
           </DialogContent>
           <DialogActions>
@@ -164,9 +164,7 @@ export default class ResourceCard extends React.Component {
 
             </Typography>
           <Typography>
-            <div style={{height: 100, textOverflow: "ellipsis", overflow: 'hidden'}}>
-            {this.props.itemData.description}
-            </div>
+            <div style={{height: 100, textOverflow: "ellipsis", overflow: 'hidden'}} dangerouslySetInnerHTML={{__html:this.props.itemData.description.replace(/(?:\r\n|\r|\n)/g, '<br/>') }} />
           </Typography>
         </CardContent>
         </CardActionArea>

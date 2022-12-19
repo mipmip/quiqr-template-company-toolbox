@@ -1,12 +1,19 @@
 ---
 title: Human Resources
-description: All about human resources.
+description: |
+  All about human resources.
+  hallo
 resource_links:
   - title: learning
-    description: ''
+    description: |-
+      leren
+      lezen
+
+      en nog meer
     resources: []
     primary_action: https://quiqr.org
     actions: []
+    keywords: []
   - title: hallo
     description: >-
       In het kader van de Deltawerken werd de zeearm, het Brouwershavense gat,
@@ -24,9 +31,14 @@ resource_links:
     resources: []
     primary_action: https://github.com/quiqr/
     actions: []
+    keywords: []
 image: hr.jpg
 
 ---
+
+
+
+
 
 
 
