@@ -40819,7 +40819,9 @@ Please use another name.` : import_utils4.formatMuiErrorMessage(18));
         id: "alert-dialog-title"
       }, this.props.itemData.title), /* @__PURE__ */ React49.createElement(DialogContent_default, null, /* @__PURE__ */ React49.createElement(DialogContent_default, {
         id: "alert-dialog-description"
-      }, this.props.itemData.description)), /* @__PURE__ */ React49.createElement(DialogActions_default, null, this.props.itemData.actions.map((actionItem, i) => /* @__PURE__ */ React49.createElement(Button_default, {
+      }, /* @__PURE__ */ React49.createElement("div", {
+        dangerouslySetInnerHTML: {__html: this.props.itemData.description.replace(/(?:\r\n|\r|\n)/g, "<br/>")}
+      }))), /* @__PURE__ */ React49.createElement(DialogActions_default, null, this.props.itemData.actions.map((actionItem, i) => /* @__PURE__ */ React49.createElement(Button_default, {
         key: actionItem.title,
         onClick: () => {
           let url = actionItem.url;
@@ -40877,8 +40879,9 @@ Please use another name.` : import_utils4.formatMuiErrorMessage(18));
           this.setState({dialogOpen: true});
         }
       }, /* @__PURE__ */ React49.createElement(import_Info.default, null)))), /* @__PURE__ */ React49.createElement(Typography_default, null, /* @__PURE__ */ React49.createElement("div", {
-        style: {height: 100, textOverflow: "ellipsis", overflow: "hidden"}
-      }, this.props.itemData.description)))), /* @__PURE__ */ React49.createElement(CardActions_default, null, this.props.itemData.actions.map((actionItem, i) => /* @__PURE__ */ React49.createElement(Button_default, {
+        style: {height: 100, textOverflow: "ellipsis", overflow: "hidden"},
+        dangerouslySetInnerHTML: {__html: this.props.itemData.description.replace(/(?:\r\n|\r|\n)/g, "<br/>")}
+      })))), /* @__PURE__ */ React49.createElement(CardActions_default, null, this.props.itemData.actions.map((actionItem, i) => /* @__PURE__ */ React49.createElement(Button_default, {
         key: actionItem.title,
         onClick: () => {
           let url = actionItem.url;

@@ -37297,7 +37297,10 @@ Please use another name.` : import_utils4.formatMuiErrorMessage(18));
       }, /* @__PURE__ */ React23.createElement(Typography_default, {
         component: "div",
         variant: "h6"
-      }, this.props.itemData.title), /* @__PURE__ */ React23.createElement(Typography_default, null, this.props.itemData.description))));
+      }, this.props.itemData.title), /* @__PURE__ */ React23.createElement(Typography_default, null, /* @__PURE__ */ React23.createElement("div", {
+        style: {height: 100, textOverflow: "ellipsis", overflow: "hidden"},
+        dangerouslySetInnerHTML: {__html: this.props.itemData.description.replace(/(?:\r\n|\r|\n)/g, "<br/>")}
+      })))));
     }
   };
   var CategoryCard_default = CategoryCard;
